@@ -1,4 +1,4 @@
-#Proyecto Integrador Grupo_17_#
+# Proyecto Integrador ** Grupo_17_ ** # 
 Los productos que ofrece nuestra pagina es de venta de electrodomésticos y artículos electrónicos más conocidas en el mercado actual. 
 
 Esta pagina apunta al publico en general.
