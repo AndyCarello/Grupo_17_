@@ -1,4 +1,4 @@
-# Proyecto Integrador Grupo_17_Pasteleria # 
+# Proyecto Integrador Grupo 17: Sucré Pasteleria #       
 ## Descripcion del Proyecto ##
 El objetivo de nuestra página es exhibir todos nuestros productos de manera cómoda y funcional para el cliente, y ofrecerle el mejor acompañamiento a la hora del te. Nuestra página también cuenta con servicio de cadetería para que, que unos cuantos clicks, el cliente pueda recibir estas tentadores delicias en su hogar, facilitando la realización de su compra.
  
@@ -27,3 +27,11 @@ Licenciatura en informatica en la Universidad de Quilmes. Tengo conocimiento con
 - http://alotiendaycafe.com.ar/
 
 - https://www.violetamassey.com.ar/
+
+## Paleta de Colores ##
+
+- https://colorhunt.co/palette/7d5a50b4846ce5b299fcdec0
+
+## Tipografia ##
+
+- Playfair Display
