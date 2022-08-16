@@ -28,10 +28,10 @@ Licenciatura en informatica en la Universidad de Quilmes. Tengo conocimiento con
 
 - https://www.violetamassey.com.ar/
 
-### Paleta de Colores ###
+## Paleta de Colores ##
 
 - https://colorhunt.co/palette/7d5a50b4846ce5b299fcdec0
 
-### Tipografia ###
+## Tipografia ##
 
 - Playfair Display
