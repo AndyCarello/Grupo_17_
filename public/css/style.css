@@ -1,0 +1,61 @@
+/* Stylesheet para Sucre Pasteleria*/
+
+. {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+
+}
+
+main {
+
+}
+
+/* Estilos Header */
+
+header {
+
+}
+
+/* Fin estilos Header */
+
+/* Estilos Footer */
+
+footer {
+
+}
+
+/* Fin estilos Footer */
+
+/* Comienzo media Querys */
+
+/* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
+
+/* Smartphones mas grandes y tablets pequeñas (mas de 480px)*/
+@media (min-width: 480px) { 
+
+}
+
+/* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
+@media (min-width: 768px) {
+
+}
+
+/* Laptos y computadoras mas grandes ()*/
+@media (min-width: 1280px) {
+
+ }
+/* Fin media Querys */
