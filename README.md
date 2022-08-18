@@ -36,6 +36,10 @@ Licenciatura en informatica en la Universidad de Quilmes. Tengo conocimiento con
 
 - Playfair Display
 
+## Tablero de Trabajo ##
+
+- https://trello.com/b/PaFQh2o5/proyecto-e-comerce
+
 
 
 
