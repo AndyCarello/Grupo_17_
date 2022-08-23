@@ -4,7 +4,8 @@
   "description": "El objetivo de nuestra página es exhibir todos nuestros productos de manera cómoda y funcional para el cliente, y ofrecerle el mejor acompañamiento a la hora del te. Nuestra página también cuenta con servicio de cadetería para que, que unos cuantos clicks, el cliente pueda recibir estas tentadores delicias en su hogar, facilitando la realización de su compra.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/AndyCarello/Grupo_17_#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
   }
 }
