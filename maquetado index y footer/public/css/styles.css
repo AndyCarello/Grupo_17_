@@ -1,0 +1,254 @@
+
+header {
+
+    background-color: #F4ECE0;
+    padding: 7%;
+    width: auto;
+  
+    
+  }
+
+
+
+.slider{
+
+    display:table;
+	position:relative;
+	margin-bottom:39px;
+    width: 110.6%;
+}
+
+.box1 {
+
+    position: relative;
+    display: inline-block;
+    width: 91%;
+}
+
+.texto{
+
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: white;
+    border-top: 1px solid #ebebeb;
+    padding:10px;
+    box-sizing: border-box;
+    
+
+}
+
+
+
+.texto-menu {
+
+    
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box2 {
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5%;
+
+
+}
+
+.img1:hover{
+
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    transition:all .5s ease-in-out
+}
+
+.img1{
+
+    width: 300px;
+    overflow:hidden;
+}
+
+
+section div .img1{
+
+    border-width: 1px;
+    border-style: solid
+}
+
+.Menu-preview{
+
+
+    width: 100%;
+    height: 100vmax;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+
+
+
+
+
+footer {
+
+    background-color: #F4ECE0;
+    padding-top: 0px;
+    padding: 40px 0px 20px ;
+    height: 400px;
+}
+
+
+
+.subtexto-menu{
+
+
+    font-size: 20px;
+    
+}
+
+.boton-personalizado-1 {
+
+
+    position: absolute;
+    top: 80%;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333333;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:#FCDEC0;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+    left: 50%;
+    top: 50%;
+    
+
+}
+
+
+.boton-vermas1 {
+
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    top: 180vh;
+    color: #7D5A50;
+    box-sizing: border-box;
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+}
+
+.boton-vermas2 {
+
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    bottom: -165%;
+    left: 46%;
+    color: #7D5A50;
+    box-sizing: border-box;
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+
+}
+
+
+main section .img2{
+
+    position: absolute;
+    top: 220%;
+    width: 100%;
+    height: 70%;
+    filter: blur(3px)
+}
+
+
+.texto2{
+
+    position: absolute;
+    top: 120vmax;
+    text-align: center;
+    left: 40%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #7D5A50;
+    padding:10px;
+    box-sizing: border-box;
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+    
+
+}
+
+
+
+footer .logo {
+
+    position: absolute;
+    left: 2%;
+    top: 330%;
+    width: 300px;
+}
+
+
+footer i {
+
+  font-size: 30px;
+  color: #7D5A50;
+  padding: 5px;
+  border: #7D5A50 1px solid;
+  border-radius: 100%;
+
+}
+
+footer div i {
+
+  position: relative;
+  display: flex;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  
+  
+ 
+  
+
+}
+
+
+footer h3 {
+
+    position: relative;
+    display: flex;
+    margin-left: 33%;
+    margin-bottom: 3px;
+    font-size: 20px;
+    bottom: 60px;
+    
+    
+}
+
+
+footer iframe{
+
+    position: relative;
+    display: flex;
+    margin-left: 63%;
+    font-size: 20px;
+    bottom: 400px;
+}
