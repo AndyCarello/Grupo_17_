@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+label {
+    color:#7D5A50;
+}
+
 .contenido-espaciado {
     justify-content: space-between;
     align-items: center;
