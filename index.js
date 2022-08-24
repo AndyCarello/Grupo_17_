@@ -25,6 +25,13 @@ app.get("/registrado", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/registrado.html"));
     console.log("Mostrando agradecimiento por haberse registrado");
 });
+
+//Recuperar Contraseña
+app.get("/recuperar", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/recuperar.html"));
+    console.log("Mostrando recuperar contraseña");
+});
+
 //El correo ha sido validado
 app.get("/validado", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/validado.html"));
