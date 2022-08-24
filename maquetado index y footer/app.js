@@ -17,3 +17,10 @@ app.get("/", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/index.html"))
 
 });
+
+
+app.get('/contacto', (req,res)=>{
+
+    res.sendFile(path.join(__dirname,'./views/contacto.html'));
+  
+  });
