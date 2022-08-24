@@ -32,6 +32,12 @@ app.get("/recuperar", (req,res)=>{
     console.log("Mostrando recuperar contraseña");
 });
 
+//Reestablecer Contraseña
+app.get("/reestablecercontrasena", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/reestablecercontrasena.html"));
+    console.log("Mostrando reestablecer contraseña");
+});
+
 //El correo ha sido validado
 app.get("/validado", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/validado.html"));

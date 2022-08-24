@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reestablecercontrasena.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Aca va pegado el contenido de header.html-->
+    </header>
+    <main>
+        <section class="reestablecer-flex">
+            <div class="reestablecer-ancho-full contenido-centrado">
+                <img id="reestablecer-logo" src="/img/sp_logo.png" alt="Logo Sucre Pasteleria">
+            </div>
+            <div class="reestablecer-ancho-full contenido-centrado">
+                <h1>Hola "Usuario"</h1>
+            </div>
+            <form class="reestablecer-flex" action="registro" method="post">
+                <div class="reestablecer-ancho-full contenido-centrado">
+                    <input type="password" name="password" id="password" placeholder="Ingresa tu nueva contraseña" required>
+                </div>
+                <div class="reestablecer-ancho-full contenido-centrado">
+                    <input type="password" name="password" id="password" placeholder="Repetir Contraseña" required>
+                </div>
+                <div class="reestablecer-ancho-full contenido-centrado">
+                    <button type="submit" id="enviar">Enviar</button>
+                </div>
+                <div class="reestablecer-ancho-full contenido-espaciado">
+                    <div>
+                        <a href="javascript:history.back()">Volver</a>
+                    </div>
+                    <div>
+                        <a href="ingreso">Login</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
