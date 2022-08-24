@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <header>
-<!-- Aca va pegado el contenido de header.html-->
-  </header>
-  <main>
-    <section>
-      <h1>BIENVENIDO</h1>
-      <form action="/Ingreso" method="post">
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email">
-        </div>
-        <div>
-          <label for="Contraseña">Contraseña:</label>
-          <input type="password" name="Password" id="password">
-        </div>
-        <div>
-          <div>
-            <input type="checkbox" name="recordarme" id="recordarme" value="recordarme">
-            <label for="recordarme">Recordarme:</label>
-          </div>
-          <div>
-            <a href="#">Olvidaste tu contraseña?</a>
-          </div>
-        </div>
-        <div>
-          <button type="submit">Ingresar</button>
-        </div>
-          <div>
-            <div>
-            <a href="#">Volver</a>
-          </div>
-          <div>
-            <a href="#">Registrate</a>
-          </div>
-        </div>
-    </form>
-  </section>
-  </main>  
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/ingreso.css">
+        
+    </head>
+    <body>
+        <header>
+            <!-- Aca va pegado el contenido de header.html-->
+        </header>
+        <main>
+            <section class="ingreso-flex">
+                <div class="ingreso-ancho-full contenido-centrado">
+                    <img id="ingreso-logo"  src="/img/sp_logo.png" alt="Logo Sucre Pasteleria">
+                </div>
+                <div class="ingreso-ancho-full contenido-centrado">
+                    <h1>BIENVENIDO</h1>
+                </div>
+                <form class="ingreso-flex" action="ingreso" method="post">
+                    <div class="ingreso-ancho-full contenido-centrado">
+                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                    </div>
+                    <div class="ingreso-ancho-full contenido-centrado">
+                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="ingreso-ancho-full contenido-espaciado">
+                        <div>
+                            <input type="checkbox" name="recordarme" id="recordarme" value="recordarme">
+                            <label for="recordarme">Recordarme</label>
+                        </div>
+                        <div>
+                            <a href="recuperar">Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+                    <div class="ingreso-ancho-full contenido-centrado">
+                        <button type="submit" id="ingresar">Ingresar</button>
+                    </div>
+                    <div class="ingreso-ancho-full contenido-espaciado">
+                        <div>
+                            <a href="javascript:history.back()">Volver</a>
+                        </div>
+                        <div>
+                            <a href="registro">Registrate</a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>  
+    </body>
 </html>

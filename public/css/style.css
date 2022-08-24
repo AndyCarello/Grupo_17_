@@ -1,11 +1,12 @@
 /* Stylesheet para Sucre Pasteleria*/
 
-. {
-
+body {
+    background-color: #F4ECE0;
+    
 }
 
 h1 {
-
+    color: #7D5A50;
 }
 
 h2 {
@@ -20,8 +21,32 @@ p {
 
 }
 
-main {
+a {
+    text-decoration: none;
+    color:#7D5A50;
+}
 
+input {
+    border-style: none;
+    padding: 0.7em;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+button {
+    color:#7D5A50;
+    background-color: #FCDEC0 ;
+    border-style: none;
+    padding: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+main {
+    padding: 5vw;
 }
 
 /* Estilos Header */
@@ -57,5 +82,5 @@ footer {
 /* Laptos y computadoras mas grandes ()*/
 @media (min-width: 1280px) {
 
- }
+}
 /* Fin media Querys */
