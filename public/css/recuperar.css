@@ -1,27 +1,12 @@
-.registro-flex {
+.recuperar-flex {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
     column-gap: 0.5em;
 }
 
-.registro-ancho-full {
+.recuperar-ancho-full {
     flex-basis: 81%;
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.registro-ancho-half {
-    flex-basis: 81%;
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-}
-
-.registro-ancho-quarter {
-    flex-basis: 34%;
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +25,7 @@ label {
     align-items: center;
 }
 
-#registro-logo {
+#recuperar-logo {
     width: 40%;
 }
 
@@ -63,14 +48,6 @@ input, button {
             padding-left: 15vw;
             padding-right: 15vw;
         }
-
-    .registro-ancho-half {
-        flex-basis:34%;
-    }
-
-    .registro-ancho-quarter {
-        flex-basis:21%;
-    }
     
 }
 
