@@ -1,4 +1,11 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
 header {
 
     background-color: #F4ECE0;
@@ -7,6 +14,12 @@ header {
   
     
   }
+
+body {
+
+
+    position: static;
+}
 
 
 
@@ -33,7 +46,7 @@ header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     color: white;
-    border-top: 1px solid #ebebeb;
+   
     padding:10px;
     box-sizing: border-box;
     
@@ -120,7 +133,6 @@ footer {
 
 
     position: absolute;
-    top: 80%;
     text-decoration:none;
     font-weight: 600;
     font-size: 20px;
@@ -237,7 +249,7 @@ footer h3 {
     margin-left: 33%;
     margin-bottom: 3px;
     font-size: 20px;
-    bottom: 60px;
+    bottom: 40px;
     
     
 }
@@ -248,8 +260,9 @@ footer iframe{
     position: relative;
     display: flex;
     margin-left: 63%;
-    font-size: 20px;
-    bottom: 400px;
+    font-size: 10px;
+    bottom: 320px;
+    
 }
 
 
@@ -258,21 +271,22 @@ footer iframe{
     background-color: #FCDEC0;
     padding: 200px;
     margin-bottom: 10px 10px;
-    width: 79.3%;
-    height: 500px
+    width: 100%;
+    height: 50%;
 }
 
 
 
-.third-preview .img3{
-    
-    position: relative;
+.slider-item{
+
+    width: 600px;
+    position: absolute;
     display: flex;
-    margin: -100px 500px;
-    left: 10%;
-   
+    left: 50%;
+    
+    
+    
 }
-
 
 
 
@@ -280,7 +294,6 @@ footer iframe{
 
     display: flex;
     position: relative;
-    top: -400px;
     margin: 0 10px;
     width: 30%;
     text-align: center;
@@ -293,7 +306,7 @@ footer iframe{
     display: flex;
     flex-direction: column;
     width: 30%;
-    top: -400px;
+    
 
 }
 
@@ -394,3 +407,200 @@ main section .logo-contacto .logo{
 }
 
 
+@media (max-width: 480px ){  
+
+    header{
+        padding: 7%;
+        width: auto;
+        
+    }
+
+   
+
+    .box1{
+
+        position: relative;
+        display: inline-block;
+        width: auto;
+
+
+    }
+    
+    .texto{
+
+        display: flex;
+        font-size: 12px;
+        position: absolute;
+        text-align: center;
+        top: 70px; 
+        left: 1px;
+        
+    
+        
+    
+    }
+
+    .boton-personalizado-1{
+
+        padding: 0%;
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+
+    .Menu-preview{
+
+        
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 100%;
+        
+       
+        
+    }
+
+    .img1{
+
+        width: 150px;
+    }
+
+    .texto-menu {
+
+
+        font-size: 10px;
+    }
+
+    .subtexto-menu {
+
+        font-size: 15px;
+    }
+
+    main section .img2{
+
+        position: absolute;
+        top: 165%;
+        margin: 0px;
+        width: 100%;
+        height: 30%;
+        filter: blur(2px)
+    }
+
+    .third-preview{
+
+        
+        padding: 100px;
+        margin-bottom: 10px 10px;
+        width: 100%;
+        height: auto;
+    }
+    .slider-item{
+
+        width: 300px;
+       
+        position: absolute;
+        left: 50px;
+           
+        
+    }
+
+    .historia {
+
+        font-size: 10px;
+        display: flex;
+        text-align: center;
+        margin-top: 250px
+        
+    }
+
+    .mision{
+
+        font-size: 10px;
+        display: flex;
+        text-align: center;
+        margin-top: -450px;
+        margin-left: auto;
+        
+    }
+
+    .texto2{
+
+        font-size: 20px;
+        top: 175%;
+        left: 100px;
+    }
+
+    .boton-vermas2{
+
+        font-size: 20px;
+        left: 150px;
+        position: absolute;
+        top: 180%;
+        
+       
+    }
+
+
+    .mapa{
+
+        display: none;
+    }
+
+    footer{
+
+        padding: 7%;
+        width: auto;
+        height: 230px;
+
+    }
+
+    footer .logo{
+
+        width: 200px;
+        margin-top: -10px;
+
+    }
+    
+
+    footer div i {
+
+        left: 40px;
+    }
+
+
+    footer i{
+
+        font-size: 10px;
+        padding: 3px;
+        left: 40px;
+        
+        
+    }
+
+    footer h3{
+
+        position: relative;
+        display: flex;
+        margin-left: 50%;
+        margin-bottom: 3px;
+        font-size: 10px;
+        bottom: 20px;
+
+    }
+}
+
+
+
+@media (min-width: 768px) {
+
+}
+
+
+
+@media (min-width: 1280px) {
+
+}
