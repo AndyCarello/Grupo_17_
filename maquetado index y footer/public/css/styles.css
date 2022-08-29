@@ -377,76 +377,6 @@ display:none;
 
 
 
-.container-form-contacto{
-
-  background-color: white;
-  padding: 28px;
-  margin: 0 auto;
-  
-
-}
-
-.container-form-contacto div{
-
-  margin-top: 20px;   
-}
-
-
-.boton-enviar{
-
-  width: 100px;
-  padding: 0px;
-  border-radius: 5px;
-  background-color: #FCDEC0;
-  color: #7D5A50;
-  font-size: 16px;
-  cursor: pointer;
-
-}
-  
-.boton-enviar:hover{
-
-  background-color: white;
-  
-}
-
-
-
-.ingreso-ancho-full {
-  flex-basis: 80%;
-  flex-grow: 1;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.contenido-centrado {
-  justify-content: center;
-}
-
-
-label {
-  color:#7D5A50;
-}
-
-
-#nombreUsuario, #email, #telefono, #localidad , #comentario {
-  width: 100%;
-}
-
-
-main section .logo-contacto {
-
-  position: absolute;
-  left: 60%;
-  bottom: 30%;
-}
-
-
-main section .logo-contacto .logo{
-
-  width: 400px;
-  
-}
 
 /* Comienzo media Querys */
 
@@ -464,7 +394,22 @@ main section .logo-contacto .logo{
 
 
   
-  
+    .texto{
+
+      
+      top: 120px;
+      left: 20%; 
+      font-size: 30px;
+   }
+   
+
+   .boton-personalizado-1 {
+      font-weight: 600;
+      font-size: 30px;
+      left: 45%;
+      top: 70%;
+  }
+
 
   
 
@@ -478,6 +423,10 @@ main section .logo-contacto .logo{
 @media (min-width: 1280px) {
 
 
+  html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 
   .Menu-preview{
 
