@@ -30,7 +30,10 @@ Licenciatura en informatica en la Universidad de Quilmes. Tengo conocimiento con
 
 ## Paleta de Colores ##
 
-- https://colorhunt.co/palette/cdf0eaf9f9f9f6c6eafaf4b7
+- #F4ECE0
+- #FCDEC0
+- #7D5A50
+- #FFFFFF
 
 ## Tipografia ##
 
