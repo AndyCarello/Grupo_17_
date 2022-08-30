@@ -6,7 +6,7 @@ const path = require("path");
 app.use(express.static("public"));
 
 //inicio el servidor en el puerto 80 asi no lo tengo que aclarar en el navegador
-app.listen(80, () => {
+app.listen(process.env.PORT || 80, () => {
     console.log("Servidor corriendo")
 });
 
@@ -52,4 +52,16 @@ app.get("/ingreso", (req,res)=>{
 app.get("/perfil", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/perfil.html"));
     console.log("Mostrando Pagina de Perfil");
+});
+
+//Probando el header
+app.get("/header", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/header.html"));
+    console.log("Mostrando header");
+});
+
+//Probando el header2
+app.get("/header2", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/header2.html"));
+    console.log("Mostrando header2");
 });
