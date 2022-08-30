@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ingreso.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Aca va pegado el contenido de header.html-->
+    </header>
+    <main>
+        <section class="flex">
+            <div class="ancho-full centrado">
+                <img id="ingreso-logo" src="/img/sp-logo.png" alt="Logo Sucre Pasteleria">
+            </div>
+            <div class="ancho-full centrado">
+                <h1>CONSULTA SI LLEGAMOS A TU DOMICILIO</h1>
+            </div>
+            <form class="flex" action="ingreso" method="post">
+                <div class="ancho-full centrado">
+                    <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required>
+                </div>
+                <div class="ancho-full centrado">
+                    <input type="tex" name="numero" id="numero" placeholder="Número" required>
+                </div>
+                <div class="ancho-full centrado">
+                    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad/Localidad" required>
+                </div>
+                <div id="mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26278.115535080597!2d-58.4138953622175!3d-34.584826443567565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca99c609fc2f%3A0x392ca99351808a75!2sRecoleta%2C%20CABA!5e0!3m2!1ses!2sar!4v1661885854397!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="ancho-full centrado">
+                    <button type="submit" id="BUSCARr">Buscar</button>
+                </div>
+                <div class="ancho-full espaciado">
+                    <div>
+                        <a href="javascript:history.back()">Volver</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

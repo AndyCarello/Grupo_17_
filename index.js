@@ -65,3 +65,9 @@ app.get("/header2", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/header2.html"));
     console.log("Mostrando header2");
 });
+
+//Muestra pagina de delivery
+app.get("/delivery", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/delivery.html"));
+    console.log("Mostrando Pagina de Delivery");
+});
