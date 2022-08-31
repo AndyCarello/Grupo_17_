@@ -63,6 +63,25 @@ app.get("/delivery", (req,res)=>{
     console.log("Mostrando Pagina de Delivery");
 });
 
+
+
+// Mostrando los productos //
+app.get("/productos", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/productos.html"));
+    console.log("Mostrando Pagina de productos");
+});
+ // preguntas frecuentes //
+ app.get("/preguntas-frecuentes", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/preguntas-frecuentes.html"));
+    console.log("preguntas frecuentes");
+});
+
+// producto //
+app.get("/producto", (req,res)=>{
+    res.sendFile(path.join(__dirname, "/views/producto.html"));
+    console.log("producto");
+});
+
 //inicio el servidor en el puerto 80 asi no lo tengo que aclarar en el navegador
 app.listen(process.env.PORT || 80, () => {
     console.log("Servidor corriendo")
