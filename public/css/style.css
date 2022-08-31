@@ -1,5 +1,6 @@
 /* Stylesheet para Sucre Pasteleria*/
 
+
 body {
     background-color: #F4ECE0;
     
@@ -35,6 +36,7 @@ input {
 }
 
 button {
+    display: flex;
     color:#7D5A50;
     background-color: #FCDEC0 ;
     border-style: none;
@@ -43,6 +45,7 @@ button {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    width: 50%;
 }
 
 main {

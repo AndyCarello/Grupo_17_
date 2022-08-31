@@ -16,7 +16,8 @@
 
 ### Antonella Villarroel ###
 ### Valentina Adle ###
-
+- Explicar de forma mas clara y detallada posible lo hecho por cada uno
+- Ordenar el código para que sea legible para el otro
 ## HACER MAS ##
 
 ### Andrea Carello ###
@@ -33,6 +34,8 @@
 ### Antonella Villarroel ###
 ### Valentina Adle ###
 
+- Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales
+
 ## CONTINUAR HACIENDO ##
 
 ### Andrea Carello ###
@@ -47,8 +50,11 @@
 
 ### Antonella Villarroel ###
 ### Valentina Adle ###
+Consultar acerca de decisiones que sean cruciales sobre la pagina
 
 ## HACER MENOS ##
+
+Contestar a tiempo los mensajes del discord
 
 ### Andrea Carello ###
 
@@ -71,5 +77,6 @@
 ### Antonella Villarroel ###
 ### Valentina Adle ###
 
+- Contestar tarde los mensajes
 
 
