@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,37 +13,50 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 rel="stylesheet" />
 </head>
+
 <body>
-    <header>
-        <div class="header-">
-            
-            </div>  
-            <div>         
+    <header
+        style="background-color: red;display: flex;/* justify-content: space-between; // width: 100%; */flex-wrap: wrap;">
+        <div id="barra-superior"
+            style="background-color: green;display: flex;flex-basis: 100%;justify-content: space-between;">
+            <div id="buscador" style="background-color: purple;">
                 <form action="#" method="GET">
                     <input type="text" name="busqueda" placeholder="Buscar...">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-             <div id="header-logo">
-                <img src="img/sp-logo.png">
-            <div>
-                <ul>
+            <div id="grupo-dcho" style="background-color: yellow;">
+                <div id="carrito" style="background-color: indianred;">
                     <a href="#">Carrito</a>
+                </div>
+                <div id="login-bar" style="background-color: gray;">
                     <a href="/register">Crea tu cuenta</a>
                     <a href="/login">Ingresa</a>
-                </ul>
+                </div>
+
             </div>
         </div>
-        <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Quienes Somos</a></li>
-              <li><a href="#">Contacto</a></li>
-              <li><a href="#">Delivery</a></li>
-              <li><a href="#">Preguntas Frecuentes</a></li>
-            </ul> 
-        </nav>      
+        <div id="contenedor logo" style="background-color: blue;flex-basis: 100%;">
+            <img src="img/sp-logo.png">
+        </div>
+        <nav id="barra-navegacion" style="
+        flex-basis: 100%;
+    ">
+            <ul style="
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-evenly;
+    ">
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">Productos</a></li>
+                 <li><a href="#">Quienes Somos</a></li>
+                 <li><a href="#">Contacto</a></li>
+                 <li><a href="#">Delivery</a></li>
+                 <li><a href="#">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
     </header>
 </body>
+
 </html>
