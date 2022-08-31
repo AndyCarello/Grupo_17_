@@ -27,6 +27,49 @@ a {
     color:#7D5A50;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.ancho-full {
+    flex-basis: 80%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ancho-half {
+    flex-basis: 81%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+}
+
+.ancho-quarter {
+    flex-basis: 34%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.centrado {
+    justify-content: center;
+}
+
+.espaciado {
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    color:#7D5A50;
+}
+
+
+
 input {
     border-style: none;
     padding: 0.7em;
@@ -68,6 +111,28 @@ footer {
 
 /* Fin estilos Footer */
 
+/* Estilos Ingreso.html */
+#ingreso-logo {
+    width: 40%;
+}
+
+#email, #password, #ingresar {
+    width: 100%;
+}
+
+/* Fin estilos Igreso.html */
+
+/* Estilos recuperar.html */
+#recuperar-logo {
+    width: 40%;
+}
+
+input, button {
+    width: 100%;
+}
+/* Fin estilos recuperar.html */
+
+
 /* Comienzo media Querys */
 
 /* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
@@ -79,11 +144,17 @@ footer {
 
 /* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
 @media (min-width: 768px) {
-
+    main {
+            padding-left: 15vw;
+            padding-right: 15vw;
+        }
 }
 
 /* Laptos y computadoras mas grandes ()*/
 @media (min-width: 1280px) {
-
+    main {
+        padding-left: 25vw;
+        padding-right: 25vw;
+    }
 }
 /* Fin media Querys */
