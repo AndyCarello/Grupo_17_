@@ -5,8 +5,6 @@ const path = require("path");
 //defino la carpeta public para que el contenido se use directo
 app.use(express.static("public"));
 
-
-
 //creo el archivo test para que sepamos que esta funcionando
 app.get("/", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/test.html"));
