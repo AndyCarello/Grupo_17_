@@ -30,6 +30,7 @@
 - Contestar tarde los mensajes
 
 
+
 # Retrospectiva Grupo 17 (Sprint 1) # 
 
 ## COMENZAR A HACER ##
