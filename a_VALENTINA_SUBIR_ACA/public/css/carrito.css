@@ -123,6 +123,8 @@ main {
     font-size: 20px;
     justify-content: space-evenly;
     align-items: flex-end;
+    width: 40%;
+    margin-left: 5%;
 }
 
 .cantidad {
