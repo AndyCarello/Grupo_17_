@@ -2,13 +2,8 @@
 
 ## COMENZAR A HACER ##
 
-### Andrea Carello ###
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
+- Organizarnos mejor a la hora de reunirnos
+- Mantener actualizado el tablero de trabajo
 
 ## HACER MAS ##
 
