@@ -55,7 +55,7 @@
 - Definir de antemano el tema de las reuniones
 - Optimizar la duracion de las reuniones
 - Implementar y mantener actualizado el tablero de trabajo
-- Que la organizacion sea mas fluida para poder concretar cada spring de manera segura
+- Que la organizacion sea mas fluida para poder concretar cada sprint de manera segura
 - Cada uno avise por que parte esta de su tarea asignada , asi no nos atrasamos
 - Reunion unos dias antes de la entrega para poder ver cuanto nos falta o si ya esta el trabajo terminado
 - Explicar de forma mas clara y detallada posible lo hecho por cada uno
