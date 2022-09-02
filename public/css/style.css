@@ -173,15 +173,45 @@ header {
 }
 
 #barra-navegacion ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 2em;
-    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#barra-navegacion ul li.derecha {
+    justify-content: right;
+}
+
+#barra-navegacion ul li.separador {
+    height: auto;
 }
 
 #barra-navegacion ul li:hover {
-    background-color: aqua;
+    background-color: #7D5A50;
 }
 
+#barra-navegacion ul li:hover a {
+    color: #FCDEC0;
+}
 
+#barra-navegacion ul li.invertido {
+    background-color: #7D5A50;
+}
+
+#barra-navegacion ul li.invertido a {
+    color: #FCDEC0;
+}
+
+#barra-navegacion ul li.invertido:hover {
+    background-color: #FCDEC0;
+}
+
+#barra-navegacion ul li.invertido:hover a {
+    color: #7D5A50;
+}
 
 /* Fin estilos Header */
 
