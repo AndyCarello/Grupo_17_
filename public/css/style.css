@@ -88,7 +88,6 @@ button {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    width: 50%;
 }
 
 main {
@@ -98,8 +97,91 @@ main {
 /* Estilos Header */
 
 header {
+    background-color: #F4ECE0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#barra-superior {
+    display: flex;
+    flex-basis: 70%;
+    flex-grow: 0.7;
+    justify-content: space-between;
+    order: 2;
 
 }
+
+#buscador {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#buscador form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#buscador form input[type="text"] {
+    min-width: 0px;
+    width: 1px;
+    flex: 1 1 auto;
+}
+
+#grupo-dcho {
+    background-color: yellow;
+    display: none;
+}
+
+#carrito {
+    background-color: indianred; 
+}
+
+#login-bar {
+    
+    background-color: gray;
+}
+
+#contenedor-logo{
+    background-color: #F4ECE0;
+    order: 1;
+    display: flex;
+    flex-grow: 0.3;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+}
+
+#contenedor-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+#barra-navegacion {
+    flex-basis: 100%;
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#barra-navegacion ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;
+}
+
+#barra-navegacion ul li {
+    height: 2em;
+    text-align: center;
+}
+
+#barra-navegacion ul li:hover {
+    background-color: aqua;
+}
+
+
 
 /* Fin estilos Header */
 
@@ -127,9 +209,9 @@ footer {
     width: 40%;
 }
 
-input, button {
+/* input, button {
     width: 100%;
-}
+} */
 /* Fin estilos recuperar.html */
 
 
