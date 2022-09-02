@@ -25,8 +25,8 @@ body {
 .slider{
 
   display:table;
-position:relative;
-margin-bottom:10px;
+  position:relative;
+  margin-bottom:10px;
   width: 110%;
 }
 
@@ -39,21 +39,24 @@ margin-bottom:10px;
 
 .texto{
 
-  position: absolute;
-  text-align:center;
+  
   top: 50px;
-  left: 20%;
-  margin: 10px;
+  left: 10%; 
+  text-align: center;
+  position: absolute;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 15px;
   color: white;
- 
-  padding:10px;
-  box-sizing: border-box;
   
 
 }
 
+.texto h3{
+
+  
+  font-size: 23px;
+  
+  
+}
 
 
 .texto-menu {
@@ -72,16 +75,32 @@ margin-bottom:10px;
   overflow: hidden;
   position: relative;
   margin: 1.5%;
+  
 
 
 }
 
-.img1:hover{
 
-  -webkit-transform:scale(1.1);
-  transform:scale(1.1);
-  transition:all .5s ease-in-out
+
+.box2 i {
+
+  color: #7D5A50;
+  visibility: hidden;
 }
+
+.box2:hover i {
+
+  visibility: visible;
+}
+
+.box2:hover{
+
+
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+
+}
+
+
 
 .img1{
 
@@ -111,16 +130,19 @@ section div .img1{
 
 .logo{
 
-width:400px;
-position: relative;
-display: flex;
+  display: flex;
+
 
 
 }
 
 
 
-footer {background-color: #F4ECE0;/* padding: 7%; */width: 100%;}
+footer {
+  background-color: #F4ECE0;
+  /* padding: 7%; */
+  width: 100%;
+}
 
 
 
@@ -240,31 +262,15 @@ border-radius: 100%;
 
 }
 
-footer div i {
 
-position: relative;
-display: flex;
-margin-left: 5%;
-margin-bottom: 0px;
+.footer-informacion{
 
-
-
-
-
-}
-
-
-footer h3 {
-
-  position: relative;
   display: flex;
-  margin-left: 20%;
-  margin-bottom: 0px;
-  font-size: 20px;
-  bottom: 30px;
-  
+  flex-direction: column;
+  align-items:center;
   
 }
+
 
 
 footer iframe{
@@ -313,8 +319,8 @@ width: 100%;
 
 .img3{
 
-display:flex;
-justify-content:center;
+  display:flex;
+  justify-content:center;
 }
 
 
@@ -396,7 +402,6 @@ display:none;
   
     .texto{
 
-      
       top: 120px;
       left: 20%; 
       font-size: 30px;
@@ -426,7 +431,7 @@ display:none;
   html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
-}
+  }
 
   .Menu-preview{
 
@@ -483,14 +488,18 @@ display:none;
     }
 
     
+   .texto h3 {
+    
 
+    font-size: 50px;
+
+   } 
 
    .texto{
 
-      
-      top: 120px;
+      top: 260px;
       left: 20%; 
-      font-size: 50px;
+      
    }
    
 
@@ -505,34 +514,22 @@ display:none;
 
     footer i {
 
-    font-size: 40px;
+    font-size: 30px;
     padding: 10px;
     
 
   }
 
-  footer div i {
 
-    left: 300px;
+  .footer-h3{
 
-
-
-
-
-  }
-
-
-  footer h3 {
-
-    left: 200px
-  
-  
+    font-size: 25px;
   }
 
   footer iframe{
 
     display:flex;
-    margin-left: 60%;
+    margin-left: 70%;
     margin-bottom: 0px;
     bottom: 70px;
 
