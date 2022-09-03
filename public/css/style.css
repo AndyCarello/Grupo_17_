@@ -14,12 +14,13 @@ h2 {
     
 }
 
-
 h3 {
     color: #7D5A50;
 }
 
 p {
+
+    color:#7D5A50;
 
 }
 
@@ -69,8 +70,6 @@ label {
     color:#7D5A50;
 }
 
-
-
 input {
     border-style: none;
     padding: 0.7em;
@@ -89,6 +88,7 @@ button {
     font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    justify-content: center;
 }
 
 main {
@@ -124,26 +124,30 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
 }
 
 #buscador form input[type="text"] {
     min-width: 0px;
     width: 1px;
     flex: 1 1 auto;
+    margin: 0;
+}
+
+#buscador form button {
+    margin: 0;
 }
 
 #grupo-dcho {
-    background-color: yellow;
     display: none;
 }
 
 #carrito {
-    background-color: indianred; 
-}
+    background-color: #FCDEC0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #7D5A50;
 
-#login-bar {
-    
-    background-color: gray;
 }
 
 #contenedor-logo{
@@ -199,11 +203,11 @@ header {
 }
 
 #barra-navegacion ul li.invertido {
-    background-color: #7D5A50;
+    background-color: #FCDEC0;
 }
 
 #barra-navegacion ul li.invertido a {
-    color: #FCDEC0;
+    color: #7D5A50;
 }
 
 #barra-navegacion ul li.invertido:hover {
@@ -214,7 +218,83 @@ header {
     color: #7D5A50;
 }
 
+/* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
+
+/* Smartphones mas grandes y tablets pequeñas (mas de 480px)*/
+@media (min-width: 480px) { 
+
+}
+
+/* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
+@media (min-width: 768px) {
+   #barra-superior {
+    order: 1;
+    flex: 1 1 100%;
+   }
+
+   #buscador {
+    width: 25%;
+   }
+
+   #grupo-dcho {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   #grupo-dcho #carrito {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   #grupo-dcho #login-bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 20px;
+    
+
+   }
+
+   #grupo-dcho #login-bar div {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+
+   }
+
+   #contenedor-logo {
+    order: 2;
+    flex: 1 1 100%;
+    align-content: center;
+    justify-content: center;
+   }
+
+   #barra-navegacion ul li.solo-mobile {
+    display: none;
+   }
+
+   #barra-navegacion ul {
+    display: inline-flex;
+    justify-content: space-evenly;
+    background-color: #FCDEC0;
+   }
+
+
+}
+
+/* Laptos y computadoras mas grandes ()*/
+@media (min-width: 1280px) {
+    main {
+        padding-left: 25vw;
+        padding-right: 25vw;
+    }
+}
+/* Fin media Querys */
 /* Fin estilos Header */
+
+
 
 /* Estilos Footer */
 
@@ -223,6 +303,8 @@ footer {
 }
 
 /* Fin estilos Footer */
+
+
 
 /* Estilos Ingreso.html */
 #ingreso-logo {
@@ -236,14 +318,32 @@ footer {
 /* Fin estilos Igreso.html */
 
 /* Estilos recuperar.html */
-#recuperar-logo {
-    width: 40%;
+
+#recuperar input, #recuperar button {
+    width: 100%;
 }
 
-/* input, button {
-    width: 100%;
-} */
 /* Fin estilos recuperar.html */
+
+/* Estilos registro.html */
+
+#registro input, #registro button {
+    width: 100%;
+}
+
+/* Estilos delivery.html */
+
+#delivery input, #delivery button {
+    width: 100%;
+}
+
+/* Fin estilos restablecer.html */
+
+#restablecer input, #restablecer button {
+    width: 100%;
+}
+
+/* Fin estilos restablecer.html */
 
 
 /* Comienzo media Querys */
@@ -261,6 +361,14 @@ footer {
             padding-left: 15vw;
             padding-right: 15vw;
         }
+
+    .registro-ancho-half {
+        flex-basis:34%;
+    }
+
+    .registro-ancho-quarter {
+        flex-basis:21%;
+    }
 }
 
 /* Laptos y computadoras mas grandes ()*/

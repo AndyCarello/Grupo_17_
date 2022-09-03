@@ -9,6 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/ingreso.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+rel="stylesheet" />
         
     </head>
     <body>
@@ -22,11 +24,15 @@
                 </div>
                 <div id="grupo-dcho">
                     <div id="carrito">
-                        <a href="#">Carrito</a>
+                        <a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
                     </div>
                     <div id="login-bar">
-                        <a href="/register">Crea tu cuenta</a>
-                        <a href="/login">Ingresa</a>
+                        <div>
+                            <a href="/registro">Crea tu cuenta</a>
+                        </div>
+                        <div>
+                            <a href="ingreso">Ingresa</a>
+                        </div>
                     </div>
     
                 </div>
@@ -36,18 +42,17 @@
             </div>
             <nav id="barra-navegacion">
                 <ul>
-                     <li id="abrir-menu" class="invertido derecha"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
-                     <li><a href="#">Home</a></li>
-                     <li><a href="#">Productos</a></li>
-                     <li><a href="#">Quienes Somos</a></li>
-                     <li><a href="#">Contacto</a></li>
-                     <li><a href="#">Delivery</a></li>
-                     <li><a href="#">Preguntas Frecuentes</a></li>
-                     <li class="separador"><hr></li>
-                     <li class="invertido"><a href="#"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
-                     <li class="invertido"><a href="#"><i class="fas fa-user"></i>Ingresar</a></li>
-                     <li class="invertido"><a href="#"><i class="fas fa-user-plus"></i>Regitrarme</a></li>
-                     <li id="cerrar-menu" class="derecha"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
+                     <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
+                     <li><a href="/">Home</a></li>
+                     <li><a href="productos">Productos</a></li>
+                     <li><a href="info">Quienes Somos</a></li>
+                     <li><a href="contacto">Contacto</a></li>
+                     <li><a href="delivery">Delivery</a></li>
+                     <li><a href="preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                     <li class="invertido solo-mobile"><a href="#"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                     <li class="invertido solo-mobile"><a href="#"><i class="fas fa-user"></i>Ingresar</a></li>
+                     <li class="invertido solo-mobile"><a href="#"><i class="fas fa-user-plus"></i>Registrarme</a></li>
+                     <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
                 </ul>
             </nav>
         </header>

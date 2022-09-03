@@ -17,14 +17,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ingreso.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+rel="stylesheet" />
 
 </head>
 
 <body>
     <header>
-        <!-- Aca va pegado el contenido de header.html-->
+        <div id="barra-superior">
+            <div id="buscador">
+                <form action="#" method="GET">
+                    <input type="text" name="busqueda" placeholder="Buscar...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div id="grupo-dcho">
+                <div id="carrito">
+                    <a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
+                </div>
+                <div id="login-bar">
+                    <div>
+                        <a href="/registro">Crea tu cuenta</a>
+                    </div>
+                    <div>
+                        <a href="ingreso">Ingresa</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="contenedor-logo">
+            <img src="img/sp-logo.png">
+        </div>
+        <nav id="barra-navegacion">
+            <ul>
+                 <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="productos">Productos</a></li>
+                 <li><a href="info">Quienes Somos</a></li>
+                 <li><a href="contacto">Contacto</a></li>
+                 <li><a href="delivery">Delivery</a></li>
+                 <li><a href="preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                 <li class="invertido solo-mobile"><a href="#"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                 <li class="invertido solo-mobile"><a href="#"><i class="fas fa-user"></i>Ingresar</a></li>
+                 <li class="invertido solo-mobile"><a href="#"><i class="fas fa-user-plus"></i>Registrarme</a></li>
+                 <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
+    <main id="delivery">
         <section class="flex">
             <div class="ancho-full centrado">
                 <h1>CONSULTA SI LLEGAMOS A 
@@ -40,10 +81,10 @@
                 <div class="ancho-full centrado">
                     <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad/Localidad" required>
                 </div>
-                <div id="mapa">
+                <div id="mapa" class="ancho-full centrado">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26278.115535080597!2d-58.4138953622175!3d-34.584826443567565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca99c609fc2f%3A0x392ca99351808a75!2sRecoleta%2C%20CABA!5e0!3m2!1ses!2sar!4v1661885854397!5m2!1ses!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="ancho-full centrado">
