@@ -93,9 +93,12 @@ footer {
 
   }
 
-  footer div{
+  .logo-footer{
 
-    height: 60px
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
 

@@ -98,6 +98,19 @@ app.get('/info', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/info.html'))
 });
 
+
+app.get('/contacto', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/contacto.html'))
+});
+
+app.get('/footer', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/footer.html'))
+});
+
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/index.html'))
+});
+
 //inicio el servidor en el puerto 80 asi no lo tengo que aclarar en el navegador
 app.listen(process.env.PORT || 80, () => {
     console.log("Servidor corriendo")
