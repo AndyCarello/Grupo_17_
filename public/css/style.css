@@ -10,10 +10,6 @@ h1 {
     color: #7D5A50;
 }
 
-h2 {
-    
-}
-
 h3 {
     color: #7D5A50;
 }
@@ -95,7 +91,11 @@ main {
     padding: 5vw;
 }
 
-/* Estilos Header */
+main input, main button {
+    width: 100%;
+}
+
+/* Estilos Header Mobile First */
 
 header {
     background-color: #F4ECE0;
@@ -218,81 +218,10 @@ header {
     color: #7D5A50;
 }
 
-/* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
-
-/* Smartphones mas grandes y tablets pequeñas (mas de 480px)*/
-@media (min-width: 480px) { 
-
-}
-
-/* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
-@media (min-width: 768px) {
-   #barra-superior {
-    order: 1;
-    flex: 1 1 100%;
-   }
-
-   #buscador {
-    width: 25%;
-   }
-
-   #grupo-dcho {
-    display: flex;
-    flex-wrap: wrap;
-   }
-
-   #grupo-dcho #carrito {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-
-   #grupo-dcho #login-bar {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    column-gap: 20px;
-    
-
-   }
-
-   #grupo-dcho #login-bar div {
-    display: flex;
-    flex-basis: 50%;
-    justify-content: center;
-
-   }
-
-   #contenedor-logo {
-    order: 2;
-    flex: 1 1 100%;
-    align-content: center;
-    justify-content: center;
-   }
-
-   #barra-navegacion ul li.solo-mobile {
-    display: none;
-   }
-
-   #barra-navegacion ul {
-    display: inline-flex;
-    justify-content: space-evenly;
-    background-color: #FCDEC0;
-   }
-
-
-}
-
-/* Laptos y computadoras mas grandes ()*/
-@media (min-width: 1280px) {
-    main {
-        padding-left: 25vw;
-        padding-right: 25vw;
-    }
-}
-/* Fin media Querys */
 /* Fin estilos Header */
+
+
+
 
 
 
@@ -306,48 +235,8 @@ footer {
 
 
 
-/* Estilos Ingreso.html */
-#ingreso-logo {
-    width: 40%;
-}
-
-#email, #password, #ingresar {
-    width: 100%;
-}
-
-/* Fin estilos Igreso.html */
-
-/* Estilos recuperar.html */
-
-#recuperar input, #recuperar button {
-    width: 100%;
-}
-
-/* Fin estilos recuperar.html */
-
-/* Estilos registro.html */
-
-#registro input, #registro button {
-    width: 100%;
-}
-
-/* Estilos delivery.html */
-
-#delivery input, #delivery button {
-    width: 100%;
-}
-
-/* Fin estilos restablecer.html */
-
-#restablecer input, #restablecer button {
-    width: 100%;
-}
-
-/* Fin estilos restablecer.html */
-
 
 /* Comienzo media Querys */
-
 /* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
 
 /* Smartphones mas grandes y tablets pequeñas (mas de 480px)*/
@@ -369,6 +258,65 @@ footer {
     .registro-ancho-quarter {
         flex-basis:21%;
     }
+
+    /* Comienzo header desktop */
+
+    #barra-superior {
+        order: 1;
+        flex: 1 1 100%;
+       }
+    
+       #buscador {
+        width: 25%;
+       }
+    
+       #grupo-dcho {
+        display: flex;
+        flex-wrap: wrap;
+       }
+    
+       #grupo-dcho #carrito {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+    
+       #grupo-dcho #login-bar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        column-gap: 20px;
+        
+    
+       }
+    
+       #grupo-dcho #login-bar div {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: center;
+    
+       }
+    
+       #contenedor-logo {
+        order: 2;
+        flex: 1 1 100%;
+        align-content: center;
+        justify-content: center;
+       }
+    
+       #barra-navegacion ul li.solo-mobile {
+        display: none;
+       }
+    
+       #barra-navegacion ul {
+        display: inline-flex;
+        justify-content: space-evenly;
+        background-color: #FCDEC0;
+       }   
+    
+
+    /* Fin header desktop */
 }
 
 /* Laptos y computadoras mas grandes ()*/
