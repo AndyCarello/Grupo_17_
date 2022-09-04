@@ -9,59 +9,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Productos.css">
+    <link rel="stylesheet" href="css/productos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 rel="stylesheet" />
 </head>
 
 <body>
-    <header
-        style="background-color: red;display: flex;/* justify-content: space-between; // width: 100%; */flex-wrap: wrap;">
-        <div id="barra-superior"
-            style="background-color: green;display: flex;flex-basis: 100%;justify-content: space-between;">
-            <div id="buscador" style="background-color: purple;">
+    <header>
+        <div id="barra-superior">
+            <div id="buscador">
                 <form action="#" method="GET">
                     <input type="text" name="busqueda" placeholder="Buscar...">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            <div id="grupo-dcho" style="background-color: yellow;">
-                <div id="carrito" style="background-color: indianred;">
-                    <a href="#">Carrito</a>
+            <div id="grupo-dcho">
+                <div id="carrito">
+                    <a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
                 </div>
-                <div id="login-bar" style="background-color: gray;">
-                    <a href="/register">Crea tu cuenta</a>
-                    <a href="/login">Ingresa</a>
+                <div id="login-bar">
+                    <div>
+                        <a href="/registro">Crea tu cuenta</a>
+                    </div>
+                    <div>
+                        <a href="ingreso">Ingresa</a>
+                    </div>
                 </div>
 
             </div>
         </div>
-        <div id="contenedor logo" style="background-color: blue;flex-basis: 100%;">
-            <img src="img/sp-logo.png">
+        <div id="contenedor-logo">
+            <img src="img/sp_logo.png">
         </div>
-        <nav id="barra-navegacion" style="
-        flex-basis: 100%;
-    ">
-            <ul style="
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
-        justify-content: space-evenly;
-    ">
-                 <li><a href="#">Home</a></li>
-                 <li><a href="#">Productos</a></li>
-                 <li><a href="#">Quienes Somos</a></li>
-                 <li><a href="#">Contacto</a></li>
-                 <li><a href="#">Delivery</a></li>
-                 <li><a href="#">Preguntas Frecuentes</a></li>
+        <nav id="barra-navegacion">
+            <ul>
+                 <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="productos">Productos</a></li>
+                 <li><a href="info">Quienes Somos</a></li>
+                 <li><a href="contacto">Contacto</a></li>
+                 <li><a href="delivery">Delivery</a></li>
+                 <li><a href="preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                 <li class="invertido solo-mobile"><a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                 <li class="invertido solo-mobile"><a href="ingreso"><i class="fas fa-user"></i>Ingresar</a></li>
+                 <li class="invertido solo-mobile"><a href="registro"><i class="fas fa-user-plus"></i>Registrarme</a></li>
+                 <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
             </ul>
         </nav>
     </header>
+
+
     <main> 
         <section>
             <article>
                 <figure>
-                    <img src="/images/cheesecake.png" alt="torta">
+                    <img src="/img/cheesecake.png" alt="torta">
                 </figure>
                 <p><button class="button" type="submit" > Agregar al carrito </button></p>
             </article>
@@ -77,7 +79,7 @@ rel="stylesheet" />
           <section>
             <article>
                 <figure>
-                    <img src="/images/oreo.png" alt="torta">
+                    <img src="/img/oreo.png" alt="torta">
                 </figure>
                 <p><button class="button" type="submit" > Agregar al carrito </button></p>
             </article>
@@ -85,7 +87,7 @@ rel="stylesheet" />
          <section>
             <article>
                 <figure>
-                    <img src="/images/balcarse.png" alt="torta">
+                    <img src="/img/balcarce-cake.png" alt="torta">
                 </figure>
                 <p><button class="button" type="submit" > Agregar al carrito </button></p>
             </article>
