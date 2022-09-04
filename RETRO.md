@@ -68,6 +68,8 @@
 - Reunion unos dias antes de la entrega para poder ver cuanto nos falta o si ya esta el trabajo terminado
 
 ### Antonella Villarroel ###
+- Que coincidamos en reuniones, para trabajar en equipo
+- revisar con frecuencia trello
 ### Valentina Adle ###
 - Explicar de forma mas clara y detallada posible lo hecho por cada uno
 - Ordenar el código para que sea legible para el otro
@@ -82,6 +84,7 @@
 ### Facundo Morcillo ###
 
 ### Antonella Villarroel ###
+- implementar mas ideas, trabajar mas como grupo!
 
 ### Valentina Adle ###
 
@@ -98,13 +101,14 @@
 - Repasar y tratar de no quedarse atras
 
 ### Antonella Villarroel ###
+- Reuniones 
 
 ### Valentina Adle ###
-Consultar acerca de decisiones que sean cruciales sobre la pagina
+- Consultar acerca de decisiones que sean cruciales sobre la pagina
 
 ## HACER MENOS ##
 
-Contestar a tiempo los mensajes del discord
+- Contestar a tiempo los mensajes del discord
 
 ### Andrea Carello ###
 - Correr a ultimo momento para llegar con un entregable

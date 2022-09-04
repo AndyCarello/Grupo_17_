@@ -24,3 +24,9 @@ app.get('/contacto', (req,res)=>{
     res.sendFile(path.join(__dirname,'./views/contacto.html'));
   
   });
+  
+  app.get('/Productos', (req,res)=>{
+
+    res.sendFile(path.join(__dirname,'./views/Productos.html'));
+  
+  });
