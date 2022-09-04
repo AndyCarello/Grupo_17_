@@ -112,6 +112,6 @@ app.get('/home', (req, res) => {
 });
 
 //inicio el servidor en el puerto 80 asi no lo tengo que aclarar en el navegador
-app.listen(process.env.PORT || 3030, () => {
+app.listen(process.env.PORT || 80, () => {
     console.log("Servidor corriendo")
 });
