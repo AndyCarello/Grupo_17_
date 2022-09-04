@@ -2,54 +2,32 @@
 
 ## COMENZAR A HACER ##
 
-### Andrea Carello ###
+- Organizarnos mejor a la hora de reunirnos
+- Avisar por que parte esta de su tarea asignada para no atrasar al resto.
+- Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales.
 
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
 
 ## HACER MAS ##
+- Que Discord sea el canal principal para tener todo el seguimiento del proyecto en un solo lugar.
+- Repasar y tratar de no quedarse atras
 
-### Andrea Carello ###
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
 
 ## CONTINUAR HACIENDO ##
+- Mantener actualizado el tablero de trabajo
+- Mantener el repositorio actualizado
 
-### Andrea Carello ###
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
 
 ## HACER MENOS ##
+- No Contestar a tiempo los mensajes del discord
+- Correr a ultimo momento para llegar con un entregable
+- No responder el discord en tiempo y forma para que la organizacion sea fluida
+- Comunicar poco las cosas que hago
 
-### Andrea Carello ###
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
 
 ## DEJAR DE HACER ##
-
-### Andrea Carello ###
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
-
+- Organizar reuniones a ultimo momento
+- Cambiar horarios de reuniones que ya estaban establecidos
+- Contestar tarde los mensajes
 
 
 
@@ -57,83 +35,43 @@
 
 ## COMENZAR A HACER ##
 
-### Andrea Carello ###
 - Definir de antemano el tema de las reuniones
 - Optimizar la duracion de las reuniones
 - Implementar y mantener actualizado el tablero de trabajo
-
-### Facundo Morcillo ###
-- Que la organizacion sea mas fluida para poder concretar cada spring de manera segura
+- Que la organizacion sea mas fluida para poder concretar cada sprint de manera segura
 - Cada uno avise por que parte esta de su tarea asignada , asi no nos atrasamos
 - Reunion unos dias antes de la entrega para poder ver cuanto nos falta o si ya esta el trabajo terminado
-
-### Antonella Villarroel ###
-- Que coincidamos en reuniones, para trabajar en equipo
-- revisar con frecuencia trello
-### Valentina Adle ###
 - Explicar de forma mas clara y detallada posible lo hecho por cada uno
 - Ordenar el código para que sea legible para el otro
+
 ## HACER MAS ##
 
-### Andrea Carello ###
 - Consensuar las decisiones y una vez aprobado no volver sobre los mismos temas
 - Usar Discord como canal principal para tener todo el seguimiento del proyecto en un solo lugar
 - Mantener informado al equipo sobre desvios en lo planificado para poder buscar una alternativa lo antes posible
-
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-- implementar mas ideas, trabajar mas como grupo!
-
-### Valentina Adle ###
-
+- Que Discord sea el canal principal para tener todo el seguimiento del proyecto en un solo lugar.
 - Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales
 
 ## CONTINUAR HACIENDO ##
 
-### Andrea Carello ###
 - Llegar con la fecha de entrega
 - Mantener el repositorio actualizado
-
-### Facundo Morcillo ###
 - Mantener el tablero de trabajo actualizado
 - Repasar y tratar de no quedarse atras
-
-### Antonella Villarroel ###
-- Reuniones 
-
-### Valentina Adle ###
 - Consultar acerca de decisiones que sean cruciales sobre la pagina
 
 ## HACER MENOS ##
 
-- Contestar a tiempo los mensajes del discord
-
-### Andrea Carello ###
+- No Contestar a tiempo los mensajes del discord
 - Correr a ultimo momento para llegar con un entregable
+- No responder el discord en tiempo y forma para que la organizacion sea fluida
+- Comunicar poco las cosas que hago
 
-### Facundo Morcillo ###
-- No responder el discord o wssp en tiempo y forma para que la organizacion sea fluida
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
-Comunicar poco las cosas que hago
 ## DEJAR DE HACER ##
 
-### Andrea Carello ###
 - Organizar reuniones a ultimo momento
 - Cambiar horarios de reuniones que ya estaban establecidos
-
-### Facundo Morcillo ###
-
-### Antonella Villarroel ###
-
-### Valentina Adle ###
-
-
 - Contestar tarde los mensajes
 
 
-=
+

@@ -5,8 +5,6 @@ const path = require("path");
 //defino la carpeta public para que el contenido se use directo
 app.use(express.static("public"));
 
-
-
 //creo el archivo test para que sepamos que esta funcionando
 app.get("/", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/test.html"));
@@ -63,7 +61,7 @@ app.get("/delivery", (req,res)=>{
     console.log("Mostrando Pagina de Delivery");
 });
 
-
+//Rutas Valentina//
 
 // Mostrando los productos //
 app.get("/productos", (req,res)=>{
@@ -80,6 +78,37 @@ app.get("/productos", (req,res)=>{
 app.get("/producto", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/producto.html"));
     console.log("producto");
+});
+
+/*Ruta para el carrito*/
+
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/carrito.html'))
+});
+
+/*Ruta para el Finalizaste tu compra*/
+
+app.get('/compra', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/compra.html'))
+});
+
+/*Ruta para el ¿Quienes Somos?*/
+
+app.get('/info', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/info.html'))
+});
+
+
+app.get('/contacto', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/contacto.html'))
+});
+
+app.get('/footer', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/footer.html'))
+});
+
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
 //inicio el servidor en el puerto 80 asi no lo tengo que aclarar en el navegador

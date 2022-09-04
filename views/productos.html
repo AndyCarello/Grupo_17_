@@ -1,1 +1,121 @@
-cl
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Productos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+rel="stylesheet" />
+</head>
+
+<body>
+    <header
+        style="background-color: red;display: flex;/* justify-content: space-between; // width: 100%; */flex-wrap: wrap;">
+        <div id="barra-superior"
+            style="background-color: green;display: flex;flex-basis: 100%;justify-content: space-between;">
+            <div id="buscador" style="background-color: purple;">
+                <form action="#" method="GET">
+                    <input type="text" name="busqueda" placeholder="Buscar...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div id="grupo-dcho" style="background-color: yellow;">
+                <div id="carrito" style="background-color: indianred;">
+                    <a href="#">Carrito</a>
+                </div>
+                <div id="login-bar" style="background-color: gray;">
+                    <a href="/register">Crea tu cuenta</a>
+                    <a href="/login">Ingresa</a>
+                </div>
+
+            </div>
+        </div>
+        <div id="contenedor logo" style="background-color: blue;flex-basis: 100%;">
+            <img src="img/sp-logo.png">
+        </div>
+        <nav id="barra-navegacion" style="
+        flex-basis: 100%;
+    ">
+            <ul style="
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-evenly;
+    ">
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">Productos</a></li>
+                 <li><a href="#">Quienes Somos</a></li>
+                 <li><a href="#">Contacto</a></li>
+                 <li><a href="#">Delivery</a></li>
+                 <li><a href="#">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <section>
+            <article>
+                <figure>
+                    <img src="/images/cheesecake.png" alt="torta">
+                </figure>
+                <p><button class="button" type="submit" > Agregar al carrito </button></p>
+            </article>
+        </section> 
+         <section>
+            <article>
+                <figure>
+                    <img src="/img/musse.png" alt="torta">
+                </figure>
+                <p><button class="button" type="submit" > Agregar al carrito </button></p>
+            </article>
+        </section>
+          <section>
+            <article>
+                <figure>
+                    <img src="/images/oreo.png" alt="torta">
+                </figure>
+                <p><button class="button" type="submit" > Agregar al carrito </button></p>
+            </article>
+        </section>
+         <section>
+            <article>
+                <figure>
+                    <img src="/images/balcarse.png" alt="torta">
+                </figure>
+                <p><button class="button" type="submit" > Agregar al carrito </button></p>
+            </article>
+        </section> 
+
+    </main>
+ <footer>
+            <section>
+                <div class="logo-contacto2">
+                    <img class="logo"
+                    id="image"
+                    src="/images/logo.png"
+                    alt="Logo footer"
+                    />
+                </div>
+    
+                <div><i class="fab fa-whatsapp"> </i></div>
+                    <h3> +54 1138209057 </h3>
+                <div><i class="fab fa-instagram"></i></div>
+                    <h3> PasteleriaSucre </h3>
+                <div><i class="fab fa-twitter"></i></div>
+                    <h3> @PasteleriaSucre </h3>
+                <div><i class="fas fa-envelope"></i></div>
+                    <h3> sucrepasteleria@gmail.com </h3>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105067.54205069569!2d-58.45183960008806!3d-34.62032437223645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires!5e0!3m2!1sen!2sar!4v1661194843809!5m2!1sen!2sar" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+            </section>    
+
+
+        </footer>
+</body>
+</html>
