@@ -18,6 +18,7 @@ body {
 
 
   position: static;
+  
 }
 
 
@@ -88,17 +89,28 @@ body {
   visibility: hidden;
 }
 
+.box2 i:hover{
+
+  color:#FCDEC0;
+  
+  
+}
+
 .box2:hover i {
 
   visibility: visible;
+  
 }
 
 .box2:hover{
 
 
   box-shadow: 0px 0px 10px rgb(100,100,100);
-
+  transition: box-shadow 0.2s ease-in-out;
+  
 }
+
+
 
 
 
@@ -123,6 +135,7 @@ section div .img1{
   display:flex;
   flex-direction: column;
   margin-bottom: 100px;
+  background-color: white;
  
   
 }
@@ -182,6 +195,7 @@ footer {
   box-sizing: border-box;
   -webkit-text-stroke-width: 2px;
  -webkit-text-stroke-color: black;
+ 
 }
 
 .boton-vermas2 {
@@ -252,7 +266,12 @@ color: #7D5A50;
 padding: 5px;
 border: #7D5A50 1px solid;
 border-radius: 100%;
+transition: transform 400ms;
+}
 
+footer i:hover{
+
+  transform: rotateZ(-360deg);
 }
 
 
@@ -409,7 +428,13 @@ display:none;
   }
 
 
-  
+  .logo-footer {
+    order: 2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+   }
 
 
   
@@ -534,7 +559,17 @@ display:none;
   }
 
 
+  .logo-footer {
+    
 
+    justify-content: left;
+    
+   }
+
+   footer img {
+
+    height: 500px;
+   }
   
 
    
