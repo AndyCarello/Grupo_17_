@@ -62,10 +62,11 @@ body {
 
 .texto-menu {
 
-  
-  font-size: 20px;
-  margin-top: 20px;
-  text-align: center;
+font-size: 15px;
+
+margin-top: 20px;
+
+text-align: center;
 }
 
 .box2 {
@@ -89,26 +90,6 @@ body {
   visibility: hidden;
 }
 
-.box2 i:hover{
-
-  color:#FCDEC0;
-  
-  
-}
-
-.box2:hover i {
-
-  visibility: visible;
-  
-}
-
-.box2:hover{
-
-
-  box-shadow: 0px 0px 10px rgb(100,100,100);
-  transition: box-shadow 0.2s ease-in-out;
-  
-}
 
 
 
@@ -116,8 +97,8 @@ body {
 
 .img1{
 
-  width: 300px;
-  overflow:hidden;
+    width: 200px;
+    overflow:hidden;
 }
 
 
@@ -129,15 +110,13 @@ section div .img1{
 
 .Menu-preview{
 
-
-  width: 100%;
-  height: 100%;
-  display:flex;
-  flex-direction: column;
-  margin-bottom: 100px;
-  background-color: white;
- 
-  
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        background-color: white;
+        align-content: center;
 }
 
 
@@ -154,9 +133,7 @@ footer {
 
 .subtexto-menu{
 
-
-  font-size: 20px;
-  
+font-size: 16px;
 }
 
 .boton-personalizado-1 {
@@ -394,6 +371,25 @@ display:none;
 }
 
 
+main .texto h3 {
+
+  font-size: 15px;
+}
+
+.logo-footer {
+  order: 2;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  
+ }
+
+
+ html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 
 
 /* Comienzo media Querys */
@@ -402,6 +398,7 @@ display:none;
 
 /* Smartphones mas grandes y tablets pequeñas (mas de 480px)*/
 @media (min-width: 480px) { 
+
 
 
 
@@ -538,6 +535,11 @@ display:none;
 
   }
 
+  main .texto h3 {
+
+    font-size: 40px;
+  }
+
 
   .footer-h3{
 
@@ -573,7 +575,27 @@ display:none;
   
 
    
+   .box2 i:hover{
 
+    color:#FCDEC0;
+    
+    
+  }
+  
+  .box2:hover i {
+  
+    visibility: visible;
+    
+  }
+  
+  .box2:hover{
+  
+  
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+    transition: box-shadow 0.2s ease-in-out;
+    
+  }
+  
 
   
   
