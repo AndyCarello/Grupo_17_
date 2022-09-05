@@ -1,13 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title> Finalizaste tu compra </title>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display">
+    <link rel="stylesheet" href="/css/carrito.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/edeb1fef90.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 rel="stylesheet" />
 
@@ -56,29 +58,27 @@ rel="stylesheet" />
             </ul>
         </nav>
     </header>
-    <main id="recuperar">
-        <section class="flex">
-            <div class="ancho-full centrado">
-                <h1>RECUPERAR CONTRASEÑA</h1>
-            </div>
-            <form class="flex" action="registro" method="post">
-                <div class="ancho-full centrado">
-                    <input type="email" name="email" id="email" placeholder="Correo electronico" required>
-                </div>
-                <div class="ancho-full centrado">
-                    <button type="submit" id="recuperar">Recuperar</button>
-                </div>
-                <div class="ancho-full espaciado">
-                    <div>
-                        <a href="javascript:history.back()">Volver</a>
-                    </div>
-                    <div>
-                        <a href="ingreso">Ingresar</a>
-                    </div>
-                </div>
-            </form>
-        </section>
-    </main>
-</body>
+    <main class="finalizaste-main">
 
+        <div class="contenedor-icon">
+        <div class="finalizaste-icon"><i class="fa-solid fa-check"></i></div>
+        </div>
+
+        <h1 class="finalizaste-titulo">
+        Finalizaste tu compra con éxito
+        </h1>
+
+        <div class="finalizaste-texto">
+            Tu código de compra es #8759305
+            <br>
+            Podrás visualizar el resumen de tu compra en tu casilla de correo electrónico
+            <br>
+            ¡Muchas gracias!
+
+        </div>
+    
+    </main>
+
+
+</body>
 </html>

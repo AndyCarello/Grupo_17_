@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+rel="stylesheet" />
 </head>
+
 <body>
-    
+    <header>
+        <div id="barra-superior">
+            <div id="buscador">
+                <form action="#" method="GET">
+                    <input type="text" name="busqueda" placeholder="Buscar...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div id="grupo-dcho">
+                <div id="carrito">
+                    <a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
+                </div>
+                <div id="login-bar">
+                    <div>
+                        <a href="/registro">Crea tu cuenta</a>
+                    </div>
+                    <div>
+                        <a href="ingreso">Ingresa</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="contenedor-logo">
+            <img src="img/sp_logo.png">
+        </div>
+        <nav id="barra-navegacion">
+            <ul>
+                 <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="productos">Productos</a></li>
+                 <li><a href="info">Quienes Somos</a></li>
+                 <li><a href="contacto">Contacto</a></li>
+                 <li><a href="delivery">Delivery</a></li>
+                 <li><a href="preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                 <li class="invertido solo-mobile"><a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                 <li class="invertido solo-mobile"><a href="ingreso"><i class="fas fa-user"></i>Ingresar</a></li>
+                 <li class="invertido solo-mobile"><a href="registro"><i class="fas fa-user-plus"></i>Registrarme</a></li>
+                 <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="flex">
+            <div class="ancho-full centrado">
+                <h1>Perfil de usuario</h1>
+            </div>
+            <form class="flex" action="registro" method="post">
+                <div class="ancho-full centrado">
+                    <h3>Datos generales</h3>
+                </div>
+                <div class="ancho-full centrado">
+                    <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                </div>
+                <div class="ancho-half centrado ">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="ancho-half centrado ">
+                    <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+                </div>
+                <div class="ancho-half centrado ">
+                    <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
+                        placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" required>
+                </div>
+                <div class="ancho-half centrado ">
+                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>  
+                </div>
+                <div class="ancho-half centrado ">
+                    <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" required>
+                </div>
+                <div class="ancho-half espaciado ">
+                    <div class="ancho-quarter centrado ">
+                    <input type="number" name="piso" id="piso" placeholder="Piso" required maxlength="2"> 
+                    </div>
+                    <div class="ancho-quarter  centrado ">
+                        <input type="number" name="dpto" id="dpto" placeholder="Dpto" required maxlength="1"> 
+                    </div>
+                </div>
+                <div class="ancho-full centrado">
+                    <button type="submit" id="actualizar">Actualizar</button>
+                </div>
+            </form>
+        </section>
+        <section class="flex">
+            <form class="flex" action="registro" method="post">
+                <div class="ancho-full centrado">
+                    <h3>Actualizar contraseña</h3>
+                </div>
+                <div class="ancho-half centrado">
+                    <input type="password" name="password" id="password-actual" placeholder="Contraseña actual" required>
+                </div>
+                <div class="ancho-half centrado">
+                    <input type="password" name="password" id="password-nueva" placeholder="Nueva contraseña" required>
+                </div>
+                <div class="ancho-half centrado ">
+                    <input type="password" name="password" id="password-repetir" placeholder="Repetir nueva contraseña" required>
+                </div>
+                <div class="ancho-full centrado">
+                    <button type="submit" id="actualizar">Actualizar contraseña</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div class="ancho-full centrado">
+                <h3>Historial de pedidos</h3>
+            </div>
+            <div class="ancho-full espaciado">
+                <p class="ancho-half">Pedido #1235 - 01/01/2023</p>
+                <div><i class="fas fa-minus"></i></div>
+            </div>
+            <div class="ancho-full espaciado">
+                <div>
+                    <img src="img/mousse-cake.png">
+                </div>
+                <p>Torta Mousse | cantidad 2</p>
+                <div><i class="fas fa-minus"></i></div>
+            </div>
+            <div class="ancho-full espaciado">
+                <p class="ancho-half">Pedido #1235 - 01/01/2023</p>
+                <div><i class="fas fa-minus"></i></div>
+            </div>
+            <div class="ancho-full espaciado">
+                <p class="ancho-half">Pedido #1523 - 15/01/2023</p>
+                <div><i class="fas fa-plus"></i></div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
