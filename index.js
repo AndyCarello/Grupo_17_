@@ -1,6 +1,7 @@
 const express = require ("express"); 
 const app = express ();
 const path = require("path");
+app.set("view engine", "ejs");
 
 //defino la carpeta public para que el contenido se use directo
 app.use(express.static("public"));
