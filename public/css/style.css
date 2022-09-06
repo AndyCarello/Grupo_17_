@@ -98,6 +98,64 @@ main input, main button {
     width: 100%;
 }
 
+/* Estilos Perfil*/
+
+.pedido {
+    margin-bottom: 0.5em;
+    background-color: white;
+}
+
+.pedido-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.5em;
+    background-color: #FCDEC0;
+}
+
+.pedido-item {
+    padding: 0.5em
+}
+
+.item-titulo {
+    font-size: 1.25em;
+}
+
+.item-unitario, .item-cantidad, .item-subtotal {
+    text-align: right;
+}
+
+.pedido-total {
+    padding: 0.5em;
+    font-size: 1.25em;
+    text-align: right;
+}
+
+.item-imagen {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+/* Estilos Preguntas frecuentes*/
+
+.pregunta-item {
+    margin-bottom: 0.5em;
+    background-color: white;
+}
+
+.pregunta-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.5em;
+    background-color: #FCDEC0;
+}
+
+.respuesta {
+    padding: 0.5em;
+}
+
 /* Estilos Header Mobile First */
 
 header {
@@ -260,6 +318,40 @@ footer {
 
     .registro-ancho-quarter {
         flex-basis:21%;
+    }
+
+    .pedido-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item-titulo {
+        font-size: unset;
+        flex: 1 1 auto;
+        margin-left: 0.5em;
+    }
+    
+    .item-unitario, .item-cantidad, .item-subtotal {
+        flex-basis: 20%
+    }
+
+    .item-unitario span, .item-cantidad span, .item-subtotal span {
+        display: block;
+        font-size: 0.75em;
+        color:#FCDEC0;
+        text-align: left;
+    }
+    
+    .pedido-total {
+        padding: 0.5em;
+        font-size: 1.25em;
+        text-align: right;
+    }
+    
+    .item-imagen {
+        height: 2em;
+        aspect-ratio: 1;
+        display: unset;
     }
 
     /* Comienzo header desktop */

@@ -5,108 +5,152 @@ const { title } = require("process");
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-//defino la carpeta public para que el contenido se use directo
 app.use(express.static("public"));
 
-//creo el archivo test para que sepamos que esta funcionando
 app.get("/", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/test.html"));
     console.log("Mostrando que esta funcionando");
 });
-//Formulario de alta de usuario
+
 app.get("/registro", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/registro.html"));
+    res.render("registro", {
+        title: "Formulario de registroo",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando formulario de registro");
 });
-//Agradecimiento por registrarse
+
 app.get("/registrado", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/registrado.html"));
+    res.render("registrado", {
+        title: "Formulario de ingreso",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando agradecimiento por haberse registrado");
 });
 
-//Recuperar Contraseña
 app.get("/recuperar", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/recuperar.html"));
+    res.render("recuperar", {
+        title: "Recuperar contraseña",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando recuperar contraseña");
 });
 
-//Reestablecer Contraseña
 app.get("/reestablecercontrasena", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/reestablecercontrasena.html"));
+    res.render("reestablecercontrasena", {
+        title: "Reestablecer contraseña",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando reestablecer contraseña");
 });
 
-//El correo ha sido validado
 app.get("/validado", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/validado.html"));
+    res.render("validado", {
+        title: "Validado correctamente",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando correo validado");
 });
-//Formulario de ingreso al sitio
+
 app.get("/ingreso", (req,res)=>{
     res.render("ingreso", {
         title: "Formulario de ingreso",
         estilos: [
-            "style.css", 
-            "footer.css"            
+            "style.css"        
         ]
     });
     console.log("Mostrando ingreso");
 });
-//Muestra datos del perfil de usuario e historial de compras
+
 app.get("/perfil", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/perfil.html"));
+    res.render("perfil", {
+        title: "Perfil de usuario",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando Pagina de Perfil");
 });
 
-//Probando el header
 app.get("/header", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/header.html"));
     console.log("Mostrando header");
 });
 
-//Muestra pagina de delivery
 app.get("/delivery", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/delivery.html"));
+    res.render("delivery", {
+        title: "Delivery",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando Pagina de Delivery");
 });
 
-//Rutas Valentina//
-
-// Mostrando los productos //
 app.get("/productos", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/productos.html"));
     console.log("Mostrando Pagina de productos");
 });
- // preguntas frecuentes //
- app.get("/preguntas-frecuentes", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/preguntas-frecuentes.html"));
+
+app.get("/preguntas-frecuentes", (req,res)=>{
+    res.render("preguntas-frecuentes", {
+        title: "Preguntas frecuentes",
+        estilos: [
+            "style.css"          
+        ]
+    });
     console.log("preguntas frecuentes");
 });
 
-// producto //
 app.get("/producto", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/producto.html"));
+    res.render("producto", {
+        title: "Detalle de producto",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("producto");
 });
 
-/*Ruta para el carrito*/
-
 app.get('/carrito', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/carrito.html'))
+    res.render("carrito", {
+        title: "Carrito de compras",
+        estilos: [
+            "style.css"        
+        ]
+    });
+    console.log("Mostrando carrito");
 });
-
-/*Ruta para el Finalizaste tu compra*/
 
 app.get('/compra', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/compra.html'))
+    res.render("compra", {
+        title: "Compra finalizada",
+        estilos: [
+            "style.css"        
+        ]
+    });
+    console.log("Mostrando finalizaste tu compra");
 });
-
-/*Ruta para el ¿Quienes Somos?*/
 
 app.get('/info', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/info.html'))
+    res.render("info", {
+        title: "¿Quienes somos?",
+        estilos: [
+            "style.css"        
+        ]
+    });
+    console.log("Mostrando ¿Quienes somos?");
 });
-
 
 app.get('/contacto', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/contacto.html'))
@@ -120,7 +164,7 @@ app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
-//inicio el servidor en el puerto 80 asi no lo tengo que aclarar en el navegador
+
 app.listen(process.env.PORT || 80, () => {
-    console.log("Servidor corriendo")
+    console.log("Servidor corriendo en el puerto 80 >> http://localhost/");
 });

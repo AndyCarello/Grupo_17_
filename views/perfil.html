@@ -116,29 +116,40 @@ rel="stylesheet" />
                 </div>
             </form>
         </section>
-        <section>
+        <section id="historial-pedidos">
             <div class="ancho-full centrado">
                 <h3>Historial de pedidos</h3>
             </div>
-            <div class="ancho-full espaciado">
-                <p class="ancho-half">Pedido #1235 - 01/01/2023</p>
-                <div><i class="fas fa-minus"></i></div>
-            </div>
-            <div class="ancho-full espaciado">
-                <div>
-                    <img src="img/mousse-cake.png">
+            <article class="pedido">
+                <div class="pedido-encabezado">
+                    <div>Pedido #1235 - 01/01/2023</div>
+                    <div><i class="fas fa-minus"></i></div>
                 </div>
-                <p>Torta Mousse | cantidad 2</p>
-                <div><i class="fas fa-minus"></i></div>
-            </div>
-            <div class="ancho-full espaciado">
-                <p class="ancho-half">Pedido #1235 - 01/01/2023</p>
-                <div><i class="fas fa-minus"></i></div>
-            </div>
-            <div class="ancho-full espaciado">
-                <p class="ancho-half">Pedido #1523 - 15/01/2023</p>
-                <div><i class="fas fa-plus"></i></div>
-            </div>
+                <div class="pedido-detalle">
+                    <div class="pedido-item">
+                        <img class="item-imagen" src="img/mousse-cake.png" alt="Imagen del producto">
+                        <div class="item-titulo">Torta Mousse</div>
+                        <div class="item-unitario"><span>Precio:</span>$100.00</div>
+                        <div class="item-cantidad"><span>Cantidad:</span>2</div>
+                        <div class="item-subtotal"><span>Subtotal:</span>$200.00</div>
+                    </div>
+                    <div class="pedido-item">
+                        <img class="item-imagen" src="img/balcarce-cake.png" alt="Imagen del producto">
+                        <div class="item-titulo">Torta Balcarce</div>
+                        <div class="item-unitario"><span>Precio:</span>$ 50.00</div>
+                        <div class="item-cantidad"><span>Cantidad:</span>1</div>
+                        <div class="item-subtotal"><span>Subtotal:</span>$ 50.00</div>
+                    </div>
+                </div>
+                    <div class="pedido-total">Total: $ 250.00</div>
+            </article>
+            <article class="pedido">
+                <div class="pedido-encabezado">
+                    <div>Pedido #2359 - 21/06/2023</div>
+                    <div><i class="fas fa-plus"></i></div>
+                </div>
+            </article>
+            
         </section>
     </main>
     <footer>
