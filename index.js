@@ -1,7 +1,9 @@
 const express = require ("express"); 
 const app = express ();
 const path = require("path");
+const { title } = require("process");
 app.set("view engine", "ejs");
+app.set("views", "./views");
 
 //defino la carpeta public para que el contenido se use directo
 app.use(express.static("public"));
@@ -41,7 +43,13 @@ app.get("/validado", (req,res)=>{
 });
 //Formulario de ingreso al sitio
 app.get("/ingreso", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/ingreso.html"));
+    res.render("ingreso", {
+        title: "Formulario de ingreso",
+        estilos: [
+            "style.css", 
+            "footer.css"            
+        ]
+    });
     console.log("Mostrando ingreso");
 });
 //Muestra datos del perfil de usuario e historial de compras

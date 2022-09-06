@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <section class="flex">
+                <div class="ancho-full centrado">
+                    <h1>BIENVENIDO</h1>
+                </div>
+                <form class="flex" action="ingreso" method="post">
+                    <div class="ancho-full centrado">
+                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="ancho-full espaciado">
+                        <div style="display: flex;">
+                            <input type="checkbox" name="recordarme" id="recordarme" value="recordarme">
+                            <label for="recordarme">Recordarme</label>
+                        </div>
+                        <div>
+                            <a href="recuperar">Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <button type="submit" id="ingresar">Ingresar</button>
+                    </div>
+                    <div class="ancho-full espaciado">
+                        <div>
+                            <a href="javascript:history.back()">Volver</a>
+                        </div>
+                        <div>
+                            <a href="registro">Registrate</a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>  
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>
