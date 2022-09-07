@@ -99,16 +99,6 @@ app.get("/recuperacion", (req,res)=>{
     console.log("Mostrando recuperacion enviada");
 });
 
-app.get("/header", (req,res)=>{
-    res.render("./partials/header", {
-        title: "Mostrando header",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando header");
-});
-
 app.get("/delivery", (req,res)=>{
     res.render("delivery", {
         title: "Delivery",
