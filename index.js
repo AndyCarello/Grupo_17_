@@ -15,7 +15,6 @@ app.get("/", (req,res)=>{
             "footer.css"        
         ]
     });
-    conso
     console.log("Mostrando que esta funcionando");
 });
 

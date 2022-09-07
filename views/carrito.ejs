@@ -4,97 +4,78 @@
     <body>
         <%- include('./partials/header.ejs') %>
         <main>
-            <section class="main-section">
-
-                
-
-                <h1 class="carrito-titulo">CARRITO</h1>
-
-                <p class="texto-carrito">A continuación podrás ver los detalles de tu compra </p>
-
-                    <article class="productos-carrito">
-
-                    <div class="nombre-productos"> Torta Doble Oreo </div>
-
-                    <div class="info-contenedor"> 
-                    <img src="img/torta-oreo.jpg" class="product-img">
-
-                    
-                    <div class="precio-cantidad-contenedor">
-
-                    <div class="precio"> Precio: $2000 </div>
-                    <div class="cantidad"> Cantidad: 1 </div>
-                    
+            <div class="ancho-full centrado">
+                <h1>Carrito de compras</h1>
+            </div>
+            <section style="
+    width: 100%;
+    overflow: scroll;
+">
+                <div id="carrito-de-compras" style="
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    white-space: nowrap;
+    overflow: scroll;
+    max-width: 100%;
+">
+                    <div style="
+    display: table-row;
+    vertical-align: middle;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    /* margin-bottom: 5px; */
+">
+                        <div style="
+    display: none;
+    /* display: table-cell; */
+">Foto</div>
+                        <div style="
+    display: table-cell;
+">Producto</div>
+                        <div style="
+    display: table-cell;
+">Precio</div>
+                        <div style="
+    display: table-cell;
+">Cantidad</div>
+                        <div style="
+    display: table-cell;
+">Subtotal</div>
+                        <div style="
+    display: table-cell;
+"></div>
                     </div>
-
-                    
-                    <div  class="borrar-item"><i class="fa-solid fa-trash-can"></i>
-                    <button> Quitar </button>
-                    </div>
-
-                    </article>
-
-                <article class="productos-carrito">
-                    
-                    <div class="nombre-productos"> Cheesecake </div>
-
-                    <div class="info-contenedor">
-
-                    <img src="img/cheesecake.jpg" class="product-img">
-
-                    <div class="precio-cantidad-contenedor">
-
-                    <div class="precio"> Precio: $2000 </div>
-                    <div class="cantidad"> Cantidad: 1 </div>
-                    
-                    </div>
-
-                    </div>
-
-                    <div class="borrar-item"><i class="fa-solid fa-trash-can"></i>
-                    <button> Quitar </button>
-                    </div>
-            
-                    </article>
-
-                    <article class="productos-carrito">
-                    
-                        <div class="nombre-productos"> Tarta Cabsha </div>
-            
-                        <div class="info-contenedor">
-            
-                        <img src="img/cabsha.jpg" class="product-img">
-            
-                        <div class="precio-cantidad-contenedor">
-            
-                        <div class="precio"> Precio: $2000 </div>
-                        <div class="cantidad"> Cantidad: 1 </div>
+                    <div style="
+    display: table-row;
+">
+                        <div style="
+    display: none;
+    /* display: table-cell; */
+"><img src="img/mousse-cake.png" alt="Imagen del producto" style="
+    width: 3em;
+    height: auto;
+    aspect-ratio: 1;
+"></div>
+                        <div style="
+    display: table-cell;
+    vertical-align: middle;
+">Torta Mousse</div>
+                        <div style="
+    display: table-cell;
+">$100.00</div>
+                        <div style="
+    display: table-cell;
+"><i class="fa fa-minus"></i>2<i class="fa fa-plus"></i></div>
+                        <div style="
+    display: table-cell;
+">$200.00</div>
+                        <div style="
+    display: table-cell;
+"><i class="fas fa-trash"></i></div>
+                    </div>  
                         
-                        </div>
-            
-                        </div>
-            
-                        <div class="borrar-item"><i class="fa-solid fa-trash-can"></i>
-                        <button> Quitar </button>
-                        </div>
-                
-                    </article>
-                
-
-                <div class="contenedor-vaciar-subtotal">
-                
-                <button class="vaciar-carrito"> Vaciar carrito</button>
-
-                <div class="subtotal"> Subtotal: $XXX </div> 
-
                 </div>
-
-                <div class="estilos-boton">
-                <button class="agregar-productos">Agregar mas productos </button>
-                <button class="finalizar-compra">Finalizar compra</button>
-
-                </div>
-
             </section>
         </main>
     <!-- <%- include('./partials/footer.ejs') %> -->
