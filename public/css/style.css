@@ -58,6 +58,7 @@ a {
 
 .centrado {
     justify-content: center;
+    text-align: center;
 }
 
 .espaciado {
