@@ -3,80 +3,43 @@
     <%- include('./partials/head.ejs') %>
     <body>
         <%- include('./partials/header.ejs') %>
-        <main>
+        <main id="carrito-compras">
             <div class="ancho-full centrado">
                 <h1>Carrito de compras</h1>
             </div>
-            <section style="
-    width: 100%;
-    overflow: scroll;
-">
-                <div id="carrito-de-compras" style="
-    display: table;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    white-space: nowrap;
-    overflow: scroll;
-    max-width: 100%;
-">
-                    <div style="
-    display: table-row;
-    vertical-align: middle;
-    border-bottom: 2px solid rgba(0,0,0,0.5);
-    /* margin-bottom: 5px; */
-">
-                        <div style="
-    display: none;
-    /* display: table-cell; */
-">Foto</div>
-                        <div style="
-    display: table-cell;
-">Producto</div>
-                        <div style="
-    display: table-cell;
-">Precio</div>
-                        <div style="
-    display: table-cell;
-">Cantidad</div>
-                        <div style="
-    display: table-cell;
-">Subtotal</div>
-                        <div style="
-    display: table-cell;
-"></div>
+            <div id="contenedor-carrito">
+                <div id="detalle-carrito">
+                    <div class="fila encabezado">
+                        <div class="celda solo-desktop"></div>
+                        <div class="celda">Producto</div>
+                        <div class="celda">#</div>
+                        <div class="celda">Subtotal</div>
+                        <div class="celda"></div>
                     </div>
-                    <div style="
-    display: table-row;
-">
-                        <div style="
-    display: none;
-    /* display: table-cell; */
-"><img src="img/mousse-cake.png" alt="Imagen del producto" style="
-    width: 3em;
-    height: auto;
-    aspect-ratio: 1;
-"></div>
-                        <div style="
-    display: table-cell;
-    vertical-align: middle;
-">Torta Mousse</div>
-                        <div style="
-    display: table-cell;
-">$100.00</div>
-                        <div style="
-    display: table-cell;
-"><i class="fa fa-minus"></i>2<i class="fa fa-plus"></i></div>
-                        <div style="
-    display: table-cell;
-">$200.00</div>
-                        <div style="
-    display: table-cell;
-"><i class="fas fa-trash"></i></div>
-                    </div>  
-                        
+                    <div class="fila">
+                        <div class="celda solo-desktop"><img src="img/mousse-cake.png" alt="Imagen del producto"></div>
+                        <div class="celda izquierda">Torta Mousse<span>Precio: $100.00</span></div>
+                        <div class="celda"><input type="text" value="2"></div>
+                        <div class="celda">$ 200.00</div>
+                        <div class="celda"><i class="fas fa-sync"></i><i class="fas fa-trash"></i></div>
+                    </div>
+                    <div class="fila">
+                        <div class="celda solo-desktop"><img src="img/balcarce-cake.png" alt="Imagen del producto"></div>
+                        <div class="celda izquierda">Torta balcarce<span>Precio: $100.00</span></div>
+                        <div class="celda"><input type="text" value="6"></div>
+                        <div class="celda">$ 1200.00</div>
+                        <div class="celda"><i class="fas fa-sync"></i><i class="fas fa-trash"></i></div>
+                    </div>                    
                 </div>
-            </section>
+            </div>
+            <div class="carrito-inline">
+                <div id="vaciar-carrito">Vaciar <i class="fas fa-dumpster"></i></div>
+                <div id="total">Total: $ 1400.00</div>
+            </div>
+            <div class="carrito-inline">
+                <button>Seguir comprando</button>
+                <button>Confirmar compra</button>
+            </div>  
         </main>
     <!-- <%- include('./partials/footer.ejs') %> -->
     </body>

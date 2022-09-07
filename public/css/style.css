@@ -66,6 +66,10 @@ a {
     align-items: center;
 }
 
+.solo-desktop {
+    display: none !important;
+}
+
 label {
     color:#7D5A50;
 }
@@ -156,6 +160,87 @@ main input, main button {
 .respuesta {
     padding: 0.5em;
 }
+
+/* Estilos Carrito */
+
+#contenedor-carrito {
+    width: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#contenedor-carrito::-webkit-scrollbar {
+    display: none;
+}
+
+#detalle-carrito {
+    display: table;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#detalle-carrito .fila{
+    display: table-row;
+}
+
+#detalle-carrito .encabezado {    
+    border-bottom: 2px solid lightgray;  
+}
+
+#detalle-carrito .celda {
+    display: table-cell;
+    vertical-align: middle;    
+    padding-left: 0.25em;
+    padding-right: 0.25em;  
+}
+
+#detalle-carrito .izquierda {
+    text-align: left; 
+}
+
+#detalle-carrito .celda span{
+    display: block;
+    font-size: 0.75em; 
+}
+
+
+#detalle-carrito img {
+    width: 3em;
+    height: auto;
+    aspect-ratio: 1;    
+}
+
+#carrito-compras i {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#carrito-compras button {
+    width: unset;
+}
+
+#carrito-compras input {
+    width: 1em;
+}
+
+#carrito-compras .carrito-inline {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: 1em;
+}
+
+#carrito-compras #vaciar-carrito {
+
+}
+
+#carrito-compras #total {
+
+}
+
+
 
 /* Estilos Header Mobile First */
 
@@ -289,9 +374,7 @@ header {
 
 /* Estilos Footer */
 
-footer {
 
-}
 
 /* Fin estilos Footer */
 
@@ -313,12 +396,16 @@ footer {
             padding-right: 15vw;
         }
 
-    .registro-ancho-half {
+    .ancho-half {
         flex-basis:34%;
     }
 
-    .registro-ancho-quarter {
+    .ancho-quarter {
         flex-basis:21%;
+    }
+
+    .solo-desktop {
+        display: unset !important;
     }
 
     .pedido-item {
