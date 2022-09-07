@@ -8,7 +8,14 @@ app.set("views", "./views");
 app.use(express.static("public"));
 
 app.get("/", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/test.html"));
+    res.render("registro", {
+        title: "Test SUCRE PASTELERIA",
+        estilos: [
+            "style.css",
+            "footer.css"        
+        ]
+    });
+    conso
     console.log("Mostrando que esta funcionando");
 });
 
