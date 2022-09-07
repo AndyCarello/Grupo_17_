@@ -8,7 +8,7 @@ app.set("views", "./views");
 app.use(express.static("public"));
 
 app.get("/", (req,res)=>{
-    res.render("registro", {
+    res.render("test", {
         title: "Test SUCRE PASTELERIA",
         estilos: [
             "style.css",
