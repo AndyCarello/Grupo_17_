@@ -100,7 +100,12 @@ app.get("/recuperacion", (req,res)=>{
 });
 
 app.get("/header", (req,res)=>{
-    res.sendFile(path.join(__dirname, "/views/header.html"));
+    res.render("./partials/header", {
+        title: "Mostrando header",
+        estilos: [
+            "style.css"        
+        ]
+    });
     console.log("Mostrando header");
 });
 
