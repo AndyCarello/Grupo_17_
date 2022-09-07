@@ -1,160 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-rel="stylesheet" />
-</head>
-
-<body>
-    <header>
-        <div id="barra-superior">
-            <div id="buscador">
-                <form action="#" method="GET">
-                    <input type="text" name="busqueda" placeholder="Buscar...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <section class="flex">
+                <div class="ancho-full centrado">
+                    <h1>Perfil de usuario</h1>
+                </div>
+                <form class="flex" action="perfil" method="GET">
+                    <div class="ancho-full centrado">
+                        <h3>Datos generales</h3>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                    </div>
+                    <div class="ancho-half centrado ">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="ancho-half centrado ">
+                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="ancho-half centrado ">
+                        <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
+                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" required>
+                    </div>
+                    <div class="ancho-half centrado ">
+                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>  
+                    </div>
+                    <div class="ancho-half centrado ">
+                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" required>
+                    </div>
+                    <div class="ancho-half espaciado ">
+                        <div class="ancho-quarter centrado ">
+                        <input type="number" name="piso" id="piso" placeholder="Piso" required maxlength="2"> 
+                        </div>
+                        <div class="ancho-quarter  centrado ">
+                            <input type="number" name="dpto" id="dpto" placeholder="Dpto" required maxlength="1"> 
+                        </div>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <button type="submit" id="actualizar">Actualizar</button>
+                    </div>
                 </form>
-            </div>
-            <div id="grupo-dcho">
-                <div id="carrito">
-                    <a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
-                </div>
-                <div id="login-bar">
-                    <div>
-                        <a href="/registro">Crea tu cuenta</a>
+            </section>
+            <section class="flex">
+                <form class="flex" action="perfil" method="GET">
+                    <div class="ancho-full centrado">
+                        <h3>Actualizar contraseña</h3>
                     </div>
-                    <div>
-                        <a href="ingreso">Ingresa</a>
+                    <div class="ancho-half centrado">
+                        <input type="password" name="password" id="password-actual" placeholder="Contraseña actual" required>
                     </div>
+                    <div class="ancho-half centrado">
+                        <input type="password" name="password" id="password-nueva" placeholder="Nueva contraseña" required>
+                    </div>
+                    <div class="ancho-half centrado ">
+                        <input type="password" name="password" id="password-repetir" placeholder="Repetir nueva contraseña" required>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <button type="submit" id="actualizar">Actualizar contraseña</button>
+                    </div>
+                </form>
+            </section>
+            <section id="historial-pedidos">
+                <div class="ancho-full centrado">
+                    <h3>Historial de pedidos</h3>
                 </div>
+                <article class="pedido">
+                    <div class="pedido-encabezado">
+                        <div>Pedido #1235 - 01/01/2023</div>
+                        <div><i class="fas fa-minus"></i></div>
+                    </div>
+                    <div class="pedido-detalle">
+                        <div class="pedido-item">
+                            <img class="item-imagen" src="img/mousse-cake.png" alt="Imagen del producto">
+                            <div class="item-titulo">Torta Mousse</div>
+                            <div class="item-unitario"><span>Precio:</span>$100.00</div>
+                            <div class="item-cantidad"><span>Cantidad:</span>2</div>
+                            <div class="item-subtotal"><span>Subtotal:</span>$200.00</div>
+                        </div>
+                        <div class="pedido-item">
+                            <img class="item-imagen" src="img/balcarce-cake.png" alt="Imagen del producto">
+                            <div class="item-titulo">Torta Balcarce</div>
+                            <div class="item-unitario"><span>Precio:</span>$ 50.00</div>
+                            <div class="item-cantidad"><span>Cantidad:</span>1</div>
+                            <div class="item-subtotal"><span>Subtotal:</span>$ 50.00</div>
+                        </div>
+                    </div>
+                        <div class="pedido-total">Total: $ 250.00</div>
+                </article>
+                <article class="pedido">
+                    <div class="pedido-encabezado">
+                        <div>Pedido #2359 - 21/06/2023</div>
+                        <div><i class="fas fa-plus"></i></div>
+                    </div>
+                </article>
+                
+            </section>
+        </main>
+        <footer>
 
-            </div>
-        </div>
-        <div id="contenedor-logo">
-            <img src="img/sp_logo.png">
-        </div>
-        <nav id="barra-navegacion">
-            <ul>
-                 <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
-                 <li><a href="/">Home</a></li>
-                 <li><a href="productos">Productos</a></li>
-                 <li><a href="info">Quienes Somos</a></li>
-                 <li><a href="contacto">Contacto</a></li>
-                 <li><a href="delivery">Delivery</a></li>
-                 <li><a href="preguntas-frecuentes">Preguntas Frecuentes</a></li>
-                 <li class="invertido solo-mobile"><a href="carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
-                 <li class="invertido solo-mobile"><a href="ingreso"><i class="fas fa-user"></i>Ingresar</a></li>
-                 <li class="invertido solo-mobile"><a href="registro"><i class="fas fa-user-plus"></i>Registrarme</a></li>
-                 <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="flex">
-            <div class="ancho-full centrado">
-                <h1>Perfil de usuario</h1>
-            </div>
-            <form class="flex" action="perfil" method="GET">
-                <div class="ancho-full centrado">
-                    <h3>Datos generales</h3>
-                </div>
-                <div class="ancho-full centrado">
-                    <input type="email" name="email" id="email" placeholder="Correo electronico" required>
-                </div>
-                <div class="ancho-half centrado ">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                </div>
-                <div class="ancho-half centrado ">
-                    <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
-                </div>
-                <div class="ancho-half centrado ">
-                    <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
-                        placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" required>
-                </div>
-                <div class="ancho-half centrado ">
-                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>  
-                </div>
-                <div class="ancho-half centrado ">
-                    <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" required>
-                </div>
-                <div class="ancho-half espaciado ">
-                    <div class="ancho-quarter centrado ">
-                    <input type="number" name="piso" id="piso" placeholder="Piso" required maxlength="2"> 
-                    </div>
-                    <div class="ancho-quarter  centrado ">
-                        <input type="number" name="dpto" id="dpto" placeholder="Dpto" required maxlength="1"> 
-                    </div>
-                </div>
-                <div class="ancho-full centrado">
-                    <button type="submit" id="actualizar">Actualizar</button>
-                </div>
-            </form>
-        </section>
-        <section class="flex">
-            <form class="flex" action="perfil" method="GET">
-                <div class="ancho-full centrado">
-                    <h3>Actualizar contraseña</h3>
-                </div>
-                <div class="ancho-half centrado">
-                    <input type="password" name="password" id="password-actual" placeholder="Contraseña actual" required>
-                </div>
-                <div class="ancho-half centrado">
-                    <input type="password" name="password" id="password-nueva" placeholder="Nueva contraseña" required>
-                </div>
-                <div class="ancho-half centrado ">
-                    <input type="password" name="password" id="password-repetir" placeholder="Repetir nueva contraseña" required>
-                </div>
-                <div class="ancho-full centrado">
-                    <button type="submit" id="actualizar">Actualizar contraseña</button>
-                </div>
-            </form>
-        </section>
-        <section id="historial-pedidos">
-            <div class="ancho-full centrado">
-                <h3>Historial de pedidos</h3>
-            </div>
-            <article class="pedido">
-                <div class="pedido-encabezado">
-                    <div>Pedido #1235 - 01/01/2023</div>
-                    <div><i class="fas fa-minus"></i></div>
-                </div>
-                <div class="pedido-detalle">
-                    <div class="pedido-item">
-                        <img class="item-imagen" src="img/mousse-cake.png" alt="Imagen del producto">
-                        <div class="item-titulo">Torta Mousse</div>
-                        <div class="item-unitario"><span>Precio:</span>$100.00</div>
-                        <div class="item-cantidad"><span>Cantidad:</span>2</div>
-                        <div class="item-subtotal"><span>Subtotal:</span>$200.00</div>
-                    </div>
-                    <div class="pedido-item">
-                        <img class="item-imagen" src="img/balcarce-cake.png" alt="Imagen del producto">
-                        <div class="item-titulo">Torta Balcarce</div>
-                        <div class="item-unitario"><span>Precio:</span>$ 50.00</div>
-                        <div class="item-cantidad"><span>Cantidad:</span>1</div>
-                        <div class="item-subtotal"><span>Subtotal:</span>$ 50.00</div>
-                    </div>
-                </div>
-                    <div class="pedido-total">Total: $ 250.00</div>
-            </article>
-            <article class="pedido">
-                <div class="pedido-encabezado">
-                    <div>Pedido #2359 - 21/06/2023</div>
-                    <div><i class="fas fa-plus"></i></div>
-                </div>
-            </article>
-            
-        </section>
-    </main>
-    <footer>
-
-    </footer>
-</body>
-
+        </footer>
+        <!-- <%- include('./partials/footer.ejs') %> -->
+    </body>
 </html>

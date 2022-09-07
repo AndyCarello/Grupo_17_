@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="10; URL=https://sucrepasteleria.herokuapp.com/home" />
-    <title>Sucré Pastelería</title>
-</head>
-<body>
-    <h1>Sucré Pastelería</h1>
-    <p>Esta pagina solo muestra que el servidor está corriendo.</p>
-    <p>Para ingresar al sitio, hace click <a href="home">aca</a> para abrir "home.html"</p>
-    <h2>Enlaces de prueba</h2>
-    <ul>
-        <li><a href="carrito">carrito</a></li>
-        <li><a href="compra">compra</a></li>
-        <li><a href="delivery">delivery</a></li>
-        <li><a href="header">header</a></li>
-        <li><a href="info">info</a></li>
-        <li><a href="ingreso">ingreso</a></li>
-        <li><a href="perfil">perfil</a></li>
-        <li><a href="preguntas-frecuentes">preguntas-frecuentes</a></li>
-        <li><a href="producto">producto</a></li>
-        <li><a href="productos">productos</a></li>
-        <li><a href="recuperar">recuperar</a></li>
-        <li><a href="reestablecercontrasena">reestablecercontrasena</a></li>
-        <li><a href="registrado">registrado</a></li>
-        <li><a href="registro">registro</a></li>
-        <li><a href="validado">validado</a></li>
-        <li><a href="contacto">contacto</a></li>
-        <li><a href="footer">footer</a></li>
-        <li><a href="home">Home</a></li>
-    </ul>
-</body>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <h1>Sucré Pastelería</h1>
+            <p>Esta pagina solo muestra que el servidor está corriendo.</p>
+            <p>Para ingresar al sitio, hace click <a href="home">aca</a> para abrir "home.html"</p>
+            <h2>Enlaces de prueba</h2>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="info">info</a></li>
+                <li><a href="delivery">delivery</a></li>
+                <li><a href="preguntas-frecuentes">preguntas-frecuentes</a></li>
+                <li><a href="contacto">contacto</a></li>
+                <li><a href="registro">registro</a></li>
+                <li><a href="registrado">registrado</a></li>
+                <li><a href="validado">validado</a></li>
+                <li><a href="recuperar">recuperar</a></li>
+                <li><a href="recuperaracion">recuperacion</a></li>
+                <li><a href="reestablecercontrasena">reestablecercontrasena</a></li>
+                <li><a href="ingreso">ingreso</a></li>
+                <li><a href="perfil">perfil</a></li>
+                <li><a href="productos">productos</a></li>
+                <li><a href="producto">producto</a></li>
+                <li><a href="carrito">carrito</a></li>
+                <li><a href="compra">compra</a></li>
+                <hr>
+                <li><a href="header">header</a></li>
+                <li><a href="footer">footer</a></li>
+                
+            </ul>
+        </main>
+        <!-- <%- include('./partials/footer.ejs') %> -->
+    </body>
 </html>

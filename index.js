@@ -82,6 +82,16 @@ app.get("/perfil", (req,res)=>{
     console.log("Mostrando Pagina de Perfil");
 });
 
+app.get("/recuperacion", (req,res)=>{
+    res.render("recuperacion", {
+        title: "Recuperaración iniciada",
+        estilos: [
+            "style.css"        
+        ]
+    });
+    console.log("Mostrando recuperacion enviada");
+});
+
 app.get("/header", (req,res)=>{
     res.sendFile(path.join(__dirname, "/views/header.html"));
     console.log("Mostrando header");
