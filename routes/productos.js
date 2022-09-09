@@ -1,15 +1,8 @@
-let express = require ('express');
+let express = require ('express'); 
+let router = express.Router(); //Requiero la funcion router de express 
+let productosController = require('../controllers/productosController.js'); //Requiero el productosController
 
-let router = express.Router();
+//Usando router llamo a un metodo del controlador segun la url
+router.get("/producto", productosController.detalle);
 
-router.get("/producto", (req,res)=>{
-    res.render("producto", {
-        title: "Detalle de producto",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("producto");
-});
-
-module.exports = router;
+module.exports = router; //Exporto mi productosRouter

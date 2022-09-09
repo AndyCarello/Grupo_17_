@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
     <body>
-        <%- include('./partials/header.ejs') %>
-        <main id="recuperar">
+        <%- include('../partials/header.ejs') %>
+        <main id="restablecer">
             <section class="flex">
                 <div class="ancho-full centrado">
-                    <h1>RECUPERAR CONTRASEÑA</h1>
+                    <h1>Hola "Usuario"</h1>
                 </div>
-                <form class="flex" action="/usuarios/recuperacion" method="GET">
+                <form class="flex" action="/usuarios/ingreso" method="post">
                     <div class="ancho-full centrado">
-                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                        <input type="password" name="password" id="password" placeholder="Ingresa tu nueva contraseña" required>
                     </div>
                     <div class="ancho-full centrado">
-                        <button type="submit" id="recuperar">Recuperar</button>
+                        <input type="password" name="password" id="password" placeholder="Repetir Contraseña" required>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <button type="submit" id="enviar">Enviar</button>
                     </div>
                     <div class="ancho-full espaciado">
                         <div>
@@ -26,6 +29,6 @@
                 </form>
             </section>
         </main>
-        <!-- <%- include('./partials/footer.ejs') %> -->
+        <!-- <%- include('../partials/footer.ejs') %> -->
     </body>
 </html>

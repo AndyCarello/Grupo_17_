@@ -1,25 +1,9 @@
 let express = require ('express');
+let router = express.Router(); //Requiero la funcion router de express
+let carritoController = require('../controllers/carritoController.js'); //Requiero el carritoController
 
-let router = express.Router();
+//Usando router llamo a un metodo del controlador segun la url
+router.get('/carrito', carritoController.carritoCompras);
+router.get('/compra', carritoController.compra);
 
-router.get('/carrito', (req, res) => {
-    res.render("carrito", {
-        title: "Carrito de compras",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando carrito");
-});
-
-router.get('/compra', (req, res) => {
-    res.render("compra", {
-        title: "Compra finalizada",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando finalizaste tu compra");
-});
-
-module.exports = router;
+module.exports = router; //Exporto mi carritoRouter

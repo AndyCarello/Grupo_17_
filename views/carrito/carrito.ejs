@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
     <body>
-        <%- include('./partials/header.ejs') %>
+        <%- include('../partials/header.ejs') %>
         <main id="carrito-compras">
             <div class="ancho-full centrado">
                 <h1>Carrito de compras</h1>
@@ -17,14 +17,14 @@
                         <div class="celda"></div>
                     </div>
                     <div class="fila">
-                        <div class="celda solo-desktop"><img src="img/mousse-cake.png" alt="Imagen del producto"></div>
+                        <div class="celda solo-desktop"><img src="/img/mousse-cake.png" alt="Imagen del producto"></div>
                         <div class="celda izquierda">Torta Mousse<span>Precio: $100.00</span></div>
                         <div class="celda"><input type="text" value="2"></div>
                         <div class="celda">$ 200.00</div>
                         <div class="celda"><i class="fas fa-sync"></i><i class="fas fa-trash"></i></div>
                     </div>
                     <div class="fila">
-                        <div class="celda solo-desktop"><img src="img/balcarce-cake.png" alt="Imagen del producto"></div>
+                        <div class="celda solo-desktop"><img src="/img/balcarce-cake.png" alt="Imagen del producto"></div>
                         <div class="celda izquierda">Torta balcarce<span>Precio: $100.00</span></div>
                         <div class="celda"><input type="text" value="6"></div>
                         <div class="celda">$ 1200.00</div>
@@ -41,6 +41,6 @@
                 <button>Confirmar compra</button>
             </div>  
         </main>
-    <!-- <%- include('./partials/footer.ejs') %> -->
+    <!-- <%- include('../partials/footer.ejs') %> -->
     </body>
 </html>

@@ -1,87 +1,15 @@
 let express = require ('express');
-//let app = express();
-let router = express.Router();
+let router = express.Router(); //Requiero la funcion router de express
+let usuariosController = require('../controllers/usuariosController.js'); //Requiero el usuariosController
 
-//app.use(express.static("../public"));
+//Usando router llamo a un metodo del controlador segun la url
+router.get("/registro", usuariosController.registro);
+router.get("/registrado", usuariosController.registrado);
+router.get("/recuperar", usuariosController.recuperar);
+router.get("/reestablecercontrasena", usuariosController.restablecer);
+router.get("/validado", usuariosController.validado);
+router.get("/ingreso", usuariosController.ingreso);
+router.get("/perfil", usuariosController.perfil);
+router.get("/recuperacion", usuariosController.recuperacion);
 
-router.get("/registro", (req,res)=>{
-    res.render("registro", {
-        title: "Formulario de registroo",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando formulario de registro");
-});
-
-router.get("/registrado", (req,res)=>{
-    res.render("registrado", {
-        title: "Formulario de ingreso",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando agradecimiento por haberse registrado");
-});
-
-router.get("/recuperar", (req,res)=>{
-    res.render("recuperar", {
-        title: "Recuperar contraseña",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando recuperar contraseña");
-});
-
-router.get("/reestablecercontrasena", (req,res)=>{
-    res.render("reestablecercontrasena", {
-        title: "Reestablecer contraseña",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando reestablecer contraseña");
-});
-
-router.get("/validado", (req,res)=>{
-    res.render("validado", {
-        title: "Validado correctamente",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando correo validado");
-});
-
-router.get("/ingreso", (req,res)=>{
-    res.render("ingreso", {
-        title: "Formulario de ingreso",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando ingreso");
-});
-
-router.get("/perfil", (req,res)=>{
-    res.render("perfil", {
-        title: "Perfil de usuario",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando Pagina de Perfil");
-});
-
-router.get("/recuperacion", (req,res)=>{
-    res.render("recuperacion", {
-        title: "Recuperaración iniciada",
-        estilos: [
-            "style.css"        
-        ]
-    });
-    console.log("Mostrando recuperacion enviada");
-});
-
-module.exports = router;
+module.exports = router; //Exporto mi usuariosRouter
