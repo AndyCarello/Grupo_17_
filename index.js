@@ -14,7 +14,7 @@ const rutasMain = require('./routes/main.js');
 const rutasUsuarios = require('./routes/usuarios.js');
 const rutasProductos = require('./routes/productos.js');
 const rutasCarrito = require('./routes/carrito.js');
-const rutasContacto = require('./router/contacto.js');
+const rutasContacto = require('./routes/contacto.js');
 const rutasHome = require('./routes/home.js');
 
 //Defino que archivo de rutas utiliza cada 'prefijo' de la url
