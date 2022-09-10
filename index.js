@@ -22,7 +22,7 @@ app.use('/', rutasMain);
 app.use('/usuarios', rutasUsuarios);
 app.use('/productos', rutasProductos);
 app.use('/carrito', rutasCarrito);
-app.use('/index', rutasHome);
+app.use('/home', rutasHome);
 app.use('/contacto', rutasContacto);
 
 

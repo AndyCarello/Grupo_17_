@@ -4,7 +4,8 @@ const controller = {
         res.render("contacto/contacto", {
             title: "Contacto",
             estilos: [
-                "style.css"        
+                "contacto.css"
+                    
             ]
         });
         console.log("Mostrando Contacto");
