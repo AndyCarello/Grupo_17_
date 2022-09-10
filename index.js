@@ -14,12 +14,17 @@ const rutasMain = require('./routes/main.js');
 const rutasUsuarios = require('./routes/usuarios.js');
 const rutasProductos = require('./routes/productos.js');
 const rutasCarrito = require('./routes/carrito.js');
+const rutasContacto = require('./router/contacto.js');
+const rutasHome = require('./routes/home.js');
 
 //Defino que archivo de rutas utiliza cada 'prefijo' de la url
 app.use('/', rutasMain);
 app.use('/usuarios', rutasUsuarios);
 app.use('/productos', rutasProductos);
 app.use('/carrito', rutasCarrito);
+app.use('/index', rutasHome);
+app.use('/contacto', rutasContacto);
+
 
 //Solicito el puerto al entorno (environment) y, si no me lo pasa, uso el 80
 app.listen(process.env.PORT || 80, () => {
