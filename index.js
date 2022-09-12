@@ -14,8 +14,9 @@ const rutasMain = require('./routes/main.js');
 const rutasUsuarios = require('./routes/usuarios.js');
 const rutasProductos = require('./routes/productos.js');
 const rutasCarrito = require('./routes/carrito.js');
-const rutasContacto = require('./routes/contacto.js');
-const rutasHome = require('./routes/home.js');
+const rutasContacto = require('./routes/main.js');
+const rutasHome = require('./routes/main.js');
+const rutasFooter = require('./routes/main.js');
 
 //Defino que archivo de rutas utiliza cada 'prefijo' de la url
 app.use('/', rutasMain);
@@ -24,6 +25,7 @@ app.use('/productos', rutasProductos);
 app.use('/carrito', rutasCarrito);
 app.use('/home', rutasHome);
 app.use('/contacto', rutasContacto);
+app.use('/footer', rutasFooter);
 
 
 //Solicito el puerto al entorno (environment) y, si no me lo pasa, uso el 80

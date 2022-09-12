@@ -36,6 +36,46 @@ let controller = {
             ]
         });
         console.log("Mostrando ¿Quienes somos?");
+    },
+
+    home: (req, res) => {
+        res.render("home/index", {
+            title: "Home",
+            estilos: [
+                "style.css",
+                "style-solo-header.css"       
+            ]
+        });
+        console.log("Mostrando el Home");
+    },
+
+    contacto: (req, res) => {
+        res.render("contacto/contacto", {
+            title: "Contacto",
+            estilos: [
+                "contacto.css",
+                "style.css"
+                    
+            ]
+        });
+        console.log("Mostrando Contacto");
+    },
+
+    footer:(req,res) => {
+
+        res.render("footer/footer" , {
+            title: "Footer",
+            estilos: [
+                "footer.css",
+                "styles.css",
+                "style-solo-header.css"
+
+
+            ]
+    
+
+
+        });
     }
 };
 

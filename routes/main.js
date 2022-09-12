@@ -8,18 +8,22 @@ router.get("/", mainController.test);
 router.get("/delivery", mainController.delivery);
 router.get("/preguntas-frecuentes", mainController.preguntasFrecuentes);
 router.get('/info', mainController.quienesSomos);
+router.get('/home', mainController.home);
+router.get('/contacto' , mainController.contacto);
+router.get("/footer", mainController.footer);
+
 router.get("/productos", (req,res)=>{
     res.sendFile(path.join(__dirname, "../views/productos.html"));
     console.log("Mostrando Pagina de productos");
 });
 router.get('/contacto', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/contacto.html'))
+    res.sendFile(path.join(__dirname, '../views/contacto.ejs'))
 });
 router.get('/footer', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/footer.html'))
+    res.sendFile(path.join(__dirname, '../views/footer.ejs'))
 });
 router.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/index.html'))
+    res.sendFile(path.join(__dirname, '../views/index.ejs'))
 });
 
 module.exports = router; //Exporto mi mainRouter
