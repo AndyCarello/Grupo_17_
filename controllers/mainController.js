@@ -39,7 +39,7 @@ let controller = {
     },
 
     home: (req, res) => {
-        res.render("home/index", {
+        res.render("index", {
             title: "Home",
             estilos: [
                 "style.css",
@@ -50,7 +50,7 @@ let controller = {
     },
 
     contacto: (req, res) => {
-        res.render("contacto/contacto", {
+        res.render("contacto", {
             title: "Contacto",
             estilos: [
                 "contacto.css",
