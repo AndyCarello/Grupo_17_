@@ -2,6 +2,15 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: 'Playfair Display', serif;
+}
+
+
+header {
+  background-color: #F4ECE0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
@@ -438,6 +447,7 @@ main .texto h3 {
 @media (min-width: 1280px) {
 
 
+  
   html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
@@ -491,12 +501,7 @@ main .texto h3 {
     
     }
 
-    body{
-      
-      font-size: 25px;
-    
-    }
-
+   
     
    .texto h3 {
     
@@ -552,7 +557,7 @@ main .texto h3 {
 
   footer div{
 
-    height: 60px
+    height: 70px
   }
 
 

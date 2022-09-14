@@ -63,12 +63,11 @@ let controller = {
 
     footer:(req,res) => {
 
-        res.render("footer/footer" , {
+        res.render("partials/footer" , {
             title: "Footer",
             estilos: [
-                "footer.css",
-                "styles.css",
-                "style-solo-header.css"
+                "syles.css",
+                "footer.css"
 
 
             ]
