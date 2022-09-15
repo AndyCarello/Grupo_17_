@@ -6,8 +6,6 @@ El objetivo de nuestra página es exhibir todos nuestros productos de manera có
 Nuestro publico objetivo son aquellos golosos que quieran disfrutar de unas ricas tortas desde la comodidad de su casa.
 
 ## Integrantes del Proyecto ##
-#### Valentina Adle ####
-> Me llamo Valentina Adle, tengo 20 años y soy de Tucuman, de la localidad de Yerba Buena.
 #### Andrea Carello ####
 > Me llamo Andrea Carello, tengo 37 años, soy de Florida Vicente Lopez y estudie Ingenieria en Sistemas en la UTN Regional Delta.
 #### Facundo Joel Morcillo ####
