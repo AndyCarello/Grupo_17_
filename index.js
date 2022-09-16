@@ -9,6 +9,10 @@ app.set('views', path.join(__dirname, 'views'));
 //Hago que public este disponible como un recurso estatico
 app.use(express.static("public"));
 
+//Agrego estas lineas para que pueda postear formularios
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 //Llamo a mis archivos de rutas con un require
 const rutasMain = require('./routes/main.js'); 
 const rutasUsuarios = require('./routes/usuarios.js');

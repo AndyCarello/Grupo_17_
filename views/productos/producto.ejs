@@ -3,7 +3,12 @@
     <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
-
+        <main>
+            <p>Nombre del producto: <%= producto.nombre %></p>
+            <p>Descripción del producto: <%= producto.descripcion %></p>
+            <p>Precio del producto: <%= producto.precio %></p>
+            <img src="/img/<%= producto.imagen %>" alt="Imagen de Producto">
+        </main>
 
         <!-- <%- include('../partials/footer.ejs') %> -->
     </body>

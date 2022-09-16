@@ -1,8 +1,29 @@
+//Defino funcion para buscar un usuario por id
+function buscarUsuarioPorId(id){
+    let usuario = {
+        id: 1,
+        nombre: "Juan",
+        apellido: "Perez",
+        nacimiento: "12/10/1984",
+        domicilio: "San Martin 2589",
+        domicilioPiso: 15,
+        domicilioDpto: "A",
+        telefono: "11 3689-3258",
+        email: "juan.perez@gmail.com"
+    }
+    return usuario;
+}
+//Defino una funcion para actualizar usuario por id
+function actualizarUsuarioPorId(id, datos) {
+    console.log("Actualizando usuario con id: " + id);
+    console.log("Nuevo nombre: " + datos.nombre);
+    console.log("Nuevo apellido: " + datos.apellido);
+}
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 const controller = {
     registro: (req,res)=>{
         res.render("usuarios/registro", {
-            title: "Formulario de registroo",
+            title: "Formulario de registro",
             estilos: [
                 "style.css"        
             ]
@@ -55,13 +76,15 @@ const controller = {
         console.log("Mostrando ingreso");
     },
     perfil: (req,res)=>{
+        let usuario = buscarUsuarioPorId(req.params.id);
         res.render("usuarios/perfil", {
             title: "Perfil de usuario",
             estilos: [
                 "style.css"        
-            ]
+            ],
+            usuario: usuario
         });
-        console.log("Mostrando Pagina de Perfil");
+        console.log("Mostrando Pagina de Perfil de usuario con id: " + req.params.id);
     },
     recuperacion: (req,res)=>{
         res.render("usuarios/recuperacion", {
@@ -71,7 +94,17 @@ const controller = {
             ]
         });
         console.log("Mostrando recuperacion enviada");
+    }, 
+    actualizar: (req, res)=>{
+        let id = req.params.id;
+        let datos = {
+            nombre: req.body.nombre,
+            apellido: req.body.apellido
+        }
+        actualizarUsuarioPorId(id, datos);
+        res.redirect("/usuarios/perfil/" + req.params.id);
     }
+    
 };
 
 module.exports = controller;

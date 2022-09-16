@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <section class="flex">
+                <div class="ancho-full centrado">
+                    <h1>CREAR PRODUCTO</h1>
+                </div>
+                <form class="flex" action="/productos/crear" method="POST">
+                    <div class="ancho-full centrado">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto" required>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <input type="text" name="precio" id="precio" placeholder="Precio" required>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto"></textarea>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" required>
+                    </div>
+                    <div class="ancho-full centrado">
+                        <button type="submit" id="crear">Crear</button>
+                    </div>
+                    <div class="ancho-full espaciado">
+                        <div>
+                            <a href="javascript:history.back()">Volver</a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>  
+        <!-- <%- include('../partials/footer.ejs') %> -->
+    </body>
+</html>

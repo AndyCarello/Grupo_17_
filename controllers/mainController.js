@@ -26,7 +26,7 @@ let controller = {
                 "style.css"          
             ]
         });
-        console.log("preguntas frecuentes");
+        console.log("Mostrando pagina Preguntas Frecuentes");
     },
     quienesSomos: (req, res) => {
         res.render("info", {
@@ -35,7 +35,7 @@ let controller = {
                 "style.css"        
             ]
         });
-        console.log("Mostrando ¿Quienes somos?");
+        console.log("Mostrando pagina ¿Quienes somos?");
     },
 
     home: (req, res) => {

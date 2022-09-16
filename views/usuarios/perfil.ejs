@@ -8,35 +8,35 @@
                 <div class="ancho-full centrado">
                     <h1>Perfil de usuario</h1>
                 </div>
-                <form class="flex" action="perfil" method="GET">
+                <form class="flex" action="/usuarios/actualizar/<%= usuario.id %>" method="POST">
                     <div class="ancho-full centrado">
                         <h3>Datos generales</h3>
                     </div>
                     <div class="ancho-full centrado">
-                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                        <input type="email" name="email" id="email" value="<%= usuario.email %>" placeholder="Correo electronico" disabled>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= usuario.nombre %>" required>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="<%= usuario.apellido %>" required>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
-                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" required>
+                        <input type="text" name="fechadenacimiento" id="fechadenacimiento"
+                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" value="<%= usuario.nacimiento %>" required>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>  
+                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" value="<%= usuario.telefono %>" required>  
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" required>
+                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" value="<%= usuario.domicilio %>" required>
                     </div>
                     <div class="ancho-half espaciado ">
                         <div class="ancho-quarter centrado ">
-                        <input type="number" name="piso" id="piso" placeholder="Piso" required maxlength="2"> 
+                        <input type="number" name="piso" id="piso" placeholder="Piso" value="<%= usuario.domicilioPiso %>" required maxlength="2"> 
                         </div>
                         <div class="ancho-quarter  centrado ">
-                            <input type="number" name="dpto" id="dpto" placeholder="Dpto" required maxlength="1"> 
+                            <input type="text" name="dpto" id="dpto" placeholder="Dpto" value="<%= usuario.domicilioDpto %>"required maxlength="1"> 
                         </div>
                     </div>
                     <div class="ancho-full centrado">
@@ -45,7 +45,7 @@
                 </form>
             </section>
             <section class="flex">
-                <form class="flex" action="/usuarios/perfil" method="GET">
+                <form class="flex" action="/usuarios/password/<%= usuario.id %>" method="POST">
                     <div class="ancho-full centrado">
                         <h3>Actualizar contraseña</h3>
                     </div>
@@ -74,14 +74,14 @@
                     </div>
                     <div class="pedido-detalle">
                         <div class="pedido-item">
-                            <img class="item-imagen" src="img/mousse-cake.png" alt="Imagen del producto">
+                            <img class="item-imagen" src="/img/mousse-cake.png" alt="Imagen del producto">
                             <div class="item-titulo">Torta Mousse</div>
                             <div class="item-unitario"><span>Precio:</span>$100.00</div>
                             <div class="item-cantidad"><span>Cantidad:</span>2</div>
                             <div class="item-subtotal"><span>Subtotal:</span>$200.00</div>
                         </div>
                         <div class="pedido-item">
-                            <img class="item-imagen" src="img/balcarce-cake.png" alt="Imagen del producto">
+                            <img class="item-imagen" src="/img/balcarce-cake.png" alt="Imagen del producto">
                             <div class="item-titulo">Torta Balcarce</div>
                             <div class="item-unitario"><span>Precio:</span>$ 50.00</div>
                             <div class="item-cantidad"><span>Cantidad:</span>1</div>
