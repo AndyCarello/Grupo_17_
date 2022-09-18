@@ -4,7 +4,7 @@ let usuariosController = require('../controllers/usuariosController.js'); //Requ
 
 //Usando router llamo a un metodo del controlador segun la url
 router.get("/registro", usuariosController.registro);
-router.get("/registrado", usuariosController.registrado);
+router.post("/registrado", usuariosController.registrado);
 router.get("/recuperar", usuariosController.recuperar);
 router.get("/reestablecercontrasena", usuariosController.restablecer);
 router.get("/validado", usuariosController.validado);
@@ -12,7 +12,7 @@ router.get("/ingreso", usuariosController.ingreso);
 router.post("/ingreso", usuariosController.iniciarSesion);
 router.get("/perfil/:id", usuariosController.perfil);
 router.post("/actualizar/:id", usuariosController.actualizar);
-router.get("/recuperacion", usuariosController.recuperacion);
+router.post("/recuperacion", usuariosController.recuperacion);
 
 
 module.exports = router; //Exporto mi usuariosRouter
