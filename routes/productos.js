@@ -3,7 +3,7 @@ let router = express.Router(); //Requiero la funcion router de express
 let productosController = require('../controllers/productosController.js'); //Requiero el productosController
 
 //Usando router llamo a un metodo del controlador segun la url
-router.get("/", );
+router.get("/", productosController.listar );
 router.get("/:id", productosController.detalle);
 router.get("/crear", productosController.formCrear);
 router.post("/crear", productosController.crear);
