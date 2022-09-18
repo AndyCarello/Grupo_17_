@@ -14,8 +14,8 @@ function buscarProductoPorId(id){
 const controller = {
     //Metodo que lista todos los productos
     listar: (req,res)=>{
-        res.render("productos/producto", {
-            title: producto.nombre,
+        res.render("productos", {
+            title: "Listado de productos",
             estilos: [
                 "style.css",
                 "productos.css"       
