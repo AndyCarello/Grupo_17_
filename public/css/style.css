@@ -85,7 +85,7 @@ input {
 }
 
 button {
-    display: flex;
+    /*display: flex; */
     color:#7D5A50;
     background-color: #FCDEC0 ;
     border-style: none;
@@ -104,7 +104,18 @@ main {
 main input, main button {
     width: 100%;
 }
+/* Estilos Producto*/
 
+#producto img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+#producto article {
+    background-color: white;
+    padding: 1em;
+}
 /* Estilos Perfil*/
 
 .pedido {
@@ -164,6 +175,10 @@ main input, main button {
 }
 
 /* Estilos Carrito */
+#fondo-carrito {
+    background-color: white;
+    padding: 1em;
+}
 
 #contenedor-carrito {
     width: 100%;

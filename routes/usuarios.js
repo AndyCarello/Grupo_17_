@@ -9,6 +9,7 @@ router.get("/recuperar", usuariosController.recuperar);
 router.get("/reestablecercontrasena", usuariosController.restablecer);
 router.get("/validado", usuariosController.validado);
 router.get("/ingreso", usuariosController.ingreso);
+router.post("/ingreso", usuariosController.iniciarSesion);
 router.get("/perfil/:id", usuariosController.perfil);
 router.post("/actualizar/:id", usuariosController.actualizar);
 router.get("/recuperacion", usuariosController.recuperacion);

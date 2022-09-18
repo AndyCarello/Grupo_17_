@@ -8,6 +8,6 @@ router.get("/crear", productosController.formCrear);
 router.post("/crear", productosController.crear);
 router.get("/actualizar/:id", productosController.formActualizar);
 router.post("/actualizar/:id", productosController.actualizar);
-router.get("/eliminar/:id", productosController.eliminar);
+router.post("/eliminar/:id", productosController.eliminar);
 
 module.exports = router; //Exporto mi productosRouter

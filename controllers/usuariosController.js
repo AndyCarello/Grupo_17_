@@ -75,6 +75,11 @@ const controller = {
         });
         console.log("Mostrando ingreso");
     },
+    iniciarSesion: (req,res)=>{
+       console.log("Validando credenciales del usuario");
+       res.redirect("/usuarios/perfil/" + 1);
+    },
+
     perfil: (req,res)=>{
         let usuario = buscarUsuarioPorId(req.params.id);
         res.render("usuarios/perfil", {

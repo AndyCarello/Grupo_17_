@@ -1,3 +1,13 @@
+## 18/09/22 ##
+### Novedades ###
+
+- Hice formulario de creacion de producto, no esta enlazado desde ningun lado. Seria bueno agregar un boton desde la pagina de productos.
+- Hice formulario de modificacion de producto, esta enlazado desde el detalle de producto. Solo deberia verse cuando este logueado un administrador.
+- Puse boton para eliminar el producto al final del formulario de actualizacion. Deberia pedir una confirmacion antes de eliminarlo. 
+- Hice la vista de producto y esta enrutada.
+- Aplique un fondo blanco en el carrito para que corte la monotonia.
+
+
 ## 12/09/22 ##
 
 - Se implemento la Weekly y se redacto el archivo Weekly.md 
