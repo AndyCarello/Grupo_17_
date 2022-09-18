@@ -12,10 +12,7 @@ router.get('/home', mainController.home);
 router.get('/contacto' , mainController.contacto);
 router.get("/footer", mainController.footer);
 
-router.get("/productos", (req,res)=>{
-    res.sendFile(path.join(__dirname, "../views/productos.html"));
-    console.log("Mostrando Pagina de productos");
-});
+
 
 
 module.exports = router; //Exporto mi mainRouter
