@@ -377,10 +377,15 @@ display:none;
 
 main .texto h3 {
 
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 10px;
+  text-align:center;
   font-size: 15px;
 }
 
-.logo-footer {
+#contenedor-logo-footer {
   order: 2;
   display: flex;
   align-content: center;
@@ -404,6 +409,15 @@ main .texto h3 {
 @media (min-width: 480px) { 
 
 
+  main .texto h3 {
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 10px;
+    text-align:center;
+    font-size: 25px;
+  }
 
 
 }
@@ -428,14 +442,7 @@ main .texto h3 {
       top: 70%;
   }
 
-
-  .logo-footer {
-    order: 2;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    
-   }
+  
 
 
   
@@ -506,7 +513,7 @@ main .texto h3 {
    .texto h3 {
     
 
-    font-size: 50px;
+    font-size: 20px;
 
    } 
 
@@ -597,6 +604,13 @@ main .texto h3 {
   }
   
 
+  #contenedor-logo-footer {
+    order: 2;
+    display: flex;
+    align-content: center;
+    justify-content: left;
+    
+   }
   
   
   
