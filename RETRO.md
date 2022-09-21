@@ -1,3 +1,34 @@
+# Retrospectiva Grupo 17 (Sprint 3) # 
+
+## COMENZAR A HACER ##
+
+- Organizarnos mejor a la hora de reunirnos
+- Avisar por que parte esta de su tarea asignada para no atrasar al resto.
+- Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales.
+
+
+## HACER MAS ##
+- Que Discord sea el canal principal para tener todo el seguimiento del proyecto en un solo lugar.
+- Repasar y tratar de no quedarse atras.
+- Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales.
+
+
+## CONTINUAR HACIENDO ##
+- Mantener actualizado el tablero de trabajo
+- Mantener el repositorio actualizado
+
+
+## HACER MENOS ##
+- No Contestar a tiempo los mensajes del discord
+- Correr a ultimo momento para llegar con un entregable
+- Comunicar poco las cosas que hago
+
+
+## DEJAR DE HACER ##
+- Organizar reuniones a ultimo momento
+- Cambiar horarios de reuniones que ya estaban establecidos
+- Contestar tarde los mensajes
+
 # Retrospectiva Grupo 17 (Sprint 2) # 
 
 ## COMENZAR A HACER ##
