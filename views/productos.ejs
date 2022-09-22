@@ -7,65 +7,26 @@
     <%- include ('partials/header.ejs') %>
 
 
-    <main> 
-        <section>
-            <article>
-                <figure>
-                    <img src="/img/cheesecake.png" alt="torta">
-                </figure>
-                <p><button class="button" type="submit" > Agregar al carrito </button></p>
-            </article>
-        </section> 
-         <section>
-            <article>
-                <figure>
-                    <img src="/img/musse.png" alt="torta">
-                </figure>
-                <p><button class="button" type="submit" > Agregar al carrito </button></p>
-            </article>
-        </section>
-          <section>
-            <article>
-                <figure>
-                    <img src="/img/oreo.png" alt="torta">
-                </figure>
-                <p><button class="button" type="submit" > Agregar al carrito </button></p>
-            </article>
-        </section>
-         <section>
-            <article>
-                <figure>
-                    <img src="/img/balcarce-cake.png" alt="torta">
-                </figure>
-                <p><button class="button" type="submit" > Agregar al carrito </button></p>
-            </article>
-        </section> 
-
-    </main>
- <footer>
-            <section>
-                <div class="logo-contacto2">
-                    <img class="logo"
-                    id="image"
-                    src="/images/logo.png"
-                    alt="Logo footer"
-                    />
+    <main id="productos">
+        <div class="ancho-full centrado">
+            <h1>NUESTROS PRODUCTOS</h1>
+        </div>
+        <section class="flex">
+            <article class="ancho-half">
+                <div class="ancho-full">
+                    <img src="/img/cheesecake.png" alt="torta" style="max-width:100%;">
                 </div>
-    
-                <div><i class="fab fa-whatsapp"> </i></div>
-                    <h3> +54 1138209057 </h3>
-                <div><i class="fab fa-instagram"></i></div>
-                    <h3> PasteleriaSucre </h3>
-                <div><i class="fab fa-twitter"></i></div>
-                    <h3> @PasteleriaSucre </h3>
-                <div><i class="fas fa-envelope"></i></div>
-                    <h3> sucrepasteleria@gmail.com </h3>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105067.54205069569!2d-58.45183960008806!3d-34.62032437223645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires!5e0!3m2!1sen!2sar!4v1661194843809!5m2!1sen!2sar" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-            </section>    
-
-
-        </footer>
+                <div class="ancho-full">
+                    <div> CHEESECAKE</div>
+                    <div>$300</div>
+                    <div class="ancho-full espaciado" >
+                        <button>Agregar al carrito</button>
+                        <button>Ver mas</button>
+                    </div>
+            </div>
+            </article>  
+        </section>
+    </main>
+    <%- include ('partials/footer.ejs') %>
 </body>
 </html>
