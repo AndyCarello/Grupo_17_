@@ -1,3 +1,29 @@
+## 23/09/22 ##
+
+### Novedades ###
+
+- Se termino la vista de productos.
+- Se terminaron los estilos de productos.
+
+### Pendientes del Sprint 3 ###
+
+- Arreglar footer para que sea 100% responsive.
+- Quitar la etiqueta <head> del footer y hacer el include. 
+
+## 21/09/22 ##
+
+### Novedades ###
+
+- Nos reunimos en la clase, hablamos sobre los faltantes para que el sprint 3 quede terminado  y planificamos el Sprint 4, se armo el tablero de trabajo y se dividieron las tareas.
+- Se actualizo el archivo retro.md
+- Se armo la carpeta data con los archivos productos.json y usuarios.json
+
+### Pendientes del Sprint 3 ###
+
+- Terminar la vista de productos
+- Terminar los estilos de productos
+- Arreglar footer para que sea 100% responsive
+
 ## 18/09/22 ##
 ### Novedades ###
 
