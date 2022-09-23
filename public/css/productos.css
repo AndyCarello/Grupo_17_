@@ -1,12 +1,43 @@
-button {
-    /*display: flex; */
-    color:#7D5A50;
-    background-color: #FCDEC0 ;
-    border-style: none;
-    padding: ;
-    text-transform: uppercase;
+#productos .productos-imagen{
+    aspect-ratio: 1;
+    background-size: cover;
+}
+
+
+#productos .detalle{
+    margin-top: 0.25em;
+    margin-bottom: 00.25em;
+}
+
+
+#productos button{
+    width: unset;
+    align-content: center;
+    align-self: normal;
+    margin: 0;
+}
+
+
+#productos button i{
+    align-self: center;
+
+}
+
+#productos article{
+    background-color: white;
+    padding: 0.5em;
+}
+
+
+#productos section{
+    row-gap: 0.5em;
+}
+
+#productos .nombre, #productos .precio{
+    color: #7D5A50;
+}
+
+#productos .precio{
     font-weight: bold;
-    margin-top: ;
-    margin-bottom: ;
-    justify-content: center;
+    font-size: 1.25em;
 }
