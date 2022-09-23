@@ -9,6 +9,7 @@
 
 - Arreglar footer para que sea 100% responsive.
 - Quitar la etiqueta <head> del footer y hacer el include. 
+- Darle al form de contacto los mismos estilos que los demas forms.
 
 ## 21/09/22 ##
 
@@ -23,7 +24,7 @@
 - Terminar la vista de productos
 - Terminar los estilos de productos
 - Arreglar footer para que sea 100% responsive
-
+- Darle al form de contacto los mismos estilos que los demas forms
 ## 18/09/22 ##
 ### Novedades ###
 
