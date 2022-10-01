@@ -1,4 +1,10 @@
 //Declaro una funcion para buscar un producto por id
+
+const fs = require("fs");
+const path = require("path");
+const { stringify } = require("querystring");
+
+
 function buscarProductoPorId(id){
     producto = {
         id: 1,
@@ -8,6 +14,20 @@ function buscarProductoPorId(id){
         imagen: "mousse-cake.png"
     }
     return producto;
+}
+
+function findAll(){
+
+    const jsonData = fs.readFileSync(path.join(__dirname , "../data/productos.json"))
+    const data = JSON.parse(jsonData);
+    return data
+ }
+
+ function wirteFile(data){
+
+    const dataString = JSON.stringify(data, null , 4);
+    fs.writeFileSync(path.join(__dirname, "../data/productos.json"), dataString);
+
 }
 
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
@@ -60,10 +80,37 @@ const controller = {
         console.log("Mostrando formulario de actualizacion de producto");
     },
     actualizar: (req,res)=>{
+        const data = findAll()
+
+        const tortaEncontrada = data.find(function(torta){
+            return torta.id == req.params.id
+        })
+
+
+        tortaEncontrada.nombre = req.body.nombre;
+        tortaEncontrada.descripcion = req.body.descripcion;
+        tortaEncontrada.precio = req.body.precio;
+        tortaEncontrada.categoria = req.body.categoria;
+        tortaEncontrada.foto = req.body.foto;
+
+        writeFile(data);
+
         console.log('En este momento actualizo un producto');
         res.redirect("/productos");
     },
     eliminar: (req,res)=>{
+
+        const data = findAll();
+
+        const tortaEncontrada = data.findIndex(function(torta){
+            return torta.id == req.params.id
+        })
+
+        data.splice(tortaEncontrada, 1)
+
+        writeFile(data);
+
+
         console.log("En este momento elimino un producto");
         res.redirect("/productos");
     }
