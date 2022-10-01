@@ -82,16 +82,16 @@ const controller = {
     actualizar: (req,res)=>{
         const data = findAll()
 
-        const tortaEncontrada = data.find(function(torta){
-            return torta.id == req.params.id
+        const productoEncontrado = data.find(function(producto){
+            return producto.id == req.params.id
         })
 
 
-        tortaEncontrada.nombre = req.body.nombre;
-        tortaEncontrada.descripcion = req.body.descripcion;
-        tortaEncontrada.precio = req.body.precio;
-        tortaEncontrada.categoria = req.body.categoria;
-        tortaEncontrada.foto = req.body.foto;
+        productoEncontrado.nombre = req.body.nombre;
+        productoEncontrado.descripcion = req.body.descripcion;
+        productoEncontrado.precio = req.body.precio;
+        productoEncontrado.categoria = req.body.categoria;
+        productoEncontrado.foto = req.body.foto;
 
         writeFile(data);
 
@@ -102,11 +102,11 @@ const controller = {
 
         const data = findAll();
 
-        const tortaEncontrada = data.findIndex(function(torta){
-            return torta.id == req.params.id
+        const productoEncontrado = data.findIndex(function(producto){
+            return producto.id == req.params.id
         })
 
-        data.splice(tortaEncontrada, 1)
+        data.splice(productoEncontrado, 1)
 
         writeFile(data);
 
