@@ -34,12 +34,14 @@ function findAll(){
 const controller = {
     //Metodo que lista todos los productos
     listar: (req,res)=>{
+        const productos = leerProductos();
         res.render("productos", {
             title: "Listado de productos",
             estilos: [
                 "style.css",
                 "productos.css"       
-            ]
+            ],
+            productos: productos
         });
         console.log("Mostrando Pagina de productos");
     },

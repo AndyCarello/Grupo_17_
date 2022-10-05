@@ -12,62 +12,24 @@
             <h1>NUESTROS PRODUCTOS</h1>
         </div>
         <section class="flex">
-            <article class="ancho-half">
-                <div class="ancho-full productos-imagen" style="background-image: url('/img/cheesecake.png');">
+            <% for(producto of productos){ %>
+              <article class="ancho-half">
+                <div class="ancho-full productos-imagen" style="background-image: url('/img/<%= producto.imagen %>');">
                 </div>
                 <div class="ancho-full">
                     <div class="ancho-full espaciado detalle"> 
-                    <div class="nombre">CHEESECAKE</div>
-                    <div class="precio">$300</div>
+                    <div class="nombre"><%= producto.nombre %></div>
+                    <div class="precio">$<%= producto.precio %></div>
                     </div>
                     <div class="ancho-full espaciado" >
                         <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
-                        <button class="ancho-half">Ver mas</button>
-                    </div>
-            </div>
-            </article>
-            <article class="ancho-half">
-                <div class="ancho-full productos-imagen" style="background-image: url('/img/oreo-cake.png');">
-                </div>
-                <div class="ancho-full">
-                    <div class="ancho-full espaciado detalle"> 
-                    <div class="nombre">OREO</div>
-                    <div class="precio">$600</div>
-                    </div>
-                    <div class="ancho-full espaciado" >
-                        <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
-                        <button class="ancho-half">Ver mas</button>
-                    </div>
-            </div>
-            </article>
-            <article class="ancho-half">
-                <div class="ancho-full productos-imagen" style="background-image: url('/img/balcarce-cake.png');">
-                </div>
-                <div class="ancho-full">
-                    <div class="ancho-full espaciado detalle"> 
-                    <div class="nombre">BALCARCE</div>
-                    <div class="precio">$450</div>
-                    </div>
-                    <div class="ancho-full espaciado" >
-                        <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
-                        <button class="ancho-half">Ver mas</button>
-                    </div>
-            </div>
-            </article>
-            <article class="ancho-half">
-                <div class="ancho-full productos-imagen" style="background-image: url('/img/mousse-cake.png');">
-                </div>
-                <div class="ancho-full">
-                    <div class="ancho-full espaciado detalle"> 
-                    <div class="nombre">MOUSSE</div>
-                    <div class="precio">$650</div>
-                    </div>
-                    <div class="ancho-full espaciado" >
-                        <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
-                        <button class="ancho-half">Ver mas</button>
+                        <a href="/productos/<%= producto.id %>">
+                            <button class="ancho-half">Ver mas</button>
+                        </a> 
                     </div>
             </div>
             </article>  
+            <% } %>
         </section>
     </main>
     <%- include ('partials/footer.ejs') %>
