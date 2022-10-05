@@ -1,24 +1,44 @@
 [
     {
         "id": 1,
-        "nombre": "",
-        "foto" : "",
-        "descripcion": "",
+        "nombre": "Torta A",
+        "imagen": "oreo-cake.png",
+        "descripcion": "Descripcion de torta A",
         "precio": 2500
     },
     {
         "id": 2,
-        "nombre": "",
-        "foto": "",
-        "descripcion": "",
+        "nombre": "Torta B",
+        "imagen": "mousse-cake.png",
+        "descripcion": "Descripcion de torta B",
         "precio": 2500
     },
     {
         "id": 3,
-        "nombre": "",
-        "foto": "",
+        "nombre": "Torta C",
+        "imagen": "balcarce-cake.png",
         "precio": 2500,
-        "description": ""
+        "description": "Descripcion de torta C"
+    },
+    {
+        "id": 1664973409845,
+        "nombre": "torta nueva",
+        "descripcion": "nueva torta rica",
+        "precio": 5000,
+        "imagen": "oreo-cake.png"
+    },
+    {
+        "id": 1664978118750,
+        "nombre": "Andy´s Tortita ",
+        "descripcion": "edss",
+        "precio": 78500,
+        "imagen": "abc-1664978118736.png"
+    },
+    {
+        "id": 1664979073599,
+        "nombre": "Andrea Estefania",
+        "descripcion": "edssss",
+        "precio": 78500,
+        "imagen": "torta-1664979073586.png"
     }
-    
-   
+]

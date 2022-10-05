@@ -9,7 +9,7 @@
                     <img src="/img/<%= producto.imagen %>" alt="Imagen de Producto">
                 </div>
                 <div class="ancho-half centrado">
-                    <h1><%= producto.nombre %> | <a href="/producto/actualizar/1"><i class="fas fa-edit"></i></a></h1>
+                    <h1><%= producto.nombre %> | <a href="/productos/actualizar/<%= producto.id %>"><i class="fas fa-edit"></i></a></h1>
                     <div class="ancho-full centrado"><%= producto.descripcion %></div>
                     <div class="ancho-full centrado">$ <%= producto.precio %></div>
                     <div class="centrado">

@@ -5,15 +5,15 @@ const path = require("path");
 const { stringify } = require("querystring");
 
 
-function buscarProductoPorId(id){
-    producto = {
-        id: 1,
-        nombre: "Torta Mousse",
-        precio: 6000,
-        descripcion: "Exquisita torta realizada con el mejor chocolate",
-        imagen: "mousse-cake.png"
-    }
-    return producto;
+function leerProductos(){
+    const jsonData = fs.readFileSync(path.join(__dirname , "../data/productos.json"));
+    const data = JSON.parse(jsonData);
+    return data;
+}
+
+function escribirProductos(data){
+    const dataString = JSON.stringify(data, null , 4);
+    fs.writeFileSync(path.join(__dirname, "../data/productos.json"), dataString);
 }
 
 function findAll(){
@@ -45,7 +45,10 @@ const controller = {
     },
     //metodo para detalle de un producto
     detalle: (req,res)=>{
-        let producto = buscarProductoPorId(req.params.id);
+        const data = leerProductos();
+        const producto = data.find(function(buscado){
+           return buscado.id == req.params.id;
+        })
         res.render("productos/producto", {
             title: producto.nombre,
             estilos: [
@@ -65,11 +68,25 @@ const controller = {
         console.log("Mostrando formulario de creacion de producto");
     },
     crear: (req,res)=>{
-        console.log('En este momento genero un producto nuevo');
-        res.redirect("/productos");
+        const data =  leerProductos();
+        console.log(req.file);
+        const nuevoProducto = {
+            id : Date.now(),
+            nombre : req.body.nombre,
+            descripcion : req.body.descripcion,
+            precio : Number(req.body.precio),
+            imagen : req.file.filename
+        }
+        data.push(nuevoProducto);
+        escribirProductos(data);
+        console.log('En este momento genero un producto nuevo: ' + nuevoProducto.id + " | " + nuevoProducto.nombre);
+        res.redirect("/productos/" + nuevoProducto.id);
     },
     formActualizar: (req,res)=>{
-        let producto = buscarProductoPorId(1);
+       const data = leerProductos();
+       const producto = data.find(function(buscado){
+        return buscado.id == req.params.id;
+     })
         res.render("productos/actualizar", {
             title: "Actualización de Producto",
             estilos: [

@@ -1,6 +1,7 @@
 const express = require("express"); 
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 
 //Defino a ejs como mi view engine y especifico donde esta mi carpeta views
 app.set("view engine", "ejs");
@@ -10,8 +11,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static("public"));
 
 //Agrego estas lineas para que pueda postear formularios
+app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+
 
 //Llamo a mis archivos de rutas con un require
 const rutasMain = require('./routes/main.js'); 
