@@ -8,7 +8,7 @@
                 <div class="ancho-full centrado">
                     <h1>ACTUALIZAR PRODUCTO</h1>
                 </div>
-                <form class="flex" action="/productos/actualizar/1" method="POST">
+                <form class="flex" action="/productos/actualizar/<%= producto.id %>" method="POST">
                     <div class="ancho-full centrado">
                         <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>"  placeholder="Nombre del Producto" required>
                     </div>
@@ -28,7 +28,7 @@
                         <button type="submit" id="actualizar">Actualizar producto</button>
                     </div>
                 </form>
-                <form class="flex" action="/productos/eliminar/1" method="POST">
+                <form class="flex" action="/productos/eliminar/<%= producto.id %>" method="POST">
                     <div class="ancho-full centrado">
                         <button type="submit" id="eliminar">Eliminar producto</button>
                     </div>

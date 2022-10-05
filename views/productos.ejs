@@ -6,10 +6,9 @@
 <body>
     <%- include ('partials/header.ejs') %>
 
-
     <main id="productos">
         <div class="ancho-full centrado">
-            <h1>NUESTROS PRODUCTOS</h1>
+            <h1>NUESTROS PRODUCTOS | <a href="/productos/crear"><i class="fas fa-plus"></i></a></h1>
         </div>
         <section class="flex">
             <% for(producto of productos){ %>

@@ -23,7 +23,7 @@ function findAll(){
     return data
  }
 
- function wirteFile(data){
+ function writeFile(data){
 
     const dataString = JSON.stringify(data, null , 4);
     fs.writeFileSync(path.join(__dirname, "../data/productos.json"), dataString);
@@ -105,7 +105,6 @@ const controller = {
             return producto.id == req.params.id
         })
 
-
         productoEncontrado.nombre = req.body.nombre;
         productoEncontrado.descripcion = req.body.descripcion;
         productoEncontrado.precio = req.body.precio;
@@ -120,17 +119,15 @@ const controller = {
     eliminar: (req,res)=>{
 
         const data = findAll();
-
         const productoEncontrado = data.findIndex(function(producto){
             return producto.id == req.params.id
         })
-
-        data.splice(productoEncontrado, 1)
-
+        console.log("indice");
+        console.log(productoEncontrado);
+        data.splice(productoEncontrado, 1);
+        
         writeFile(data);
-
-
-        console.log("En este momento elimino un producto");
+        console.log("En este momento elimino: " + req.params.id);
         res.redirect("/productos");
     }
 };
