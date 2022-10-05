@@ -23,7 +23,7 @@ router.get("/", productosController.listar );
 router.get("/crear", productosController.formCrear);
 router.post("/crear", upload.single("foto"), productosController.crear);
 router.get("/actualizar/:id", productosController.formActualizar);
-router.post("/actualizar/:id", productosController.actualizar);
+router.post("/actualizar/:id", upload.single("foto"), productosController.actualizar);
 router.post("/eliminar/:id", productosController.eliminar);
 router.get("/:id", productosController.detalle);
 

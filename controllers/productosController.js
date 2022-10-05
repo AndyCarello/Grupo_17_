@@ -109,7 +109,7 @@ const controller = {
         productoEncontrado.descripcion = req.body.descripcion;
         productoEncontrado.precio = req.body.precio;
         productoEncontrado.categoria = req.body.categoria;
-        productoEncontrado.foto = req.body.foto;
+        productoEncontrado.imagen =  req.file ? req.file.filename : productoEncontrado.imagen;
 
         writeFile(data);
 
@@ -125,7 +125,7 @@ const controller = {
         console.log("indice");
         console.log(productoEncontrado);
         data.splice(productoEncontrado, 1);
-        
+
         writeFile(data);
         console.log("En este momento elimino: " + req.params.id);
         res.redirect("/productos");

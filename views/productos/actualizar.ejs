@@ -8,7 +8,7 @@
                 <div class="ancho-full centrado">
                     <h1>ACTUALIZAR PRODUCTO</h1>
                 </div>
-                <form class="flex" action="/productos/actualizar/<%= producto.id %>" method="POST">
+                <form class="flex" enctype="multipart/form-data" action="/productos/actualizar/<%= producto.id %>" method="POST">
                     <div class="ancho-full centrado">
                         <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>"  placeholder="Nombre del Producto" required>
                     </div>

@@ -2,9 +2,10 @@
     {
         "id": 2,
         "nombre": "Torta B",
-        "imagen": "mousse-cake.png",
+        "imagen": "torta-1664985223498.png",
         "descripcion": "Descripcion de torta B",
-        "precio": 2500
+        "precio": "2500",
+        "foto": ""
     },
     {
         "id": 3,
