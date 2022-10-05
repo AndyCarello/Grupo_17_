@@ -114,7 +114,7 @@ const controller = {
         writeFile(data);
 
         console.log('En este momento actualizo un producto');
-        res.redirect("/productos");
+        res.redirect("/productos/" + req.params.id);
     },
     eliminar: (req,res)=>{
 

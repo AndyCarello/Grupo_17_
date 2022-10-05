@@ -1,13 +1,5 @@
 [
     {
-        "id": 2,
-        "nombre": "Torta B",
-        "imagen": "torta-1664985223498.png",
-        "descripcion": "Descripcion de torta B",
-        "precio": "2500",
-        "foto": ""
-    },
-    {
         "id": 3,
         "nombre": "Torta D",
         "imagen": "balcarce-cake.png",
@@ -22,5 +14,19 @@
         "descripcion": "nueva torta rica",
         "precio": 5000,
         "imagen": "oreo-cake.png"
+    },
+    {
+        "id": 1664985369179,
+        "nombre": "Andy´s Tortita ",
+        "descripcion": "yhujjj",
+        "precio": "890788",
+        "imagen": "torta-1664986126784.png"
+    },
+    {
+        "id": 1664986162136,
+        "nombre": "cheescake",
+        "descripcion": "yhgtfrdesss",
+        "precio": "8907654",
+        "imagen": "torta-1664986162127.png"
     }
 ]
