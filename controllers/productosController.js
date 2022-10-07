@@ -35,7 +35,7 @@ const controller = {
     //Metodo que lista todos los productos
     listar: (req,res)=>{
         const productos = leerProductos();
-        res.render("productos", {
+        res.render("productos/productos", {
             title: "Listado de productos",
             estilos: [
                 "style.css",
