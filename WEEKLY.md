@@ -1,3 +1,14 @@
+## 5/10/22 ##
+
+### Novedades ###
+
+- Facu hizo el actualizar y el eliminar
+- Anto hizo listado y detalle en conjunto con Andy
+- Andy hizo crear, multer y method override
+- Falta contenido de usuarios.json
+- Falta que se eliminen las imágenes de productos actualizados o borrados de la carpeta
+- Generar una carpeta dentro de img donde se guarden las imágenes que no son estáticas y modificar las rutas que hagan falta
+
 ## 23/09/22 ##
 
 ### Novedades ###
