@@ -1,3 +1,26 @@
+# Retrospectiva Grupo 17 (Sprint 4) # 
+
+## COMENZAR A HACER ##
+
+- Tareas mejor detalladas en tablero
+
+## HACER MAS ##
+- Reuniones semanales
+
+
+## CONTINUAR HACIENDO ##
+- Mantener actualizado el tablero de trabajo
+- Mantener el repositorio actualizado
+- Comunicación fluida por discord y wtsp
+- Programar en equipo cuando uno se traba
+
+
+## HACER MENOS ##
+- Definir las reuniones muy sobre la hora
+
+## DEJAR DE HACER ##
+- Llegar con los entregables a ultimo momento
+
 # Retrospectiva Grupo 17 (Sprint 3) # 
 
 ## COMENZAR A HACER ##
