@@ -1,3 +1,28 @@
+## 7/10/22 ##
+
+- Revisar todas las rutas que tenemos hoy para productos y asegurarnos de que sean las definitivas 
+- Hacer  una lista de todas las rutas y cada req por cada una y definir la acción a tomar según sea invitado registrado o administrador. 
+- Implementar la entidad de usuarios (implementar las rutas el controlador las rutas)(Ya esta)
+- Implementar el registro de usuarios
+- Identificar todos los campos que  necesitamos
+- Definir que validación lleva cada campo
+- Definir donde se van a mostrar los errores y en que formato
+- Modificar las maquetas y estilos para que exista ese espacio 
+- Implementar el registro
+- Mostrar los errores donde corresponde
+- Hacer las redirecciones necesarias
+- Implementar el Login de usuarios
+- Identificar todos los campos que  necesitamos
+- Definir que validacion lleva cada campo
+-  Definir donde se van a mostrar los errores y en que formato
+- Modificar las maquetas y estilos para que exista ese espacio
+- Implementar el registro
+- Mostrar los errores donde corresponde
+- Hacer las redirecciones necesarias
+
+- Recordar usuario 
+Rutas de huéspedes y usuarios
+
 ## 5/10/22 ##
 
 ### Novedades ###
