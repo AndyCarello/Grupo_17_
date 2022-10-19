@@ -1,5 +1,7 @@
 ## 7/10/22 ##
 
+### Novedades ###
+
 - Revisar todas las rutas que tenemos hoy para productos y asegurarnos de que sean las definitivas 
 - Hacer  una lista de todas las rutas y cada req por cada una y definir la acción a tomar según sea invitado registrado o administrador. 
 - Implementar la entidad de usuarios (implementar las rutas el controlador las rutas)(Ya esta)
