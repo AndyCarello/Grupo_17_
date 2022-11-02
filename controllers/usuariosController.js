@@ -1,3 +1,19 @@
+const fs = require("fs");
+const path = require("path");
+const bcryptjs = require("bcryptjs");
+const { validationResult } = require("express-validator");
+
+function findAll(){
+    const jsonData = fs.readFileSync(path.join(__dirname, "../data/usuarios.json"))
+    const data = JSON.parse(jsonData);
+    return data;
+}
+
+function writeFile(data){
+    const stringData = JSON.stringify(data, null, 4);
+    fs.writeFileSync(path.join(__dirname, "../data/usuarios.json"), stringData);
+}
+
 //Defino funcion para buscar un usuario por id
 function buscarUsuarioPorId(id){
     let usuario = {
@@ -30,7 +46,40 @@ const controller = {
         });
         console.log("Mostrando formulario de registro");
     },
-    registrado: (req,res)=>{
+    processRegister: (req, res) =>{
+
+        const error = validationResult(req)
+        
+        if(!error.isEmpty()){
+
+            console.log(error.mapped())
+            console.log(error.errors)
+            return res.render("usuarios/registro" , { errors: error.mapped() , old: req.body })
+        }
+
+        const users = findAll();
+
+        
+
+        const newUser = {
+
+            id:  users.length + 1,
+            nombre: req.body.nombre,
+            apellido: req.body.Apellido,
+            nacimiento: req.body.Fechadenacimiento,
+            telefono: req.body.telefono,
+            domicilio: req.body.calleyaltura,
+            domicilioPiso: req.body.piso,
+            domicilioDpto: req.body.dpto,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            
+        };
+
+        users.push(newUser);
+
+        writeFile(users);
+
         res.render("usuarios/registrado", {
             title: "Formulario de ingreso",
             estilos: [
@@ -38,6 +87,21 @@ const controller = {
             ]
         });
         console.log("Mostrando agradecimiento por haberse registrado");
+
+
+    },
+    registrado: (req,res)=>{
+
+
+        res.render("usuarios/registrado", {
+            title: "Formulario de ingreso",
+            estilos: [
+                "style.css"        
+            ]
+        });
+        console.log("Mostrando agradecimiento por haberse registrado");
+
+        
     },
     recuperar: (req,res)=>{
         res.render("usuarios/recuperar", {

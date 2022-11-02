@@ -3,6 +3,7 @@
     <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
+    
         <main id="registro">
             <section class="flex">
                 <div class="ancho-full centrado">
@@ -15,38 +16,63 @@
                         <li>Error 2</li>
                     </ul></p>
                 </div>
-                <form class="flex" action="/usuarios/registrado" method="POST">
+                <form class="flex" action="registro" method="POST">
+                    
                     <div class="ancho-full centrado">
-                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                        <input type="email" name="email" id="email" placeholder="Correo electronico" >
+                        <% if(locals.errors && locals.errors.email){ %>
+                            <p> <%= errors.email.msg %>  </p>
+                          <% } %> 
                     </div>
                     <div class="ancho-half centrado">
-                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" >
+                        <% if(locals.errors && locals.errors.password){ %>
+                            <p> <%= errors.password.msg %>  </p>
+                          <% } %> 
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="password" name="password" id="password" placeholder="Repetir contraseña" required>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre"  >
+                        <% if(locals.errors && locals.errors.nombre){ %>
+                            <p> <%= errors.email.msg %>  </p>
+                          <% } %> 
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" >
+                        <% if(locals.errors && locals.errors.Apellido){ %>
+                            <p> <%= errors.Apellido.msg %>  </p>
+                          <% } %> 
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
-                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" required>
+                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')"  >
+                            <% if(locals.errors && locals.errors.Fechadenacimiento){ %>
+                                <p> <%= errors.Fechadenacimiento.msg %>  </p>
+                              <% } %> 
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>  
+                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono"  > 
+                        <% if(locals.errors && locals.errors.telefono){ %>
+                            <p> <%= errors.telefono.msg %>  </p>
+                          <% } %> 
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" required>
+                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" >
+                        <% if(locals.errors && locals.errors.calleyaltura){ %>
+                            <p> <%= errors.calleyaltura.msg %>  </p>
+                          <% } %> 
                     </div>
                     <div class="ancho-half espaciado ">
                         <div class="ancho-quarter centrado ">
-                        <input type="number" name="piso" id="piso" placeholder="Piso" required maxlength="2"> 
+                        <input type="number" name="piso" id="piso" placeholder="Piso"  maxlength="2" > 
+                        <% if(locals.errors && locals.errors.piso){ %>
+                            <p> <%= errors.piso.msg %>  </p>
+                          <% } %> 
                         </div>
                         <div class="ancho-quarter  centrado ">
-                            <input type="text" name="dpto" id="dpto" placeholder="Dpto" required maxlength="1"> 
+                            <input type="text" name="dpto" id="dpto" placeholder="Dpto"  maxlength="1" > 
+                            <% if(locals.errors && locals.errors.dpto){ %>
+                                <p> <%= errors.dpto.msg %>  </p>
+                              <% } %> 
                         </div>
                     </div>
                     <div class="ancho-full centrado">

@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nombre": "Facundo",
+        "apellido": "Morcillo",
+        "nacimiento": "1999-12-24",
+        "telefono": "113829042",
+        "domicilio": "3213",
+        "domicilioPiso": "1",
+        "domicilioDpto": "2",
+        "email": "facundomorcillo@gmail.com",
+        "password": "$2a$10$lA/Kv.ciUq.ZlUVccDofD.eJGmKwT0quvTUyZLnjmevYjWyWhfcna"
+    }
+]
