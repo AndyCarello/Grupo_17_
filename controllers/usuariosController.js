@@ -54,12 +54,17 @@ const controller = {
 
             console.log(error.mapped())
             console.log(error.errors)
-            return res.render("usuarios/registro" , { errors: error.mapped() , old: req.body })
+            return res.render("usuarios/registro" , { 
+                title: "Formulario de registro",
+                estilos: [
+                    "style.css"
+                ],
+                errors: error.mapped(), 
+                old: req.body 
+                })
         }
 
         const users = findAll();
-
-        
 
         const newUser = {
 
