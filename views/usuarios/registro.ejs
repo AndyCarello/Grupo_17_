@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs') %>
+    <head class="header">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <title>Home</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/style-solo-header.css"> 
+        <link rel="stylesheet" href="/css/style.css"> 
+        <link rel="stylesheet" href="/css/style-solo-header.css"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">   
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
     <body>
         <%- include('../partials/header.ejs') %>
     
@@ -10,69 +24,60 @@
                     <h1>FORMULARIO DE REGISTRO</h1>
                 </div>
                 <div class="msg-error" >
-                   <p><b>Atencion!</b> se han encontrado los siguientes errores en el formulario.</p> 
+                   <p><b>Atencion!</b> se han encontrado los siguientes errores en el formulario.</p>
+                   <% if(locals.errors){ %>
+                    
                     <p><ul>
-                        <li>Error 1</li>
-                        <li>Error 2</li>
+                        <% errors.forEach(function(error) { %>
+
+                            <li> <%= error.msg %></li>
+
+                        <%}) %>
                     </ul></p>
+                
+                
+                   <% } %>
+                    
                 </div>
-                <form class="flex" action="registro" method="POST">
+                <form class="flex" action="/usuarios/registro" method="POST">
                     
                     <div class="ancho-full centrado">
                         <input type="email" name="email" id="email" placeholder="Correo electronico" >
-                        <% if(locals.errors && locals.errors.email){ %>
-                            <p> <%= errors.email.msg %>  </p>
-                          <% } %> 
+                        
                     </div>
                     <div class="ancho-half centrado">
                         <input type="password" name="password" id="password" placeholder="Contraseña" >
-                        <% if(locals.errors && locals.errors.password){ %>
-                            <p> <%= errors.password.msg %>  </p>
-                          <% } %> 
+                        
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre"  >
-                        <% if(locals.errors && locals.errors.nombre){ %>
-                            <p> <%= errors.email.msg %>  </p>
-                          <% } %> 
+                        
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" >
-                        <% if(locals.errors && locals.errors.Apellido){ %>
-                            <p> <%= errors.Apellido.msg %>  </p>
-                          <% } %> 
+                        
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
                             placeholder="Fecha de Nacimiento" onfocus="(this.type='date')"  >
-                            <% if(locals.errors && locals.errors.Fechadenacimiento){ %>
-                                <p> <%= errors.Fechadenacimiento.msg %>  </p>
-                              <% } %> 
+                           
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="tel" name="telefono" id="telefono" placeholder="Telefono"  > 
-                        <% if(locals.errors && locals.errors.telefono){ %>
-                            <p> <%= errors.telefono.msg %>  </p>
-                          <% } %> 
+                        
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" >
-                        <% if(locals.errors && locals.errors.calleyaltura){ %>
-                            <p> <%= errors.calleyaltura.msg %>  </p>
-                          <% } %> 
+                        
                     </div>
                     <div class="ancho-half espaciado ">
                         <div class="ancho-quarter centrado ">
                         <input type="number" name="piso" id="piso" placeholder="Piso"  maxlength="2" > 
-                        <% if(locals.errors && locals.errors.piso){ %>
-                            <p> <%= errors.piso.msg %>  </p>
-                          <% } %> 
+                        
                         </div>
                         <div class="ancho-quarter  centrado ">
                             <input type="text" name="dpto" id="dpto" placeholder="Dpto"  maxlength="1" > 
-                            <% if(locals.errors && locals.errors.dpto){ %>
-                                <p> <%= errors.dpto.msg %>  </p>
-                              <% } %> 
+                            
                         </div>
                     </div>
                     <div class="ancho-full centrado">
