@@ -17,18 +17,10 @@ function writeFile(data){
 
 //Defino funcion para buscar un usuario por id
 function buscarUsuarioPorId(id){
-    let usuario = {
-        id: 1,
-        nombre: "Juan",
-        apellido: "Perez",
-        nacimiento: "12/10/1984",
-        domicilio: "San Martin 2589",
-        domicilioPiso: 15,
-        domicilioDpto: "A",
-        telefono: "11 3689-3258",
-        email: "juan.perez@gmail.com"
-    }
-    return usuario;
+    const data = findAll();
+    return data.find(function(buscado){
+        return buscado.id == id;
+    });
 }
 //Defino una funcion para actualizar usuario por id
 function actualizarUsuarioPorId(id, datos) {
@@ -50,11 +42,9 @@ const controller = {
     processRegister: (req, res) =>{
 
         const error = validationResult(req)
-        
+        console.log(error.errors)
         if(!error.isEmpty()){
 
-            //console.log(error.mapped())
-            console.log(error.errors)
             return res.render("usuarios/registro" , { 
                 title: "Formulario de registro",
                 estilos: [
@@ -146,8 +136,59 @@ const controller = {
         console.log("Mostrando ingreso");
     },
     iniciarSesion: (req,res)=>{
-       console.log("Validando credenciales del usuario");
-       res.redirect("/usuarios/perfil/" + 1);
+        const error = validationResult(req);
+        if(!error.isEmpty()){
+            return res.render("usuarios/ingreso" , 
+                { 
+                    title: "Formulario de ingreso",
+                    estilos: [
+                        "style.css"
+                    ],
+                    errors: error.errors, 
+                    old: req.body 
+                })
+        }
+        
+        const data = findAll();
+        
+        const user = data.find(function(buscado){
+           return buscado.email == req.body.email;
+        })
+
+        if (user === undefined) {
+            res.render("usuarios/ingreso", 
+                {
+                    title: "Formulario de ingreso",
+                    estilos: [
+                        "style.css"        
+                    ],
+                    errors: [
+                        {
+                            msg : "Los datos de inicio de sesión no son válidos"
+                        }
+                    ]
+                });
+        } else {
+            if (bcryptjs.compareSync(req.body.password, user.password)) {
+                console.log("Coinciden passwords");
+                res.redirect("/usuarios/perfil/" + user.id);
+            } 
+            else {
+                console.log("No coinciden passwords");
+                res.render("usuarios/ingreso", 
+                {
+                    title: "Formulario de ingreso",
+                    estilos: [
+                        "style.css"        
+                    ],
+                    errors: [
+                        {
+                            msg : "Los datos de inicio de sesión no son válidos"
+                        }
+                    ]
+                });
+            }
+        }
     },
 
     perfil: (req,res)=>{

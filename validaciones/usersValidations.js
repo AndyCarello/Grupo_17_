@@ -37,6 +37,16 @@ module.exports = {
 
 
 
+    ],
+    logInValidation: [
+        body("email")
+           .notEmpty()
+           .withMessage("Campo email incompleto")
+           .isEmail()
+           .withMessage("formate de email invalido"),
+        body("password")
+           .notEmpty()
+           .withMessage("Campo password incompleto")
     ]
 
 }
