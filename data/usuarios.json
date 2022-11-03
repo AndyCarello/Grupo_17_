@@ -12,55 +12,6 @@
         "password": "$2a$10$lA/Kv.ciUq.ZlUVccDofD.eJGmKwT0quvTUyZLnjmevYjWyWhfcna"
     },
     {
-        "id": 2,
-        "nombre": "Andrea",
-        "apellido": "Carello",
-        "nacimiento": "1984-11-11",
-        "telefono": "1136593282",
-        "domicilio": "ohigggins 1402",
-        "domicilioPiso": "1",
-        "domicilioDpto": "2",
-        "email": "andytest@gmail.com",
-        "password": "$2a$10$dkiNSyf3D2Rq.8eb6BNoUueWoAWH2YCKeO7tkLmynhfalQi7uavzi"
-    },
-    {
-        "id": 3,
-        "nombre": "Andy",
-        "apellido": "La clave es 1234",
-        "nacimiento": "1984-11-27",
-        "telefono": "11 12344321",
-        "domicilio": "la calle 1234",
-        "domicilioPiso": "4",
-        "domicilioDpto": "5",
-        "email": "andyok@gmail.com",
-        "password": "$2a$10$up1J3mL7ghixH.QTjiXLCelrWCr4sYUGNuw9LZRjLM3bvRl6d0Fi6"
-    },
-    {
-        "id": 4,
-        "nombre": "Andy",
-        "apellido": "La clave es 1234",
-        "nacimiento": "1984-11-27",
-        "telefono": "132873728",
-        "domicilio": "lksjdaklsjd 342",
-        "domicilioPiso": "2",
-        "domicilioDpto": "4",
-        "email": "andy1234@gmail.com",
-        "password": "$2a$10$sxztzgmWArRrGwxOZCzj3.H97z4bzCAmQ02VFTgkfZ4XIdkK0toHC"
-    },
-    {
-        "id": 5,
-        "nombre": "Andy",
-        "apellido": "La clave es 1234",
-        "nacimiento": "1984-11-27",
-        "telefono": "01136593282",
-        "domicilio": "75757",
-        "domicilioPiso": "1",
-        "domicilioDpto": "2",
-        "email": "1234@gmail.com",
-        "password": "$2a$10$pj.nsrKVwXQK931HdENbI.fUeUfc00V0GAqQKyjyfZRdYyxDUwHLu",
-        "admin": true
-    },
-    {
         "id": 6,
         "nombre": "Administrador",
         "apellido": "Sucre",

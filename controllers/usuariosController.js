@@ -59,7 +59,7 @@ const controller = {
 
         const newUser = {
 
-            id:  users.length + 1,
+            id:  users[users.length -1].id +1,
             nombre: req.body.nombre,
             apellido: req.body.Apellido,
             nacimiento: req.body.Fechadenacimiento,
