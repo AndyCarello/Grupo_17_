@@ -170,8 +170,9 @@ const controller = {
                 });
         } else {
             if (bcryptjs.compareSync(req.body.password, user.password)) {
-                console.log("Coinciden passwords");
-                res.redirect("/usuarios/perfil/" + user.id);
+                delete user.password;
+                req.session.user = user;
+                res.redirect("/usuarios/perfil/");
             } 
             else {
                 console.log("No coinciden passwords");
@@ -192,15 +193,21 @@ const controller = {
     },
 
     perfil: (req,res)=>{
-        let usuario = buscarUsuarioPorId(req.params.id);
-        res.render("usuarios/perfil", {
-            title: "Perfil de usuario",
-            estilos: [
-                "style.css"        
-            ],
-            usuario: usuario
-        });
-        console.log("Mostrando Pagina de Perfil de usuario con id: " + req.params.id);
+        if (req.session.user === undefined) {
+            res.redirect("/");
+        } else {
+            let usuario = buscarUsuarioPorId(req.session.user.id);
+            res.render("usuarios/perfil", {
+                title: "Perfil de usuario",
+                estilos: [
+                    "style.css"        
+                ],
+                usuario: usuario
+            });
+            console.log("Mostrando Pagina de Perfil de usuario con id: " + req.params.id);
+        }
+    
+        
     },
     recuperacion: (req,res)=>{
         res.render("usuarios/recuperacion", {
@@ -212,14 +219,19 @@ const controller = {
         console.log("Mostrando recuperacion enviada");
     }, 
     actualizar: (req, res)=>{
-        let id = req.params.id;
+        let id = req.session.user.id;
         let datos = {
             nombre: req.body.nombre,
             apellido: req.body.apellido
         }
         actualizarUsuarioPorId(id, datos);
-        res.redirect("/usuarios/perfil/" + req.params.id);
-    }
+        res.redirect("/usuarios/perfil/");
+    },
+    salir: (req, res)=>{
+        req.session.destroy();
+        return res.redirect("/");
+    },
+
     
 };
 

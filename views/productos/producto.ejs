@@ -9,12 +9,18 @@
                     <img src="/img/<%= producto.imagen %>" alt="Imagen de Producto">
                 </div>
                 <div class="ancho-half centrado">
-                    <h1><%= producto.nombre %> | <a href="/productos/actualizar/<%= producto.id %>"><i class="fas fa-edit"></i></a></h1>
+                    <h1><%= producto.nombre %>
+                        <% if (locals.user && locals.user.admin){ %>
+                             | <a href="/productos/actualizar/<%= producto.id %>"><i class="fas fa-edit"></i></a>
+                        <% } %>
+                    </h1>
                     <div class="ancho-full centrado"><%= producto.descripcion %></div>
                     <div class="ancho-full centrado">$ <%= producto.precio %></div>
-                    <div class="centrado">
-                        <button>Agregar</button>
-                    </div>
+                    <% if (locals.user){ %>
+                        <div class="centrado">
+                            <button>Agregar</button>
+                        </div>
+                    <% } %>
                 </div>
             </article>
         </main>

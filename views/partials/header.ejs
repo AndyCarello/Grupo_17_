@@ -11,12 +11,22 @@
                 <a href="/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
             </div>
             <div id="login-bar">
-                <div>
-                    <a href="/usuarios/registro">Crea tu cuenta</a>
-                </div>
-                <div>
-                    <a href="/usuarios/ingreso">Ingresa</a>
-                </div>
+                <% if (!locals.sesionIniciada) { %>
+                    <div>
+                        <a href="/usuarios/registro">Creá tu cuenta</a>
+                    </div>
+                    <div>
+                        <a href="/usuarios/ingreso">Ingresá</a>
+                    </div>
+                <% } else { %>
+                    <div>
+                        <a href="/usuarios/perfil">Perfil</a>
+                    </div>
+                    <div>
+                        <a href="/usuarios/salir">Salir</a>
+                    </div>
+                <% } %>
+                
             </div>
 
         </div>

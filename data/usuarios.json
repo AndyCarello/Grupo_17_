@@ -57,6 +57,32 @@
         "domicilioPiso": "1",
         "domicilioDpto": "2",
         "email": "1234@gmail.com",
-        "password": "$2a$10$pj.nsrKVwXQK931HdENbI.fUeUfc00V0GAqQKyjyfZRdYyxDUwHLu"
+        "password": "$2a$10$pj.nsrKVwXQK931HdENbI.fUeUfc00V0GAqQKyjyfZRdYyxDUwHLu",
+        "admin": true
+    },
+    {
+        "id": 6,
+        "nombre": "Administrador",
+        "apellido": "Sucre",
+        "nacimiento": "2020-01-01",
+        "telefono": "11 1234-4321",
+        "domicilio": "Calle Admin 1234",
+        "domicilioPiso": "1",
+        "domicilioDpto": "A",
+        "email": "administrador@sucre.com.ar",
+        "password": "$2a$10$mO9L1/rQvXxO84WdrIx9tep898HznRi/AjAFOiRlVPrFu0L6GK4gi",
+        "admin": true
+    },
+    {
+        "id": 7,
+        "nombre": "Registrado",
+        "apellido": "Sucre",
+        "nacimiento": "2024-01-01",
+        "telefono": "11 4321-1234",
+        "domicilio": "Calle Registrado 1234",
+        "domicilioPiso": "9",
+        "domicilioDpto": "B",
+        "email": "registrado@sucre.com.ar",
+        "password": "$2a$10$/KEb69ahLv7ZBPKMto5/g.GLN803mgSLE7sDTw22eQ6fLmygft/Fa"
     }
 ]

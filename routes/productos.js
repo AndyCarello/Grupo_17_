@@ -4,6 +4,7 @@ let productosController = require('../controllers/productosController.js'); //Re
 const path = require('path');
 const multer = require('multer');
 const aux = require('../js/auxiliares');
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
@@ -20,11 +21,11 @@ const upload = multer({storage: storage})
 
 //Usando router llamo a un metodo del controlador segun la url
 router.get("/", productosController.listar );
-router.get("/crear", productosController.formCrear);
-router.post("/crear", upload.single("foto"), productosController.crear);
-router.get("/actualizar/:id", productosController.formActualizar);
-router.put("/actualizar/:id", upload.single("foto"), productosController.actualizar);
-router.delete("/eliminar/:id", productosController.eliminar);
+router.get("/crear", adminMiddleware, productosController.formCrear);
+router.post("/crear", adminMiddleware, upload.single("foto"), productosController.crear);
+router.get("/actualizar/:id", adminMiddleware, productosController.formActualizar);
+router.put("/actualizar/:id", adminMiddleware, upload.single("foto"), productosController.actualizar);
+router.delete("/eliminar/:id", adminMiddleware, productosController.eliminar);
 router.get("/:id", productosController.detalle);
 
 

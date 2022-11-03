@@ -8,7 +8,11 @@
 
     <main id="productos">
         <div class="ancho-full centrado">
-            <h1>NUESTROS PRODUCTOS | <a href="/productos/crear"><i class="fas fa-plus"></i></a></h1>
+            <h1>NUESTROS PRODUCTOS 
+                <% if (locals.user && locals.user.admin){ %>
+                     | <a href="/productos/crear"><i class="fas fa-plus"></i></a>
+                <% } %>
+            </h1>
         </div>
         <section class="flex">
             <% for(producto of productos){ %>
@@ -21,7 +25,9 @@
                     <div class="precio">$<%= producto.precio %></div>
                     </div>
                     <div class="ancho-full espaciado" >
-                        <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
+                        <% if (locals.user){ %>
+                          <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
+                        <% } %>
                         <a href="/productos/<%= producto.id %>">
                             <button class="ancho-half">Ver mas</button>
                         </a> 
