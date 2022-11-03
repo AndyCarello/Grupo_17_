@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head class="header">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-        <title>Home</title>
-        <link rel="stylesheet" href="/css/index.css">
-        <link rel="stylesheet" href="/css/style-solo-header.css"> 
-        <link rel="stylesheet" href="/css/style.css"> 
-        <link rel="stylesheet" href="/css/style-solo-header.css"> 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">   
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+    <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
     
@@ -23,22 +9,18 @@
                 <div class="ancho-full centrado">
                     <h1>FORMULARIO DE REGISTRO</h1>
                 </div>
+                <% if (locals.errors) { %>
                 <div class="msg-error" >
                    <p><b>Atencion!</b> se han encontrado los siguientes errores en el formulario.</p>
-                   <% if(locals.errors){ %>
-                    
-                    <p><ul>
-                        <% errors.forEach(function(error) { %>
-
-                            <li> <%= error.msg %></li>
-
-                        <%}) %>
-                    </ul></p>
-                
-                
-                   <% } %>
-                    
+                   <p>
+                        <ul>
+                            <% for (error of locals.errors) { %>
+                                <li><%= error.msg %></li>
+                            <% } %>
+                        </ul>
+                    </p>                   
                 </div>
+                <% } %>
                 <form class="flex" action="/usuarios/registro" method="POST">
                     
                     <div class="ancho-full centrado">

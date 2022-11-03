@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const { exit } = require("process");
 
 function findAll(){
     const jsonData = fs.readFileSync(path.join(__dirname, "../data/usuarios.json"))
@@ -52,18 +53,18 @@ const controller = {
         
         if(!error.isEmpty()){
 
-            console.log(error.mapped())
+            //console.log(error.mapped())
             console.log(error.errors)
             return res.render("usuarios/registro" , { 
                 title: "Formulario de registro",
                 estilos: [
                     "style.css"
                 ],
-                errors: error.mapped(), 
+                errors: error.errors, 
                 old: req.body 
                 })
         }
-
+        
         const users = findAll();
 
         const newUser = {
