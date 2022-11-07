@@ -1,9 +1,9 @@
 const express = require("express"); 
 const app = express();
 const path = require("path");
-const session = require('express-session');
+const session = require('express-session'); 
 const methodOverride = require("method-override");
-const sesionIniciadaMiddleware = require("./middlewares/sesionIniciadaMiddleware.js");
+const sesionIniciadaMiddleware = require("./middlewares/sesionIniciadaMiddleware.js"); //Llamo al mw que maneja las sesiones a nivel aplicacion
 
 //Defino a ejs como mi view engine y especifico donde esta mi carpeta views
 app.set("view engine", "ejs");
@@ -17,14 +17,14 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-
+//Confirguro la libreria express session
 app.use(session({
         secret: "frase secreta",
         resave: false,
         saveUninitialized: false
     }));
 
-app.use(sesionIniciadaMiddleware);
+app.use(sesionIniciadaMiddleware); //Hago uso del Mw requerido
 
 
 //Llamo a mis archivos de rutas con un require

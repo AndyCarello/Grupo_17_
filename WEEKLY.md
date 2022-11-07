@@ -1,3 +1,15 @@
+## 2/11/22 ##
+
+### Novedades ###}
+- saqué el requerido del formulario de login para seguir el mismo criterio que Facu
+- implemente la verificacionnde usuario y contraseña en el login
+- arme 3 middlewares: admin, invitado, registrado; para que redireccione según corresponda
+- arme un middleware de app para que tenga los datos de sesion a nivel locals
+- modifique ejs de header para que muestre opciones de registro/ingreso o perfil/salir, segun corresponda
+- modifique ejs de productos para que muestre links segun si es invitado, registrado o admin
+- hice un usuario registrado@ sucre.com.ar y uno administrador@ sucre.com.ar; ambos con contraseña 1234
+- modifique como se genera el id de usuario nuevo pars que no se pisen si se borra alguno.
+
 ## 7/10/22 ##
 
 ### Novedades ###

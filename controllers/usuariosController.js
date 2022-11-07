@@ -135,9 +135,11 @@ const controller = {
         });
         console.log("Mostrando ingreso");
     },
+    //Metodo que valida los datos del usuario
     iniciarSesion: (req,res)=>{
         const error = validationResult(req);
-        if(!error.isEmpty()){
+        //Si hay errores, renderizo el login y le paso los errores al objeto de ejs.
+        if(!error.isEmpty()){ 
             return res.render("usuarios/ingreso" , 
                 { 
                     title: "Formulario de ingreso",
@@ -149,13 +151,13 @@ const controller = {
                 })
         }
         
-        const data = findAll();
-        
+        const data = findAll();//Cargo en data todos los usuarios
+        //Verifico en data si existe un usuario con el mail que se esta queriendo loguear
         const user = data.find(function(buscado){
            return buscado.email == req.body.email;
         })
 
-        if (user === undefined) {
+        if (user === undefined) { //Si no existe el usuario renderizo con error
             res.render("usuarios/ingreso", 
                 {
                     title: "Formulario de ingreso",
@@ -168,13 +170,13 @@ const controller = {
                         }
                     ]
                 });
-        } else {
-            if (bcryptjs.compareSync(req.body.password, user.password)) {
-                delete user.password;
-                req.session.user = user;
-                res.redirect("/usuarios/perfil/");
+        } else { //Comparo el hash de contraseña guardado con el pass que quiere hacer el login
+            if (bcryptjs.compareSync(req.body.password, user.password)) {//Si coinciden...
+                delete user.password; //elimino la contraseña de la variable user
+                req.session.user = user;//Disponibilizo los datos de usuario a nivel sesion
+                res.redirect("/usuarios/perfil/");//Redirijo al perfil de usuario
             } 
-            else {
+            else {//Si no coinciden los Passw renderizo con error
                 console.log("No coinciden passwords");
                 res.render("usuarios/ingreso", 
                 {
