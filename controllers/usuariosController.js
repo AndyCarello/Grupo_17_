@@ -229,7 +229,7 @@ const controller = {
         actualizarUsuarioPorId(id, datos);
         res.redirect("/usuarios/perfil/");
     },
-    salir: (req, res)=>{
+    salir: (req, res)=>{//Destruye la sesion de usuario y redirige al home
         req.session.destroy();
         return res.redirect("/");
     },
