@@ -1,3 +1,25 @@
+# Retrospectiva Grupo 17 (Sprint 5) # 
+
+## COMENZAR A HACER ##
+
+- Terminar las tareas a tiempo
+
+## HACER MAS ##
+
+- Mejor comunicacion grupal
+- Avisar al grupo si se esta trabado en una tarea
+
+## CONTINUAR HACIENDO ##
+- Mantener actualizado el tablero de trabajo
+- Mantener el repositorio actualizado
+
+## HACER MENOS ##
+- No avisar cuando no se llega con su parte del trabajo
+
+## DEJAR DE HACER ##
+- Dejar tareas para ultimo momento
+
+
 # Retrospectiva Grupo 17 (Sprint 4) # 
 
 ## COMENZAR A HACER ##
