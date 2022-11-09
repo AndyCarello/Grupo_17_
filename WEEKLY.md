@@ -1,6 +1,14 @@
+## 7/11/22 ##
+
+### Novedades ###
+
+- Se actualizo el tablero de trabajo
+- Se actualizo el archivo retro.md
+- Se actualizo el archivo WEEKLY.MD
+- Se recibio la correccion del Sprint anterior y quedaron cosas para terminar, se añadio tarjeta al sprint 6 como prioridad.
 ## 2/11/22 ##
 
-### Novedades ###}
+### Novedades ###
 - saqué el requerido del formulario de login para seguir el mismo criterio que Facu
 - implemente la verificacionnde usuario y contraseña en el login
 - arme 3 middlewares: admin, invitado, registrado; para que redireccione según corresponda
