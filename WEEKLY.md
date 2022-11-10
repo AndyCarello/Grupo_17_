@@ -1,3 +1,10 @@
+## 9/11/22 ##
+
+### Novedades ###
+
+- Archivo retro.md actualizado
+- Reparti las tareas del proximo sprint y tambien puse las tareas que venimos arrastrando del sprint anterior.
+- Tablero de trabajp actualizado
 ## 7/11/22 ##
 
 ### Novedades ###
