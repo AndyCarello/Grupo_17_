@@ -4,7 +4,7 @@ const path = require("path");
 const session = require('express-session'); 
 const methodOverride = require("method-override");
 const sesionIniciadaMiddleware = require("./middlewares/sesionIniciadaMiddleware.js"); //Llamo al mw que maneja las sesiones a nivel aplicacion
-
+const cookieParser=require('cookie-parser')
 //Defino a ejs como mi view engine y especifico donde esta mi carpeta views
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +23,7 @@ app.use(session({
         resave: false,
         saveUninitialized: false
     }));
-
+app.use(cookieParser()); // lo implemento para usar cookies
 app.use(sesionIniciadaMiddleware); //Hago uso del Mw requerido
 
 
@@ -44,7 +44,6 @@ app.use('/carrito', rutasCarrito);
 app.use('/home', rutasHome);
 app.use('/contacto', rutasContacto);
 app.use('/footer', rutasFooter);
-
 
 //Solicito el puerto al entorno (environment) y, si no me lo pasa, uso el 80
 app.listen(process.env.PORT || 80, () => {

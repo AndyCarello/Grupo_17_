@@ -35,5 +35,17 @@
         "domicilioDpto": "B",
         "email": "registrado@sucre.com.ar",
         "password": "$2a$10$/KEb69ahLv7ZBPKMto5/g.GLN803mgSLE7sDTw22eQ6fLmygft/Fa"
+    },
+    {
+        "id": 8,
+        "nombre": "Antonella",
+        "apellido": "villarroel",
+        "nacimiento": "1990-03-02",
+        "telefono": "223613933",
+        "domicilio": "Rivadavia 3456",
+        "domicilioPiso": "4",
+        "domicilioDpto": "2",
+        "email": "antus2020@gmail.com",
+        "password": "$2a$10$jHdiOchGR5jxawqa1st5MeBjjNs.QCzrHLqQnm0bEEBkJ4F41jnwm"
     }
 ]

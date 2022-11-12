@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const { exit } = require("process");
 
 function findAll(){
     const jsonData = fs.readFileSync(path.join(__dirname, "../data/usuarios.json"))
@@ -174,6 +173,11 @@ const controller = {
             if (bcryptjs.compareSync(req.body.password, user.password)) {//Si coinciden...
                 delete user.password; //elimino la contraseña de la variable user
                 req.session.user = user;//Disponibilizo los datos de usuario a nivel sesion
+                // Valido si el usuario puso recordarme y lo guardo en una cookie
+                if(req.body.recordarme){
+                    res.cookie('emailUsuario', req.body.email, {maxAge: 1000*60*60})
+                } 
+            
                 res.redirect("/usuarios/perfil/");//Redirijo al perfil de usuario
             } 
             else {//Si no coinciden los Passw renderizo con error
