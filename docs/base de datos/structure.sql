@@ -88,6 +88,7 @@ ALTER TABLE `products`
 
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+  ADD UNIQUE KEY `email` (`email`);
 
 
 ALTER TABLE `cart`
