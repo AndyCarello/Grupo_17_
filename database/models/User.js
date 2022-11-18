@@ -58,7 +58,7 @@ module.exports = () => {
         tableName : 'users',
     };
 
-    const Users = Sequelize.define(alias , cols , config)
+    const User = Sequelize.define(alias , cols , config)
 
-    return Users;
+    return User;
 };

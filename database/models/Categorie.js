@@ -24,7 +24,7 @@ module.exports = () => {
         tableName : 'categories',
     };
 
-    const Categories = Sequelize.define(alias , cols , config)
+    const Categorie = Sequelize.define(alias , cols , config)
 
-    return Categories;
+    return Categorie;
 };

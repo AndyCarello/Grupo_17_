@@ -24,7 +24,7 @@ module.exports = () => {
         tableName : 'neighborhoods',
     };
 
-    const Neighborhoods = Sequelize.define(alias , cols , config)
+    const Neighborhood = Sequelize.define(alias , cols , config)
 
-    return Neighborhoods;
+    return Neighborhood;
 };
