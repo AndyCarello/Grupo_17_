@@ -24,7 +24,7 @@ module.exports = () => {
         tableName : 'ingredients',
     };
 
-    const Ingredients = Sequelize.define(alias , cols , config)
+    const Ingredient = Sequelize.define(alias , cols , config)
 
-    return Ingredients;
+    return Ingredient;
 };
