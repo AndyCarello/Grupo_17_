@@ -14,17 +14,19 @@ module.exports = (req, res, next) => {
     if (req.session && req.session.user) {
         res.locals.sesionIniciada = true;
         res.locals.user = req.session.user;
-        console.log("Esto entro")
+    } else {
+        let emailCookie = req.cookies.emailUsuario // Guarda la cookie en una variable
+        let usuarios = findAll() //Traigo todos los Usuarios
+        let usuarioEncontrado = usuarios.find((usuario) => {
+            return usuario.email == emailCookie // Busco la coincidencia con la cookie y la guardo en una variable
+        })
+        if (usuarioEncontrado) {
+            delete usuarioEncontrado.password;
+            res.locals.sesionIniciada = true;
+            res.locals.user = req.session.user;
+            req.session.user = usuarioEncontrado // Valido si existe el usuario y lo guardo en la session
+        }
     }
-
-    let emailCookie = req.cookies.emailUsuario // Guarda la cookie en una variable
-    let usuarios = findAll() //Traigo todos los Usuarios
-    let usuarioEncontrado = usuarios.find((usuario) => {
-        usuario.email == emailCookie // Busco la coincidencia con la cookie y la guardo en una variable
-    })
-    if (usuarioEncontrado) {
-        req.session.user = usuarioEncontrado // Valido si existe el usuario y lo guardo en la session
-    }
-
+    
     next();
 }
