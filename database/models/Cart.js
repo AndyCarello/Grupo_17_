@@ -1,9 +1,6 @@
-const { DataTypes } = require("sequelize");
+module.exports = (Sequelize, DataTypes) => {
 
-
-module.exports = () => {
-
-    let alias = "cart";
+    let alias = "Cart";
 
     let cols = {
 
@@ -25,11 +22,29 @@ module.exports = () => {
 
     let config = {
 
-        timeStamps : false,
-        tableName : 'cart',
+        timestamps : false,
+        tableName : 'carts',
     };
 
-    const Cart = Sequelize.define(alias , cols , config)
+    const Cart = Sequelize.define(alias , cols , config);
+
+    Cart.associate = function(models) {
+      Cart.belongsTo(models.User, {
+        as: "user",
+        foreignKey: "user_id",
+      })
+      Cart.belongsToMany(models.Product, {
+        as: "products",
+        through: "cart_product",
+        foreignKey: "cart_id",
+        otherKey: "product_id",
+        timestamps: false
+      })
+    }
 
     return Cart;
 };
+
+
+
+

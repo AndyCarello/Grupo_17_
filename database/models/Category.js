@@ -1,7 +1,6 @@
 module.exports = (Sequelize, DataTypes) => {
 
-
-    let alias = "Neighborhood";
+    let alias = "Category";
 
     let cols = {
 
@@ -19,17 +18,17 @@ module.exports = (Sequelize, DataTypes) => {
     let config = {
 
         timestamps : false,
-        tableName : 'neighborhoods',
+        tableName : 'categories',
     };
 
-    const Neighborhood = Sequelize.define(alias , cols , config);
+    const Category = Sequelize.define(alias , cols , config);
 
-    Neighborhood.associate = function(models){
-        Neighborhood.hasMany(models.User, {
-            as: "users",
-            foreignKey: "neighborhood_id"
+    Category.associate = function(models) {
+        Category.hasMany(models.Product, {
+           as: "products",
+           foreignKey: "category_id"
         })
     }
 
-    return Neighborhood;
+    return Category;
 };

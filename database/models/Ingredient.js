@@ -1,9 +1,7 @@
-const { DataTypes } = require("sequelize");
+module.exports = (Sequelize, DataTypes) => {
 
 
-module.exports = () => {
-
-    let alias = "ingredients";
+    let alias = "Ingredient";
 
     let cols = {
 
@@ -20,11 +18,21 @@ module.exports = () => {
 
     let config = {
 
-        timeStamps : false,
+        timestamps : false,
         tableName : 'ingredients',
     };
 
-    const Ingredient = Sequelize.define(alias , cols , config)
+    const Ingredient = Sequelize.define(alias , cols , config);
+
+    Ingredient.associate = function(models) {
+        Ingredient.belongsToMany(models.Product, {
+            as: "products",
+            through: "ingredient_product",
+            foreignKey: "ingredient_id",
+            otherKey: "product_id",
+            timestamps: false
+        })
+    }
 
     return Ingredient;
 };

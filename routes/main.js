@@ -13,6 +13,7 @@ router.get("/footer", mainController.footer);
 
 
 router.get('/test', mainController.test);
+router.get('/sequelize', mainController.prueba);//
 
 
 

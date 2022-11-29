@@ -1,9 +1,7 @@
-const { DataTypes } = require("sequelize");
+module.exports = (Sequelize, DataTypes) => {
 
 
-module.exports = () => {
-
-    let alias = "products";
+    let alias = "Product";
 
     let cols = {
 
@@ -28,22 +26,37 @@ module.exports = () => {
         category_id: {
             type: DataTypes.INTEGER,
             
-        },
-        deleted_at: {
-            type: DataTypes.DATE
         }
-
-    
-
     };
 
     let config = {
 
-        timeStamps : false,
+        timestamps : false,
         tableName : 'products',
     };
 
-    const Product = Sequelize.define(alias , cols , config)
+    const Product = Sequelize.define(alias , cols , config);
+
+    Product.associate = function(models){
+        Product.belongsToMany(models.Cart, {
+            as: "carts",
+            through: "cart_product",
+            foreignKey: "product_id",
+            otherKey: "cart_id",
+            timestamps: false
+        })
+        Product.belongsTo(models.Category, {
+           as: "category",
+           foreignKey: "category_id" 
+        })
+        Product.belongsToMany(models.Ingredient, {
+            as: "ingredients",
+            through: "ingredient_product",
+            foreignKey: "product_id",
+            otherKey: "ingredient_id",
+            timestamps: false
+        })
+    }
 
     return Product;
 };

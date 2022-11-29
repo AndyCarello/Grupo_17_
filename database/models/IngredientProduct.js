@@ -1,7 +1,5 @@
-const { DataTypes } = require("sequelize");
+module.exports = (Sequelize, DataTypes) => {
 
-
-module.exports = () => {
 
     let alias = "ingredient_product";
 
@@ -23,7 +21,7 @@ module.exports = () => {
 
     let config = {
 
-        timeStamps : false,
+        timestamps : false,
         tableName : 'ingredient_product',
     };
 

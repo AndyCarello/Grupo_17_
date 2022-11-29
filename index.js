@@ -1,5 +1,6 @@
 const express = require("express"); 
 const app = express();
+require("dotenv").config() // Requiero dotenv para poder pasar puerto
 const path = require("path");
 const session = require('express-session'); 
 const methodOverride = require("method-override");
@@ -47,5 +48,5 @@ app.use('/footer', rutasFooter);
 
 //Solicito el puerto al entorno (environment) y, si no me lo pasa, uso el 80
 app.listen(process.env.PORT || 80, () => {
-    console.log("Servidor corriendo en el puerto 80 >> http://localhost/");
+    console.log("Servidor corriendo en el puerto " + process.env.PORT + " >> http://localhost:" + process.env.PORT + "/");
 });

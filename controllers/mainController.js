@@ -1,3 +1,5 @@
+const db = require('../database/models');
+const sequelize = db.sequelize;
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 let controller = {
     test: (req,res)=>{
@@ -75,6 +77,14 @@ let controller = {
 
 
         });
+    },
+
+    prueba:async(req,res)=> {
+        const data = await db.User.findAll({
+            include:'carts'
+        })
+        res.json(data)
+
     }
 };
 

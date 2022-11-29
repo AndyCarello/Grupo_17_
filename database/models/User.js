@@ -1,9 +1,7 @@
-const { DataTypes } = require("sequelize");
+module.exports = (Sequelize, DataTypes) => {
 
 
-module.exports = () => {
-
-    let alias = "users";
+    let alias = "User";
 
     let cols = {
 
@@ -30,7 +28,7 @@ module.exports = () => {
         phone: {
             type: DataTypes.STRING
         },
-        adress: {
+        address: {
             type: DataTypes.STRING
         },
         apartment: {
@@ -44,21 +42,28 @@ module.exports = () => {
         },
         is_admin: {
             type: DataTypes.TINYINT
-        },
-        deleted_at: {
-            type: DataTypes.DATE
         }
     
-
     };
 
     let config = {
 
-        timeStamps : false,
+        timestamps : false,
         tableName : 'users',
     };
 
-    const User = Sequelize.define(alias , cols , config)
+    const User = Sequelize.define(alias , cols , config);
 
+    User.associate = function(models) {
+        User.hasMany(models.Cart, {
+            as: "carts",
+            foreignKey : "user_id"
+        })
+        User.belongsTo(models.Neighborhood, {
+            as: "neighborhood",
+            foreignKey: "neighborhood_id"
+        })
+    }
     return User;
 };
+
