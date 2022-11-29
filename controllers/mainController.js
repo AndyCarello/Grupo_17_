@@ -78,8 +78,8 @@ let controller = {
 
         });
     },
-
-    prueba:async(req,res)=> {
+//metodo "prueba"(http://localhost:3000/sequelize) donde si cambian la consulta y lo llaman desde el navegador les devuelve un json directamente con la respuesta.
+    prueba:async(req,res)=> { 
         const data = await db.User.findAll({
             include:'carts'
         })
