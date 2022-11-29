@@ -2,12 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
-function findAll(){
+/* function findAll(){
     const jsonData = fs.readFileSync(path.join(__dirname, "../data/usuarios.json"))
     const data = JSON.parse(jsonData);
     return data;
-}
+} */
 
 function writeFile(data){
     const stringData = JSON.stringify(data, null, 4);
@@ -135,7 +137,7 @@ const controller = {
         console.log("Mostrando ingreso");
     },
     //Metodo que valida los datos del usuario
-    iniciarSesion: (req,res)=>{
+    iniciarSesion: async (req,res)=>{
         const error = validationResult(req);
         //Si hay errores, renderizo el login y le paso los errores al objeto de ejs.
         if(!error.isEmpty()){ 
@@ -150,13 +152,11 @@ const controller = {
                 })
         }
         
-        const data = findAll();//Cargo en data todos los usuarios
-        //Verifico en data si existe un usuario con el mail que se esta queriendo loguear
-        const user = data.find(function(buscado){
-           return buscado.email == req.body.email;
+        const user = await db.User.findOne({
+            where: { email: req.body.email}
         })
 
-        if (user === undefined) { //Si no existe el usuario renderizo con error
+        if (user === null) { //Si no existe el usuario renderizo con error
             res.render("usuarios/ingreso", 
                 {
                     title: "Formulario de ingreso",
@@ -202,15 +202,14 @@ const controller = {
         if (req.session.user === undefined) {
             res.redirect("/");
         } else {
-            let usuario = buscarUsuarioPorId(req.session.user.id);
             res.render("usuarios/perfil", {
                 title: "Perfil de usuario",
                 estilos: [
                     "style.css"        
                 ],
-                usuario: usuario
+                usuario: req.session.user
             });
-            console.log("Mostrando Pagina de Perfil de usuario con id: " + req.params.id);
+            console.log("Mostrando Pagina de Perfil de usuario con id: " + req.session.user.id);
         }
     
         

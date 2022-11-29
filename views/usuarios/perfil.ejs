@@ -16,27 +16,27 @@
                         <input type="email" name="email" id="email" value="<%= usuario.email %>" placeholder="Correo electronico" disabled>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= usuario.nombre %>" required>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= usuario.name %>" required>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="<%= usuario.apellido %>" required>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="<%= usuario.lastname %>" required>
                     </div>
                     <div class="ancho-half centrado ">
                         <input type="text" name="fechadenacimiento" id="fechadenacimiento"
-                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" value="<%= usuario.nacimiento %>" required>
+                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" value="<%= usuario.birthday %>" required>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" value="<%= usuario.telefono %>" required>  
+                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" value="<%= usuario.phone %>" required>  
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" value="<%= usuario.domicilio %>" required>
+                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" value="<%= usuario.address %>" required>
                     </div>
                     <div class="ancho-half espaciado ">
                         <div class="ancho-quarter centrado ">
-                        <input type="number" name="piso" id="piso" placeholder="Piso" value="<%= usuario.domicilioPiso %>" required maxlength="2"> 
+                        <input type="number" name="piso" id="piso" placeholder="Piso" value="<%= usuario.floor %>" required maxlength="2"> 
                         </div>
                         <div class="ancho-quarter  centrado ">
-                            <input type="text" name="dpto" id="dpto" placeholder="Dpto" value="<%= usuario.domicilioDpto %>"required maxlength="1"> 
+                            <input type="text" name="dpto" id="dpto" placeholder="Dpto" value="<%= usuario.apartment %>"required maxlength="1"> 
                         </div>
                     </div>
                     <div class="ancho-full centrado">

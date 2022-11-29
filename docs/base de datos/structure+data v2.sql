@@ -123,7 +123,7 @@ CREATE TABLE `users` (
 
 TRUNCATE TABLE `users`;
 INSERT INTO `users` (`id`, `email`, `password`, `name`, `lastname`, `birthday`, `phone`, `address`, `apartment`, `floor`, `neighborhood_id`, `is_admin`) VALUES
-(1, ' administrador@ sucre.com.ar', '$2a$10$mO9L1/rQvXxO84WdrIx9tep898HznRi/AjAFOiRlVPrFu0L6GK4gi', 'administrador', 'carello', '1984-11-27', '1136593286', 'vergara 2635', '10', '2', 2, 1),
+(1, 'administrador@sucre.com.ar', '$2a$10$mO9L1/rQvXxO84WdrIx9tep898HznRi/AjAFOiRlVPrFu0L6GK4gi', 'administrador', 'carello', '1984-11-27', '1136593286', 'vergara 2635', '10', '2', 2, 1),
 (2, 'registrado@sucre.com.ar', '$2a$10$/KEb69ahLv7ZBPKMto5/g.GLN803mgSLE7sDTw22eQ6fLmygft/Fa', 'registrado', 'carello', '1984-11-26', '1136578945', 'san martin 3324', '2', '15', 2, 0);
 
 

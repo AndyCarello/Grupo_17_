@@ -80,8 +80,8 @@ let controller = {
     },
 //metodo "prueba"(http://localhost:3000/sequelize) donde si cambian la consulta y lo llaman desde el navegador les devuelve un json directamente con la respuesta.
     prueba:async(req,res)=> { 
-        const data = await db.User.findAll({
-            include:'carts'
+        const data = await db.User.findOne({
+            where: { email: "aslkdjas@sucre.com.ar"}
         })
         res.json(data)
 
