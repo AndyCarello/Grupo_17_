@@ -76,25 +76,20 @@ const controller = {
         console.log("Mostrando formulario de creacion de producto");
     },
 
-    crearProducto: async(req, res) =>{
+    crearProducto: function(req, res){
 
         db.Product.create({
 
-            name: req.body.name ,
+            name: req.body.nombre,
             desciption: req.body.descripcion,
             price: req.body.precio,
             category_id: req.body.categoria,
-            //image: req.file.filename,
+            image: req.file.filename,
             
         })
         .then(function(){
 
-            res.render("productos/crear", {
-                title: "Creacion de Producto",
-                estilos: [
-                    "style.css" 
-                ]
-            });
+            res.redirect("/productos")
             console.log("Mostrando formulario de creacion de producto");
 
         })
@@ -110,7 +105,7 @@ const controller = {
             name: req.body.nombre,
             price: req.body.precio,
             description: req.body.descripcion,
-            //image: req.file.filename,
+            image: req.file.filename,
         },{
 
             where: {id:req.params.id}
