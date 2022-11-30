@@ -10,13 +10,23 @@
                 </div>
                 <form class="flex" enctype="multipart/form-data" action="/productos/actualizar/<%= producto.id %>?_method=PUT" method="POST">
                     <div class="ancho-full centrado">
-                        <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>"  placeholder="Nombre del Producto" required>
+                        <input type="text" name="nombre" id="nombre" value="<%= producto.name %>"  placeholder="Nombre del Producto" required>
                     </div>
                     <div class="ancho-full centrado">
-                        <input type="text" name="precio" id="precio" value="<%= producto.precio %>" placeholder="Precio" required>
+                        <input type="text" name="precio" id="precio" value="<%= producto.price %>" placeholder="Precio" required>
                     </div>
+                    <div class="ancho-half centrado ">
+                        <select type="text" name="categoria" id="categoria">
+                            <% for (categoria of categorias) { %>
+                                <option value="<%= categoria.id %>" 
+                                    <% if (categoria.id == producto.category_id){ %>
+                                        selected> <% } else { %> >
+                                            <% } %>
+                                        <%= categoria.name %></option>
+                            <% } %>
+                    </select>
                     <div class="ancho-full centrado">
-                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto"><%= producto.descripcion %></textarea>
+                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto"><%= producto.description %></textarea>
                     </div>
                     <div class="ancho-full centrado">
                         <img src="/img/<%= producto.image %>">

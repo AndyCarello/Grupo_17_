@@ -8,12 +8,6 @@ const { Op } = require('sequelize');
 const {validationResult} = require("express-validator");
 const e = require("express");
 
-
-
-
-
-
-
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 const controller = {
 
@@ -57,9 +51,9 @@ const controller = {
 
         const productos = await db.Product.findAll({
             where: {
-                name: {[Op.substring]: req.query.busqueda}
-                
-            }
+                name: {[Op.substring]: '3'}
+            },
+            include: 'category'
         })
         
             res.render("productos/productos", {
@@ -110,7 +104,7 @@ const controller = {
         db.Product.create({
 
             name: req.body.nombre,
-            desciption: req.body.descripcion,
+            description: req.body.descripcion,
             price: req.body.precio,
             category_id: req.body.categoria,
             image: req.file.filename,
@@ -128,15 +122,16 @@ const controller = {
     },
 
     actualizarProducto: function(req,res) {
-
-        db.Product.update ({
-
+        const data = {
             name: req.body.nombre,
             price: req.body.precio,
             description: req.body.descripcion,
-            image: req.file.filename,
-        },{
+            category_id: req.body.categoria,
+            image: (req.file) ? req.file.filename : null
+        }
+        if (data.image == null) {delete data.image}
 
+        db.Product.update(data,{
             where: {id:req.params.id}
         })
         .then(res.redirect("/productos/" + req.params.id));
@@ -154,15 +149,17 @@ const controller = {
     productEdit: function(req,res){
 
         db.Product.findByPk(req.params.id)
-            .then((productoEncontrado) =>{
-
+            .then(async(productoEncontrado) =>{
+                const categorias = await db.Category.findAll()
                 res.render(path.join(__dirname,'../views/productos/actualizar.ejs'), {
                     
                 title: "Actualización de Producto",
                 estilos: [
                     "style.css" 
                 ],
-                producto:productoEncontrado});
+                producto:productoEncontrado,
+                categorias: categorias
+            });
 
                 
             })
