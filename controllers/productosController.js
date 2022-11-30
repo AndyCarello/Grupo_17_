@@ -3,6 +3,174 @@
 const fs = require("fs");
 const path = require("path");
 const { stringify } = require("querystring");
+const db = require('../database/models');
+const { Op } = require('sequelize');
+const {validationResult} = require("express-validator");
+const e = require("express");
+
+const Products = db.Product;
+
+
+
+
+
+//Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
+const controller = {
+
+    add: function(req,res){
+
+        db.Category.findAll()
+        .then(function(allCategories){
+
+            res.render('productos/crear', {allCategories})
+
+        })
+        .catch(error => {
+            res.send(error)
+        })
+        
+    },
+
+    productList: function(req,res){
+
+        db.Product.findAll()
+        .then((productos) =>{
+
+            res.render("productos/productos", {
+                title: "Listado de productos",
+                estilos: [
+                    "style.css",
+                    "productos.css"       
+                ],
+                productos: productos
+            });
+            console.log("Mostrando Pagina de productos");
+
+  
+
+        })
+    },
+    
+    productDetail: function(req , res) {
+
+        db.Product.findByPk(req.params.id)
+            .then((productoEncontrado) => {
+
+                res.render("productos/producto", {
+                    title: producto.nombre,
+                    estilos: [
+                        "style.css"        
+                    ],
+                    producto: productoEncontrado
+                });
+                console.log("Mostrando pagina del producto con id: " + req.params.id);
+            })
+    },
+
+    productCreate: function(req,res) {
+
+        res.render("productos/crear", {
+            title: "Creacion de Producto",
+            estilos: [
+                "style.css" 
+            ]
+        });
+        console.log("Mostrando formulario de creacion de producto");
+    },
+
+    crearProducto: function(req ,res) {
+
+        db.Product.create({
+
+            id: req,
+            name: req.body.name ,
+            desciption: req.body.descripcion,
+            price: req.body.precio,
+            image: req.file.filename,
+            
+        })
+        .then(function(){
+
+            res.render("productos/crear", {
+                title: "Creacion de Producto",
+                estilos: [
+                    "style.css" 
+                ]
+            });
+            console.log("Mostrando formulario de creacion de producto");
+
+        })
+        
+    },
+
+    actualizarProducto: function(req,res) {
+
+        db.Product.update ({
+
+            name: req.body.nombre,
+            price: req.body.precio,
+            description: req.body.descripcion,
+            //image: req.file.filename,
+        },{
+
+            where: {id:req.params.id}
+        })
+        .then(res.redirect("/productos/" + req.params.id));
+    },
+
+    borrarProducto: function(req,res){
+
+        db.Product.destroy ({
+
+            where: {id:req.params.id}
+        })
+        .then(res.redirect('/productos/productos'));
+    },
+
+    productEdit: function(req,res){
+
+        db.Product.findByPk(req.params.id)
+            .then((productoEncontrado) =>{
+
+                res.render(path.join(__dirname,'../views/productos/actualizar.ejs'), {
+                    
+                title: "Actualización de Producto",
+                estilos: [
+                    "style.css" 
+                ],
+                producto:productoEncontrado});
+
+                
+            })
+    }
+
+    
+
+}
+module.exports = controller; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  
+
+//TODO EL CODIGO ANTERIOR COMENTADO (METODO ANTIGUO DEL CRUD)
 
 
 function leerProductos(){
@@ -30,9 +198,6 @@ function findAll(){
 
 }
 
-//Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
-const controller = {
-    //Metodo que lista todos los productos
     listar: (req,res)=>{
         const productos = leerProductos();
         res.render("productos/productos", {
@@ -130,6 +295,4 @@ const controller = {
         console.log("En este momento elimino: " + req.params.id);
         res.redirect("/productos");
     }
-};
-
-module.exports = controller; 
+};  */

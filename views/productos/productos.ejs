@@ -17,12 +17,12 @@
         <section class="flex">
             <% for(producto of productos){ %>
               <article class="ancho-half">
-                <div class="ancho-full productos-imagen" style="background-image: url('/img/<%= producto.imagen %>');">
+                <div class="ancho-full productos-imagen" style="background-image: url('/img/<%= producto.image %>');">
                 </div>
                 <div class="ancho-full">
                     <div class="ancho-full espaciado detalle"> 
-                    <div class="nombre"><%= producto.nombre %></div>
-                    <div class="precio">$<%= producto.precio %></div>
+                    <div class="nombre"><%= producto.name %></div>
+                    <div class="precio">$<%= producto.price %></div>
                     </div>
                     <div class="ancho-full espaciado" >
                         <% if (locals.user){ %>

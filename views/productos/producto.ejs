@@ -6,16 +6,16 @@
         <main id="producto" class="flex">
             <article class="ancho-full centrado">
                 <div class="ancho-quarter centrado">
-                    <img src="/img/<%= producto.imagen %>" alt="Imagen de Producto">
+                    <img src="/img/<%= producto.image %>" alt="Imagen de Producto">
                 </div>
                 <div class="ancho-half centrado">
-                    <h1><%= producto.nombre %>
+                    <h1><%= producto.name %>
                         <% if (locals.user && locals.user.admin){ %>
                              | <a href="/productos/actualizar/<%= producto.id %>"><i class="fas fa-edit"></i></a>
                         <% } %>
                     </h1>
-                    <div class="ancho-full centrado"><%= producto.descripcion %></div>
-                    <div class="ancho-full centrado">$ <%= producto.precio %></div>
+                    <div class="ancho-full centrado"><%= producto.description %></div>
+                    <div class="ancho-full centrado">$ <%= producto.price %></div>
                     <% if (locals.user){ %>
                         <div class="centrado">
                             <button>Agregar</button>

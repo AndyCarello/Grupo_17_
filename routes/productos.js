@@ -20,13 +20,13 @@ const upload = multer({storage: storage})
 
 
 //Usando router llamo a un metodo del controlador segun la url
-router.get("/", productosController.listar );
-router.get("/crear", adminMiddleware, productosController.formCrear);
-router.post("/crear", adminMiddleware, upload.single("foto"), productosController.crear);
-router.get("/actualizar/:id", adminMiddleware, productosController.formActualizar);
-router.put("/actualizar/:id", adminMiddleware, upload.single("foto"), productosController.actualizar);
-router.delete("/eliminar/:id", adminMiddleware, productosController.eliminar);
-router.get("/:id", productosController.detalle);
+router.get("/", productosController.productList );
+router.get("/crear", adminMiddleware, productosController.productCreate);
+router.post("/crear", adminMiddleware, upload.single("foto"), productosController.crearProducto);
+router.get("/actualizar/:id", adminMiddleware, productosController.productEdit);
+router.put("/actualizar/:id", adminMiddleware, upload.single("foto"), productosController.actualizarProducto);
+router.delete("/eliminar/:id", adminMiddleware, productosController.borrarProducto);
+router.get("/:id", productosController.productDetail);
 
 
 module.exports = router; //Exporto mi productosRouter
