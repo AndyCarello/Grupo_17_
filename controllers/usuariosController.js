@@ -5,11 +5,11 @@ const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-/* function findAll(){
+function findAll(){
     const jsonData = fs.readFileSync(path.join(__dirname, "../data/usuarios.json"))
     const data = JSON.parse(jsonData);
     return data;
-} */
+}
 
 function writeFile(data){
     const stringData = JSON.stringify(data, null, 4);
@@ -31,16 +31,18 @@ function actualizarUsuarioPorId(id, datos) {
 }
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 const controller = {
-    registro: (req,res)=>{
+    registro: async (req,res)=>{
+        const localidades = await db.Neighborhood.findAll();
         res.render("usuarios/registro", {
             title: "Formulario de registro",
             estilos: [
                 "style.css"        
-            ]
+            ],
+            localidades: localidades
         });
         console.log("Mostrando formulario de registro");
     },
-    processRegister: (req, res) =>{
+    processRegister: async(req, res) =>{
 
         const error = validationResult(req)
         console.log(error.errors)
@@ -60,22 +62,20 @@ const controller = {
 
         const newUser = {
 
-            id:  users[users.length -1].id +1,
-            nombre: req.body.nombre,
-            apellido: req.body.Apellido,
-            nacimiento: req.body.Fechadenacimiento,
-            telefono: req.body.telefono,
-            domicilio: req.body.calleyaltura,
-            domicilioPiso: req.body.piso,
-            domicilioDpto: req.body.dpto,
+            name: req.body.nombre,
+            lastname: req.body.Apellido,
+            birthday: req.body.Fechadenacimiento,
+            phone: req.body.telefono,
+            neighborhood_id: req.body.localidad,
+            address: req.body.calleyaltura,
+            floor: req.body.piso,
+            apartment: req.body.dpto,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
             
         };
 
-        users.push(newUser);
-
-        writeFile(users);
+        await db.User.create(newUser);
 
         res.render("usuarios/registrado", {
             title: "Formulario de ingreso",

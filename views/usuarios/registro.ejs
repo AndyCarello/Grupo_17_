@@ -49,6 +49,13 @@
                         
                     </div>
                     <div class="ancho-half centrado ">
+                        <select type="text" name="localidad" id="localidad">
+                            <% for (localidad of localidades) { %>
+                                <option value="<%= localidad.id %>"><%= localidad.name %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="ancho-half centrado ">
                         <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" >
                         
                     </div>
