@@ -6,7 +6,7 @@
 - Avances en parte de usuario con base de datos
 - Avances en parte de productos con base de datos
 - Planeamiento y primeros avances con carritos de compra y pedidos finalizados
-
+- ENTREGAMOS EL SPRINT 6 CON TODO LO QUE ERA OBLIGATORIO!!!
 ### PENDIENTES ###
 
 - El tablero necesita una reorganizacion importante
