@@ -17,18 +17,16 @@ const e = require("express");
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 const controller = {
 
-    add: function(req,res){
-
-        db.Category.findAll()
-        .then(allCategories =>{
-
-            res.render('productos/crear', {allCategories})
-
-        })
-        .catch(error => {
-            res.send(error)
-        })
-        
+    add: async (req,res)=>{
+        const categorias = await db.Category.findAll();
+        res.render("usuarios/registro", {
+            title: "Desplegable de categorias",
+            estilos: [
+                "style.css"        
+            ],
+            categorias: categorias
+        });
+        console.log("Mostrando desplegable de categorias");
     },
 
     productList: function(req,res){

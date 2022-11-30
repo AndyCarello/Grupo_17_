@@ -18,20 +18,12 @@
                     <div class="ancho-full centrado">
                         <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto"></textarea>
                     </div>
-                    <div class="ancho-full centrado">
-                        <p>
-                            <select name="category_id" id="category_id" required>
-
-                                <option value="" disabled selected>- Select Category - </option>
-                                <% allCategories.forEach(categories => { %>
-                                
-                                <option value="<%= categories.id %>"><%= categories.name %></option>
-                                <% }); %>
-
-
-                            </select>
-
-                        </p>
+                    <div class="ancho-half centrado ">
+                        <select type="text" name="categoria" id="categoria">
+                            <% for (categoria of categorias) { %>
+                                <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                            <% } %>
+                        </select>
                     </div>
                     <div class="ancho-full centrado">
                         <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" >
