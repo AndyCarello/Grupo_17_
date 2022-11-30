@@ -119,7 +119,7 @@ const controller = {
 
             where: {id:req.params.id}
         })
-        .then(res.redirect('/productos/productos'));
+        .then(res.redirect('/productos'));
     },
 
     productEdit: function(req,res){
