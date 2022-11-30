@@ -20,9 +20,13 @@
                     </div>
                     <div class="ancho-full centrado">
                         <p>
-                            <select name="category_id" id="" required>
+                            <select name="category_id" id="category_id" required>
 
+                                <option value="" disabled selected>- Select Category - </option>
+                                <% allCategories.forEach(categories => { %>
                                 
+                                <option value="<%= categories.id %>"><%= categories.name %></option>
+                                <% }); %>
 
 
                             </select>

@@ -8,7 +8,7 @@ const { Op } = require('sequelize');
 const {validationResult} = require("express-validator");
 const e = require("express");
 
-const Products = db.Product;
+
 
 
 
@@ -20,7 +20,7 @@ const controller = {
     add: function(req,res){
 
         db.Category.findAll()
-        .then(function(allCategories){
+        .then(allCategories =>{
 
             res.render('productos/crear', {allCategories})
 
