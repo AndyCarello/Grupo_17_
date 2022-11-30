@@ -14,7 +14,13 @@
                              | <a href="/productos/actualizar/<%= producto.id %>"><i class="fas fa-edit"></i></a>
                         <% } %>
                     </h1>
+                    
                     <div class="ancho-full centrado"><%= producto.description %></div>
+                    <div class="ancho-full centrado categoria">
+                        <div class="tag">Ingrediente</div>
+                        <div class="tag">Ingrediente</div>
+                        <div class="tag">Ingrediente</div>
+                    </div>
                     <div class="ancho-full centrado">$ <%= producto.price %></div>
                     <% if (locals.user){ %>
                         <div class="centrado">

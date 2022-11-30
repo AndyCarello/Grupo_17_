@@ -116,6 +116,24 @@ main input, main button, main select {
     background-color: white;
     padding: 1em;
 }
+
+.categoria {
+    margin: 0.25em auto;
+    display: block;
+}
+
+.tag {
+    padding: 0.25em 0.75em;
+    background-color: #7d5a50;
+    color: white;
+    border-radius: 0%;
+    text-align: center;
+    border: none;
+    border-radius: 1em;
+    font-size: 0.7em;
+    margin: 0;
+    display: inline-block;
+}
 /* Estilos Perfil*/
 
 .pedido {
