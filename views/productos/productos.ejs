@@ -9,7 +9,7 @@
     <main id="productos">
         <div class="ancho-full centrado">
             <h1>NUESTROS PRODUCTOS 
-                <% if (locals.user && locals.user.admin){ %>
+                <% if (locals.user && locals.user.is_admin){ %>
                      | <a href="/productos/crear"><i class="fas fa-plus"></i></a>
                 <% } %>
             </h1>

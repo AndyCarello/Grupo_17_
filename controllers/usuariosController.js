@@ -5,11 +5,11 @@ const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-function findAll(){
+/* function findAll(){
     const jsonData = fs.readFileSync(path.join(__dirname, "../data/usuarios.json"))
     const data = JSON.parse(jsonData);
     return data;
-}
+} */
 
 function writeFile(data){
     const stringData = JSON.stringify(data, null, 4);
@@ -58,7 +58,7 @@ const controller = {
                 })
         }
         
-        const users = findAll();
+        /* const users = findAll(); */
 
         const newUser = {
 

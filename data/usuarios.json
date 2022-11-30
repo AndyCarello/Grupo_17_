@@ -47,18 +47,5 @@
         "domicilioDpto": "2",
         "email": "antus2020@gmail.com",
         "password": "$2a$10$jHdiOchGR5jxawqa1st5MeBjjNs.QCzrHLqQnm0bEEBkJ4F41jnwm"
-    },
-    {
-        "id": 9,
-        "nombre": "Juan",
-        "apellido": "Topo",
-        "nacimiento": "2022-02-11",
-        "telefono": "1157573892",
-        "localidad": "1",
-        "domicilio": "la calle 1234",
-        "domicilioPiso": "1",
-        "domicilioDpto": "B",
-        "email": "juantopo@gmail.com",
-        "password": "$2a$10$7TSS8Rlmp3jo2WJCj8XQVOZxD0cSmSIvJpu3AsO5HZ2WqPa2JtGUG"
     }
 ]
