@@ -83,7 +83,7 @@ const controller = {
             name: req.body.name ,
             desciption: req.body.descripcion,
             price: req.body.precio,
-            category_id: req.body.categorias,
+            category_id: req.body.categoria,
             //image: req.file.filename,
             
         })
