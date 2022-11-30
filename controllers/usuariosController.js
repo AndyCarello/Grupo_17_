@@ -198,16 +198,18 @@ const controller = {
         }
     },
 
-    perfil: (req,res)=>{
+    perfil: async (req,res)=>{
         if (req.session.user === undefined) {
             res.redirect("/");
         } else {
+            const localidades = await db.Neighborhood.findAll();
             res.render("usuarios/perfil", {
                 title: "Perfil de usuario",
                 estilos: [
                     "style.css"        
                 ],
-                usuario: req.session.user
+                usuario: req.session.user,
+                localidades: localidades
             });
             console.log("Mostrando Pagina de Perfil de usuario con id: " + req.session.user.id);
         }
@@ -223,13 +225,29 @@ const controller = {
         });
         console.log("Mostrando recuperacion enviada");
     }, 
-    actualizar: (req, res)=>{
+    actualizar: async (req, res)=>{
         let id = req.session.user.id;
         let datos = {
-            nombre: req.body.nombre,
-            apellido: req.body.apellido
+            name: req.body.nombre,
+            lastname: req.body.apellido,
+            birthday: req.body.fechadenacimiento,
+            phone: req.body.telefono,
+            neighborhood_id: req.body.localidad,
+            address: req.body.calleyaltura,
+            floor: req.body.piso,
+            apartment: req.body.dpto
         }
-        actualizarUsuarioPorId(id, datos);
+        await db.User.update(
+            datos,
+            {
+                where: {id: id}
+            })
+        const user = await db.User.findOne({
+            where: {id: req.session.user.id}
+        })
+        delete user.password;
+        req.session.user = user;
+        
         res.redirect("/usuarios/perfil/");
     },
     salir: (req, res)=>{//Destruye la sesion de usuario y redirige al home

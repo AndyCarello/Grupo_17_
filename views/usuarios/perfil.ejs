@@ -31,6 +31,17 @@
                     <div class="ancho-half centrado ">
                         <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" value="<%= usuario.address %>" required>
                     </div>
+                    <div class="ancho-half centrado ">
+                        <select type="text" name="localidad" id="localidad">
+                            <% for (localidad of localidades) { %>
+                                <option value="<%= localidad.id %>" 
+                                    <% if (locals.user.neighborhood_id == localidad.id){ %>
+                                        selected> <% } else { %> >
+                                            <% } %>
+                                        <%= localidad.name %></option>
+                            <% } %>
+                        </select>
+                    </div>
                     <div class="ancho-half espaciado ">
                         <div class="ancho-quarter centrado ">
                         <input type="number" name="piso" id="piso" placeholder="Piso" value="<%= usuario.floor %>" required maxlength="2"> 

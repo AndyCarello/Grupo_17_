@@ -76,7 +76,7 @@ label {
     color:#7D5A50;
 }
 
-input {
+input, select {
     border-style: none;
     padding: 0.7em;
     text-align: center;
@@ -101,7 +101,7 @@ main {
     padding: 5vw;
 }
 
-main input, main button {
+main input, main button, main select {
     width: 100%;
 }
 /* Estilos Producto*/
