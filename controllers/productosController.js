@@ -51,7 +51,7 @@ const controller = {
 
         const productos = await db.Product.findAll({
             where: {
-                name: {[Op.substring]: '3'}
+                name: {[Op.substring]: req.query.busqueda}
             },
             include: 'category'
         })
