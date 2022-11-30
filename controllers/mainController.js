@@ -81,10 +81,17 @@ let controller = {
     },
 //metodo "prueba"(http://localhost:3000/sequelize) donde si cambian la consulta y lo llaman desde el navegador les devuelve un json directamente con la respuesta.
     prueba:async(req,res)=> { 
-        const data = await db.Cart.findAll({
+
+
+        let data = await db.Cart.findAll({
             where: { user_id: 2},
             include: "products"
         })
+
+        data = await db.Product.findByPk(1, {
+            include: 'ingredients'
+        })
+
         res.json(data)
 
     }

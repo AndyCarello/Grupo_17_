@@ -26,6 +26,7 @@ router.post("/crear", adminMiddleware, upload.single("foto"), productosControlle
 router.get("/actualizar/:id", adminMiddleware, productosController.productEdit);
 router.put("/actualizar/:id", adminMiddleware, upload.single("foto"), productosController.actualizarProducto);
 router.delete("/eliminar/:id", adminMiddleware, productosController.borrarProducto);
+router.get("/buscar/", productosController.buscarPorTitulo);
 router.get("/:id", productosController.productDetail);
 
 

@@ -25,7 +25,7 @@
                     <div class="precio">$<%= producto.price %></div>
                     </div>
                     <div class="ancho-full espaciado categoria"> 
-                        <div class="tag">Categoria</div>
+                        <div class="tag"><%= producto.category.name %></div>
                     </div>
                     <div class="ancho-full espaciado" >
                         <% if (locals.user){ %>

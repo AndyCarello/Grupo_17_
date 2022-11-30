@@ -1,4 +1,24 @@
-## 9/11/22 ##
+## 30/11/22 ##
+
+### Novedades ###
+
+- Se reasignaron varias tareas en funcion a lo que a cada uno tenia mas en claro
+- Avances en parte de usuario con base de datos
+- Avances en parte de productos con base de datos
+- Planeamiento y primeros avances con carritos de compra y pedidos finalizados
+
+### PENDIENTES ###
+
+- El tablero necesita una reorganizacion importante
+
+## 25/11/22 ##
+
+### Novedades ###
+
+- Esta semana se revisaron tareas que tenemos pendientes de realizar
+- A la espera del colearning, decidimos esperar con el sprint 
+
+## 18/11/22 ##
 
 ### Novedades ###
 

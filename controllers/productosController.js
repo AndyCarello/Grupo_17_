@@ -19,6 +19,7 @@ const controller = {
 
     add: async (req,res)=>{
         const categorias = await db.Category.findAll();
+
         res.render("productos/crear", {
             title: "Desplegable de categorias",
             estilos: [
@@ -31,14 +32,18 @@ const controller = {
 
     productList: function(req,res){
 
-        db.Product.findAll()
+        db.Product.findAll({
+            include: 'category'
+        })
         .then((productos) =>{
 
             res.render("productos/productos", {
-                title: "Listado de productos",
+                title: "Nuestros productos",
                 estilos: [
+                    "index.css",
+                    "footer.css",
                     "style.css",
-                    "productos.css"       
+                    "productos.css"                  
                 ],
                 productos: productos
             });
@@ -48,14 +53,38 @@ const controller = {
 
         })
     },
+    buscarPorTitulo: async function(req,res){
+
+        const productos = await db.Product.findAll({
+            where: {
+                name: {[Op.substring]: req.query.busqueda}
+                
+            }
+        })
+        
+            res.render("productos/productos", {
+                title: "Resultado(s) para: " + req.query.busqueda,
+                estilos: [
+                    "index.css",
+                    "footer.css",
+                    "style.css",
+                    "productos.css"
+                ],
+                productos: productos
+            });
+            console.log("Mostrando resultados busqueda");
+
+    },
     
     productDetail: function(req , res) {
 
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {
+            include: 'ingredients'
+        })
             .then((productoEncontrado) => {
 
                 res.render("productos/producto", {
-                    title: producto.nombre,
+                    title: productoEncontrado.name,
                     estilos: [
                         "style.css"        
                     ],
@@ -124,7 +153,7 @@ const controller = {
 
             where: {id:req.params.id}
         })
-        .then(res.redirect('/productos/productos'));
+        .then(res.redirect('/productos'));
     },
 
     productEdit: function(req,res){
