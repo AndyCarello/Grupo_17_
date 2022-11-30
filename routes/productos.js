@@ -21,7 +21,7 @@ const upload = multer({storage: storage})
 
 //Usando router llamo a un metodo del controlador segun la url
 router.get("/", productosController.productList );
-router.get("/crear", adminMiddleware, productosController.productCreate);
+router.get("/crear", adminMiddleware, productosController.add);
 router.post("/crear", adminMiddleware, upload.single("foto"), productosController.crearProducto);
 router.get("/actualizar/:id", adminMiddleware, productosController.productEdit);
 router.put("/actualizar/:id", adminMiddleware, upload.single("foto"), productosController.actualizarProducto);

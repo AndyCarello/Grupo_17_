@@ -19,7 +19,7 @@ const controller = {
 
     add: async (req,res)=>{
         const categorias = await db.Category.findAll();
-        res.render("usuarios/registro", {
+        res.render("productos/crear", {
             title: "Desplegable de categorias",
             estilos: [
                 "style.css"        
@@ -76,15 +76,15 @@ const controller = {
         console.log("Mostrando formulario de creacion de producto");
     },
 
-    crearProducto: function(req ,res) {
+    crearProducto: async(req, res) =>{
 
         db.Product.create({
 
-            id: req,
             name: req.body.name ,
             desciption: req.body.descripcion,
             price: req.body.precio,
-            image: req.file.filename,
+            category_id: req.body.categorias,
+            //image: req.file.filename,
             
         })
         .then(function(){
@@ -98,6 +98,7 @@ const controller = {
             console.log("Mostrando formulario de creacion de producto");
 
         })
+
         
     },
 
