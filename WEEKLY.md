@@ -1,3 +1,11 @@
+## 09/12/22 ##
+
+### Novedades ###
+
+- Tablero de trabajo actualizado
+- Archivo readme.md actualizado
+- Se asignaron las tareas del sprint 7 y se agregaron todos los pendientes para la finalizacion del proyecto con la etiqueta de color rosa.
+- Archivo retro actualizado.
 ## 30/11/22 ##
 
 ### Novedades ###
