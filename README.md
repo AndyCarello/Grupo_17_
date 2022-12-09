@@ -11,8 +11,6 @@ Nuestro publico objetivo son aquellos golosos que quieran disfrutar de unas rica
 #### Facundo Joel Morcillo ####
 > Me llamo Facundo Joel Morcillo , tengo 22 años , soy de Buenos Aires,  Quilmes Oeste , y estudio
 Licenciatura en informatica en la Universidad de Quilmes. Tengo conocimiento con lenguajes como Python , C , html y CSS.
-#### Antonella Villarroel ####
-> Me llamo Antonella Villarroel, tengo 29 años, soy de Mar Del Plata .
 #### Mariano Macias ####
 > Me llamo Mariano Macias, tengo 32 años, soy de Buenos Aires, ejecutivo de cuentas por varios años, estudiante de sistemas en UTN y afan de la tecnologia.
 
