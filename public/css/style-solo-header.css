@@ -1,217 +1,207 @@
 /* Extracto de style.css solo para el header*/
 
-
 body {
-    background-color: white;
-    
+  background-color: white;
 }
 
 header a {
-    text-decoration: none;
-    color:#7D5A50;
+  text-decoration: none;
+  color: #7d5a50;
 }
 
 header input {
-    border-style: none;
-    padding: 0.7em;
-    text-align: center;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  border-style: none;
+  padding: 0.7em;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 header button {
-    display: flex;
-    color:#7D5A50;
-    background-color: #FCDEC0 ;
-    border-style: none;
-    padding: 0.7em;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    justify-content: center;
+  display: flex;
+  color: #7d5a50;
+  background-color: #fcdec0;
+  border-style: none;
+  padding: 0.7em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  justify-content: center;
 }
 
 header {
-    background-color: #F4ECE0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  background-color: #f4ece0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #barra-superior {
-    display: flex;
-    flex-basis: 70%;
-    flex-grow: 0.7;
-    justify-content: space-between;
-    order: 2;
-
+  display: flex;
+  flex-basis: 70%;
+  flex-grow: 0.7;
+  justify-content: space-between;
+  order: 2;
 }
 
 #buscador {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
+  display: flex;
+  width: 100%;
+  align-items: stretch;
 }
 
 #buscador form {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 #buscador form input[type="text"] {
-    min-width: 0px;
-    width: 1px;
-    flex: 1 1 auto;
-    margin: 0;
+  min-width: 0px;
+  width: 1px;
+  flex: 1 1 auto;
+  margin: 0;
 }
 
 #buscador form button {
-    margin: 0;
+  margin: 0;
 }
 
 #grupo-dcho {
-    display: none;
+  display: none;
 }
 
 #carrito {
-    background-color: #FCDEC0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #7D5A50;
-
+  background-color: #fcdec0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #7d5a50;
 }
 
-#contenedor-logo{
-    background-color: #F4ECE0;
-    order: 1;
-    display: flex;
-    flex-grow: 0.3;
-    flex-wrap: wrap;
-    flex-basis: 30%;
+#contenedor-logo {
+  background-color: #f4ece0;
+  order: 1;
+  display: flex;
+  flex-grow: 0.3;
+  flex-wrap: wrap;
+  flex-basis: 30%;
 }
 
 #contenedor-logo img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 #barra-navegacion {
-    flex-basis: 100%;
-    order: 3;
-    display: flex;
-    flex-wrap: wrap;
+  flex-basis: 100%;
+  order: 3;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #barra-navegacion ul {
-    list-style-type: none;
-    width: 100%;
-    padding: 0px;
+  list-style-type: none;
+  width: 100%;
+  padding: 0px;
 }
 
 #barra-navegacion ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2em;
-    padding-left: 5px;
-    padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #barra-navegacion ul li.derecha {
-    justify-content: right;
+  justify-content: right;
 }
 
 #barra-navegacion ul li.separador {
-    height: auto;
+  height: auto;
 }
 
 #barra-navegacion ul li:hover {
-    background-color: #7D5A50;
+  background-color: #7d5a50;
 }
 
 #barra-navegacion ul li:hover a {
-    color: #FCDEC0;
+  color: #fcdec0;
 }
 
 #barra-navegacion ul li.invertido {
-    background-color: #FCDEC0;
+  background-color: #fcdec0;
 }
 
 #barra-navegacion ul li.invertido a {
-    color: #7D5A50;
+  color: #7d5a50;
 }
 
 #barra-navegacion ul li.invertido:hover {
-    background-color: #FCDEC0;
+  background-color: #fcdec0;
 }
 
 #barra-navegacion ul li.invertido:hover a {
-    color: #7D5A50;
+  color: #7d5a50;
 }
 
 /* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
 
 /* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
 @media (min-width: 768px) {
-   #barra-superior {
+  #barra-superior {
     order: 1;
     flex: 1 1 100%;
-   }
+  }
 
-   #buscador {
+  #buscador {
     width: 25%;
-   }
+  }
 
-   #grupo-dcho {
+  #grupo-dcho {
     display: flex;
     flex-wrap: wrap;
-   }
+  }
 
-   #grupo-dcho #carrito {
+  #grupo-dcho #carrito {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-   }
+  }
 
-   #grupo-dcho #login-bar {
+  #grupo-dcho #login-bar {
     display: flex;
     width: 100%;
     align-items: center;
     column-gap: 20px;
-    
+  }
 
-   }
-
-   #grupo-dcho #login-bar div {
+  #grupo-dcho #login-bar div {
     display: flex;
     flex-basis: 50%;
     justify-content: center;
+  }
 
-   }
-
-   #contenedor-logo {
+  #contenedor-logo {
     order: 2;
     flex: 1 1 100%;
     align-content: center;
     justify-content: center;
-   }
+  }
 
-   #barra-navegacion ul li.solo-mobile {
+  #barra-navegacion ul li.solo-mobile {
     display: none;
-   }
+  }
 
-   #barra-navegacion ul {
+  #barra-navegacion ul {
     display: inline-flex;
     justify-content: space-evenly;
-    background-color: #FCDEC0;
-   }
-
-
+    background-color: #fcdec0;
+  }
 }
 
 /* Fin media Querys */

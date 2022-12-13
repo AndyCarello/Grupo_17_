@@ -47,5 +47,29 @@
         "domicilioDpto": "2",
         "email": "antus2020@gmail.com",
         "password": "$2a$10$jHdiOchGR5jxawqa1st5MeBjjNs.QCzrHLqQnm0bEEBkJ4F41jnwm"
+    },
+    {
+        "id": 9,
+        "nombre": "mariano",
+        "apellido": "macias",
+        "nacimiento": "1989-11-23",
+        "telefono": "1139570431",
+        "domicilio": "herrera 2026",
+        "domicilioPiso": "0",
+        "domicilioDpto": "0",
+        "email": "mariano@mail.com",
+        "password": "$2a$10$Dq8QuWn4KFmbDayX3JbT8.V8L3nesSLj9UoLXJnhe5duRxgYy1tM2"
+    },
+    {
+        "id": 10,
+        "nombre": "mariano",
+        "apellido": "macias",
+        "nacimiento": "1989-11-23",
+        "telefono": "1139570431",
+        "domicilio": "herrera 2026",
+        "domicilioPiso": "0",
+        "domicilioDpto": "0",
+        "email": "mariano.maciasgandulfo@gmail.com",
+        "password": "$2a$10$Q/950YqdkGbHRju8Y/c31u/3sbTQSqvw9gztVRxbBpFpbSGSuZwVC"
     }
 ]

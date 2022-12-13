@@ -1,147 +1,108 @@
-.container-form-contacto{
-
-    background-color: white;
-    padding: 30px;
-    margin: 0 auto;
-   
-    
-  
-  }
-  
-  .container-form-contacto div{
-  
-    margin-top: 20px;   
-  }
-
-  main {
-    height: 1000px;
-  }
-  
-  
-  .boton-enviar{
-  
-    width: 100px;
-    padding: 0px;
-    border-radius: 5px;
-    background-color: #FCDEC0;
-    color: #7D5A50;
-    font-size: 16px;
-    cursor: pointer;
-  
-  }
-    
-  .boton-enviar:hover{
-  
-    background-color: white;
-    
-  }
-  
-  
-  
-  .ingreso-ancho-full {
-    flex-basis: 80%;
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .contenido-centrado {
-    justify-content: center;
-  }
-  
-  
-  label {
-    color:#7D5A50;
-  }
-  
-  
-  #nombreUsuario, #email, #telefono, #localidad , #comentario {
-    width: 100%;
-  }
-  
-  
-.logo-contacto1 img{
-
-    width: 400px;
-    
+.container-form-contacto {
+  background-color: white;
+  padding: 30px;
+  margin: 0 auto;
 }
 
-
-.logo-contacto1  {
-
-
-    text-align: center;
+.container-form-contacto div {
+  margin-top: 20px;
 }
 
+main {
+  height: 1000px;
+}
+
+.boton-enviar {
+  width: 100px;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #fcdec0;
+  color: #7d5a50;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boton-enviar:hover {
+  background-color: white;
+}
+
+.ingreso-ancho-full {
+  flex-basis: 80%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contenido-centrado {
+  justify-content: center;
+}
+
+label {
+  color: #7d5a50;
+}
+
+#nombreUsuario,
+#email,
+#telefono,
+#localidad,
+#comentario {
+  width: 100%;
+}
+
+.logo-contacto1 img {
+  width: 400px;
+}
+
+.logo-contacto1 {
+  text-align: center;
+}
 
 .descripcion-contacto-logo {
-
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 100px;
 }
 
-
-
-
-
-
-
-
-
-
-@media (min-width: 480px) { 
-
+@media (min-width: 480px) {
 }
 
 /* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
 @media (min-width: 768px) {
-    
 }
 
 /* Laptops y computadoras mas grandes ()*/
 @media (min-width: 1280px) {
-
-
-    main {
-        height: auto;
+  main {
+    height: auto;
   }
 
   .descripcion-contacto-logo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        
-        
-    }
+  .logo-contacto1 {
+    position: relative;
+    bottom: 450px;
+    left: 200px;
+  }
 
-    .logo-contacto1{
-        
-        position: relative;
-        bottom: 450px;
-        left: 200px;
-    }
+  main {
+    height: 700px;
+  }
 
-    main {
-        height: 700px;
-      }
+  footer {
+    height: 500px;
+  }
 
-    footer{
+  footer section iframe {
+    position: relative;
+    bottom: 340px;
+  }
 
-        height: 500px;
-    }
-
-    footer section iframe{
-
-        position: relative;
-        bottom: 340px;
-
-    }
-
-    footer section {
-
-        height: 100px;
-    }
+  footer section {
+    height: 100px;
+  }
 }
