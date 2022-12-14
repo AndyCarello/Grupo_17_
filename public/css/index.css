@@ -116,6 +116,12 @@ footer {
   top: 60%;
 }
 
+.boton-personalizado-1:hover{
+  color: #fcdec0;
+  background-color: #333333;
+  border-color: #d0a1a1;
+}
+
 .boton-vermas1 {
   display: flex;
   justify-content: center;
@@ -125,8 +131,15 @@ footer {
   margin: 30px;
   color: #7d5a50;
   box-sizing: border-box;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black; */
+}
+
+.boton-vermas1:hover{
+  font-size: 33px;
+  color: #909a61;
+  text-shadow: 5px 5px 5px rgb(115, 12, 12);
+  text-decoration: none;
 }
 
 .boton-vermas2 {
@@ -169,6 +182,11 @@ main section div.img2 {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   bottom: 250px;
+}
+
+.texto2:hover{
+  color: white;
+
 }
 
 footer i {
@@ -348,6 +366,10 @@ body {
 
   .boton-vermas2 {
     justify-content: center;
+  }
+
+  .boton-vermas2:hover{
+    color: white;
   }
 
   .texto h3 {

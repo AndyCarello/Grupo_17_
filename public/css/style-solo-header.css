@@ -65,8 +65,14 @@ header {
   margin: 0;
 }
 
+
 #buscador form button {
   margin: 0;
+}
+
+#buscador:hover form button {
+  background-color: #7d5a50;
+  color: white;
 }
 
 #grupo-dcho {
@@ -80,6 +86,15 @@ header {
   border-color: #7d5a50;
 }
 
+#carrito:hover{
+  border-color: red;
+  color: #f4ece0;
+  background-color: #7d5a50;
+}
+
+#carrito:hover a{
+  color: #f4ece0;
+}
 #contenedor-logo {
   background-color: #f4ece0;
   order: 1;
