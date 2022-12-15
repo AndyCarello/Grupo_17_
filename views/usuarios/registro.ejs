@@ -1,88 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
+
     <body>
         <%- include('../partials/header.ejs') %>
-    
-        <main id="registro">
-            <section class="flex">
-                <div class="ancho-full centrado">
-                    <h1>FORMULARIO DE REGISTRO</h1>
-                </div>
-                <% if (locals.errors) { %>
-                <div class="msg-error" >
-                   <p><b>Atencion!</b> se han encontrado los siguientes errores en el formulario.</p>
-                   <p>
-                        <ul>
-                            <% for (error of locals.errors) { %>
-                                <li><%= error.msg %></li>
-                            <% } %>
-                        </ul>
-                    </p>                   
-                </div>
-                <% } %>
-                <form class="flex" action="/usuarios/registro" method="POST">
-                    
+
+            <main id="registro">
+                <section class="flex">
                     <div class="ancho-full centrado">
-                        <input type="email" name="email" id="email" placeholder="Correo electronico" >
-                        
+                        <h1>FORMULARIO DE REGISTRO</h1>
                     </div>
-                    <div class="ancho-half centrado">
-                        <input type="password" name="password" id="password" placeholder="Contraseña" >
-                        
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre"  >
-                        
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" >
-                        
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
-                            placeholder="Fecha de Nacimiento" onfocus="(this.type='date')"  >
-                           
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <input type="tel" name="telefono" id="telefono" placeholder="Telefono"  > 
-                        
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <select type="text" name="localidad" id="localidad">
-                            <% for (localidad of localidades) { %>
-                                <option value="<%= localidad.id %>"><%= localidad.name %></option>
-                            <% } %>
-                        </select>
-                    </div>
-                    <div class="ancho-half centrado ">
-                        <input type="text" name="calleyaltura" id="calleyaltura" placeholder="Calle y altura" >
-                        
-                    </div>
-                    <div class="ancho-half espaciado ">
-                        <div class="ancho-quarter centrado ">
-                        <input type="number" name="piso" id="piso" placeholder="Piso"  maxlength="2" > 
-                        
+                    <% if (locals.errors) { %>
+                        <div class="msg-error">
+                            <p><b>Atencion!</b> se han encontrado los siguientes errores en el formulario.</p>
+                            <p>
+                            <ul>
+                                <% for (error of locals.errors) { %>
+                                    <li>
+                                        <%= error.msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                            </p>
                         </div>
-                        <div class="ancho-quarter  centrado ">
-                            <input type="text" name="dpto" id="dpto" placeholder="Dpto"  maxlength="1" > 
-                            
-                        </div>
-                    </div>
-                    <div class="ancho-full centrado">
-                        <button type="submit" id="ingresar">Registrate</button>
-                    </div>
-                    <div class="ancho-full espaciado">
-                        <div>
-                            <a href="javascript:history.back()">Volver</a>
-                        </div>
-                        <div>
-                            <a href="ingreso">Ingresar</a>
-                        </div>
-                    </div>
-                </form>
-            </section>
-        </main>
-        <%- include('../partials/footer.ejs') %>
+                        <% } %>
+                            <form class="flex" action="/usuarios/registro" method="POST">
+
+                                <div class="ancho-full centrado">
+                                    <input type="email" name="email" id="email" placeholder="Correo electronico">
+
+                                </div>
+                                <div class="ancho-half centrado">
+                                    <input type="password" name="password" id="password" placeholder="Contraseña">
+
+                                </div>
+                                <div class="ancho-half centrado ">
+                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+
+                                </div>
+                                <div class="ancho-half centrado ">
+                                    <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+
+                                </div>
+                                <div class="ancho-half centrado ">
+                                    <input type="text" name="Fechadenacimiento" id="Fechadenacimiento"
+                                        placeholder="Fecha de Nacimiento" onfocus="(this.type='date')">
+
+                                </div>
+                                <div class="ancho-half centrado ">
+                                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono">
+
+                                </div>
+
+                                <!-- ESTE CODIGO DA ERROR -->
+
+                                <!-- <div class="ancho-half centrado ">
+                                    <select type="text" name="localidad" id="localidad">
+                                        <!--  for (localidad of localidades) { %> -->
+                                            <!-- <option value="  localidad.id %>"> -->
+                                                <!--  localidad.name %> -->
+                                            <!-- </option> -->
+                                            <!--  } %> -->
+                                    <!-- </select> -->
+                                <!-- </div> -->
+
+                                <div class="ancho-half centrado ">
+                                    <input type="text" name="calleyaltura" id="calleyaltura"
+                                        placeholder="Calle y altura">
+
+                                </div>
+                                <div class="ancho-half espaciado ">
+                                    <div class="ancho-quarter centrado ">
+                                        <input type="number" name="piso" id="piso" placeholder="Piso" maxlength="2">
+
+                                    </div>
+                                    <div class="ancho-quarter  centrado ">
+                                        <input type="text" name="dpto" id="dpto" placeholder="Dpto" maxlength="1">
+
+                                    </div>
+                                </div>
+                                <div class="ancho-full centrado">
+                                    <button type="submit" id="ingresar">Registrate</button>
+                                </div>
+                                <div class="ancho-full espaciado">
+                                    <div>
+                                        <a href="javascript:history.back()">Volver</a>
+                                    </div>
+                                    <div>
+                                        <a href="ingreso">Ingresar</a>
+                                    </div>
+                                </div>
+                            </form>
+                </section>
+            </main>
+
+            
+            <%- include('../partials/footer.ejs') %>
+                <script>
+                    window.addEventListener('load', function () {
+
+                        let formulario = document.querySelector('form');
+                        
+                        formulario.addEventListener('submit', (e) => {
+                            e.preventDefault();
+                            alert('hola')
+                        })
+                    });
+                </script>
+
     </body>
+
 </html>
