@@ -17,6 +17,8 @@ let controller = {
         res.render("delivery", {
             title: "Delivery",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -26,6 +28,8 @@ let controller = {
         res.render("preguntas-frecuentes", {
             title: "Preguntas frecuentes",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"          
             ]
         });
@@ -35,6 +39,8 @@ let controller = {
         res.render("info", {
             title: "¿Quienes somos?",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });

@@ -36,6 +36,8 @@ const controller = {
         res.render("usuarios/registro", {
             title: "Formulario de registro",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ],
             localidades: localidades
@@ -51,6 +53,8 @@ const controller = {
             return res.render("usuarios/registro" , { 
                 title: "Formulario de registro",
                 estilos: [
+                    "index.css",
+                    "footer.css",
                     "style.css"
                 ],
                 errors: error.errors, 
@@ -80,6 +84,8 @@ const controller = {
         res.render("usuarios/registrado", {
             title: "Formulario de ingreso",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -93,6 +99,8 @@ const controller = {
         res.render("usuarios/registrado", {
             title: "Formulario de ingreso",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -104,6 +112,8 @@ const controller = {
         res.render("usuarios/recuperar", {
             title: "Recuperar contraseña",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -113,6 +123,8 @@ const controller = {
         res.render("usuarios/reestablecercontrasena", {
             title: "Reestablecer contraseña",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -122,6 +134,8 @@ const controller = {
         res.render("usuarios/validado", {
             title: "Validado correctamente",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -131,6 +145,8 @@ const controller = {
         res.render("usuarios/ingreso", {
             title: "Formulario de ingreso",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -145,6 +161,8 @@ const controller = {
                 { 
                     title: "Formulario de ingreso",
                     estilos: [
+                        "index.css",
+                        "footer.css",
                         "style.css"
                     ],
                     errors: error.errors, 
@@ -161,6 +179,8 @@ const controller = {
                 {
                     title: "Formulario de ingreso",
                     estilos: [
+                        "index.css",
+                        "footer.css",
                         "style.css"        
                     ],
                     errors: [
@@ -186,6 +206,8 @@ const controller = {
                 {
                     title: "Formulario de ingreso",
                     estilos: [
+                        "index.css",
+                        "footer.css",
                         "style.css"        
                     ],
                     errors: [
@@ -206,6 +228,8 @@ const controller = {
             res.render("usuarios/perfil", {
                 title: "Perfil de usuario",
                 estilos: [
+                    "index.css",
+                    "footer.css",
                     "style.css"        
                 ],
                 usuario: req.session.user,
@@ -220,6 +244,8 @@ const controller = {
         res.render("usuarios/recuperacion", {
             title: "Recuperaración iniciada",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });

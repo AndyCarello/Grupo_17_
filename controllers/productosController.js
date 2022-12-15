@@ -17,6 +17,8 @@ const controller = {
         res.render("productos/crear", {
             title: "Desplegable de categorias",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ],
             categorias: categorias
@@ -80,6 +82,8 @@ const controller = {
                 res.render("productos/producto", {
                     title: productoEncontrado.name,
                     estilos: [
+                        "index.css",
+                        "footer.css",
                         "style.css"        
                     ],
                     producto: productoEncontrado
@@ -93,6 +97,8 @@ const controller = {
         res.render("productos/crear", {
             title: "Creacion de Producto",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css" 
             ]
         });
@@ -157,6 +163,8 @@ const controller = {
                     
                 title: "Actualización de Producto",
                 estilos: [
+                    "index.css",
+                    "footer.css",
                     "style.css" 
                 ],
                 producto:productoEncontrado,

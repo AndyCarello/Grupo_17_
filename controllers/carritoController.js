@@ -4,6 +4,8 @@ const controller = {
         res.render("carrito/carrito", {
             title: "Carrito de compras",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
@@ -13,6 +15,8 @@ const controller = {
         res.render("carrito/compra", {
             title: "Compra finalizada",
             estilos: [
+                "index.css",
+                "footer.css",
                 "style.css"        
             ]
         });
