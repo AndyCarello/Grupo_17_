@@ -16,17 +16,17 @@
                         <input type="text" name="precio" id="precio" placeholder="Precio" required>
                     </div>
                     <div class="ancho-full centrado">
-                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto"></textarea>
+                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto" required></textarea>
                     </div>
                     <div class="ancho-half centrado ">
-                        <select type="text" name="categoria" id="categoria">
+                        <select type="text" name="categoria" id="categoria" required>
                             <% for (categoria of categorias) { %>
                                 <option value="<%= categoria.id %>"><%= categoria.name %></option>
                             <% } %>
                         </select>
                     </div>
                     <div class="ancho-full centrado">
-                        <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" >
+                        <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" required >
                     </div>
                     <div class="ancho-full centrado">
                         <button type="submit" id="crear">Crear</button>
