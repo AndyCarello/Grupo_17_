@@ -8,15 +8,16 @@
                 <div class="ancho-full centrado">
                     <h1>CREAR PRODUCTO</h1>
                 </div>
+                <ul class="errores"></ul>
                 <form class="flex" action="/productos/crear" enctype="multipart/form-data" method="POST">
                     <div class="ancho-full centrado">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto" required>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto" required> 
                     </div>
                     <div class="ancho-full centrado">
-                        <input type="text" name="precio" id="precio" placeholder="Precio" required>
+                        <input type="text" name="precio" id="precio" placeholder="Precio" required >
                     </div>
                     <div class="ancho-full centrado">
-                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto" required></textarea>
+                        <textarea class="ancho-full centrado" name="descripcion" id="comentario" placeholder="Descripción del producto" required ></textarea>
                     </div>
                     <div class="ancho-half centrado ">
                         <select type="text" name="categoria" id="categoria" required>
@@ -40,5 +41,6 @@
             </section>
         </main>  
         <!-- <%- include('../partials/footer.ejs') %> -->
+        <script src="/js/productCreateValidator.js"></script>
     </body>
 </html>

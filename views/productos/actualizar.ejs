@@ -8,12 +8,13 @@
                 <div class="ancho-full centrado">
                     <h1>ACTUALIZAR PRODUCTO</h1>
                 </div>
+                <ul class="errores"></ul>
                 <form class="flex" enctype="multipart/form-data" action="/productos/actualizar/<%= producto.id %>?_method=PUT" method="POST">
                     <div class="ancho-full centrado">
-                        <input type="text" name="nombre" id="nombre" value="<%= producto.name %>"  placeholder="Nombre del Producto" required>
+                        <input type="text" name="nombre" id="nombre" value="<%= producto.name %>"  placeholder="Nombre del Producto" >
                     </div>
                     <div class="ancho-full centrado">
-                        <input type="text" name="precio" id="precio" value="<%= producto.price %>" placeholder="Precio" required>
+                        <input type="text" name="precio" id="precio" value="<%= producto.price %>" placeholder="Precio" >
                     </div>
                     <div class="ancho-half centrado ">
                         <select type="text" name="categoria" id="categoria">
@@ -32,7 +33,7 @@
                         <img src="/img/<%= producto.image %>">
                     </div>
                     <div class="ancho-full centrado">
-                        <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" required>
+                        <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" >
                     </div>
                     <div class="ancho-full centrado">
                         <button type="submit" id="actualizar">Actualizar producto</button>
@@ -51,5 +52,6 @@
             </section>
         </main>  
         <!-- <%- include('../partials/footer.ejs') %> -->
+        <script src="/js/productUpdateValidator.js"></script>
     </body>
 </html>
