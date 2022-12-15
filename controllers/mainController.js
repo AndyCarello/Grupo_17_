@@ -45,8 +45,8 @@ let controller = {
         res.render("index", {
             title: "Home",
             estilos: [
-                "style.css",
-                "style-solo-header.css"       
+                "index.css",
+                "style-solo-header.css"     
             ]
         });
         console.log("Mostrando el Home");
@@ -56,9 +56,9 @@ let controller = {
         res.render("contacto", {
             title: "Contacto",
             estilos: [
+                "index.css",
                 "contacto.css",
-                "style.css"
-                    
+                "style-solo-header.css"
             ]
         });
         console.log("Mostrando Contacto");
