@@ -2,6 +2,7 @@ let express = require ('express');
 let router = express.Router(); //Requiero la funcion router de express
 let usuariosController = require('../controllers/usuariosController.js'); //Requiero el usuariosController
 const usersValidations = require('../validaciones/usersValidations');
+const loginValidations = require('../validaciones/loginValidations');
 const invitadoMiddleware = require('../middlewares/invitadoMiddleware');
 const registradoMiddleware = require('../middlewares/registradoMiddleware');
 
@@ -14,7 +15,7 @@ router.get("/recuperar", invitadoMiddleware, usuariosController.recuperar);
 router.get("/reestablecercontrasena", invitadoMiddleware, usuariosController.restablecer);
 router.get("/validado", invitadoMiddleware, usuariosController.validado);
 router.get("/ingreso", invitadoMiddleware, usuariosController.ingreso);
-router.post("/ingreso", usersValidations.logInValidation, usuariosController.iniciarSesion);
+router.post("/ingreso", loginValidations.loginValidations, usuariosController.iniciarSesion);
 router.get("/perfil/", registradoMiddleware, usuariosController.perfil);
 router.post("/actualizar/", registradoMiddleware, usuariosController.actualizar);
 router.post("/recuperacion", invitadoMiddleware, usuariosController.recuperacion);

@@ -1,16 +1,14 @@
 const { body } = require('express-validator');
 
-
-
 module.exports = {
 
     registerValidation: [
 
         body("email")
-           .notEmpty()
-           .withMessage("Campo email incompleto")
-           .isEmail()
-           .withMessage("formate de email invalido"),
+            .notEmpty()
+            .withMessage("Campo email incompleto")
+            .isEmail()
+            .withMessage("formate de email invalido"),
         body("nombre")
             .notEmpty()
             .withMessage("Campo nombre incompleto"),
@@ -35,20 +33,6 @@ module.exports = {
         body("telefono")
             .notEmpty()
             .withMessage("Campo telefono incompleto"),
-
-
-
-    ],
-    logInValidation: [
-        body("email")
-           .notEmpty()
-           .withMessage("Campo email incompleto")
-           .isEmail()
-           .withMessage("formate de email invalido"),
-        body("password")
-           .notEmpty()
-           .withMessage("Campo password incompleto")
     ]
-
 }
 
