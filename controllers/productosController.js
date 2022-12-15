@@ -129,6 +129,8 @@ const controller = {
             category_id: req.body.categoria,
             image: (req.file) ? req.file.filename : null
         }
+
+        if (data.image == null) {delete data.image}
         
 
         db.Product.update(data,{
