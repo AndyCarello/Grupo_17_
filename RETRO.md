@@ -1,3 +1,29 @@
+# Retrospectiva Grupo 17 (Sprint 7) # 
+
+## COMENZAR A HACER ##
+
+- Terminar las tareas con mas tiempo de sobra
+- Me gustaria una call Grupal a la semana (Marian)
+
+## HACER MAS ##
+
+- Mejor comunicacion grupal
+- Intercambiar ideas de codigo
+- Avisar al grupo si se esta trabado en una tarea
+- Avisar de los push y pull
+- Pendientes
+
+## CONTINUAR HACIENDO ##
+- Mantener actualizado el tablero de trabajo
+- Mantener el repositorio actualizado
+- trabajar en equipo
+
+## HACER MENOS ##
+- No avisar cuando no se llega con su parte del trabajo.
+
+## DEJAR DE HACER ##
+- Dejar tareas para ultimo momento
+
 # Retrospectiva Grupo 17 (Sprint 6) # 
 
 ## COMENZAR A HACER ##
