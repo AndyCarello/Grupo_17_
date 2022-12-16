@@ -49,7 +49,7 @@ const controller = {
         const error = validationResult(req)
         console.log(error.errors)
         if(!error.isEmpty()){
-
+            const localidades = await db.Neighborhood.findAll();
             return res.render("usuarios/registro" , { 
                 title: "Formulario de registro",
                 estilos: [
@@ -57,6 +57,7 @@ const controller = {
                     "footer.css",
                     "style.css"
                 ],
+                localidades:localidades,
                 errors: error.errors, 
                 old: req.body 
                 })
