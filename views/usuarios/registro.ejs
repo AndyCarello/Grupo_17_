@@ -99,6 +99,7 @@
 
                         let campoEmail = document.querySelector('#email');
                         let campoPassword = document.querySelector('#password');
+                        let campoNombre = document.querySelector('#nombre');
                         let campoApellido = document.querySelector('#Apellido');
                         let campoFechadenacimiento = document.querySelector('#Fechadenacimiento');
                         let campoTelefono = document.querySelector('#telefono');
@@ -107,9 +108,10 @@
 
                         let validEmail= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/; //validacion de mail
 
-                        let errores = [];
 
                         formulario.addEventListener('submit', (e) => {
+
+                            let errores = [];
 
                             if (campoEmail.value == "") {
                                 errores.push('El campo de email debe de estar completo')
@@ -119,10 +121,20 @@
 
                             if (campoPassword.value == "") {
                                 errores.push('El campo de password debe de estar completo')
+                            }else if(campoPassword.value.length < 8){
+                                errores.push('Debe de contener mas de 8 caracteres');
+                            }
+
+                            if (campoNombre.value == "") {
+                                errores.push('El campo de apellido debe de estar completo')
+                            }else if(campoNombre.value.length < 2){
+                                errores.push('El nombre debe de contener mas de 2 caracteres');
                             }
 
                             if (campoApellido.value == "") {
                                 errores.push('El campo de apellido debe de estar completo')
+                            }else if(campoApellido.value.length < 2){
+                                errores.push('El apellido debe de contener mas de 2 caracteres');
                             }
 
                             if (campoFechadenacimiento.value == "") {
