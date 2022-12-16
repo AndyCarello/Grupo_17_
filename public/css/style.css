@@ -386,7 +386,11 @@ header {
   color: #7d5a50;
 }
 
-div.errores{
+.errores{
+  color: red;
+  font-size: medium;
+}
+.errores li{
   color: red;
   font-size: medium;
 }
