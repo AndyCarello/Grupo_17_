@@ -24,6 +24,9 @@
                             </p>
                         </div>
                         <% } %>
+                        <div class="errores">
+                            <ul></ul>
+                        </div>
                             <form id="formularioRegistro" class="flex" action="/usuarios/registro" method="POST">
 
                                 <div class="ancho-full centrado">
@@ -107,7 +110,6 @@
                     let errores = [];
                     
                     formulario.addEventListener('submit', (e) => {
-                        e.preventDefault();
                         
                         if(campoEmail.value == ""){
                             errores.push('El campo de email debe de estar completo')
@@ -137,6 +139,15 @@
                             errores.push('El campo de calle y altura debe de estar completo')
                         }
                         
+                        if(errores.length > 0){
+                            e.preventDefault();
+
+                            let ulErrores = document.querySelector('div.errores ul')
+                            for (let i = 0; i < errores.length; i++) {
+                                ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
+                                
+                            }
+                        }
                     })
                 });
             </script>
