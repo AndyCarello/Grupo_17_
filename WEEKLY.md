@@ -4,6 +4,7 @@
     (Andy) 
     - Hice router de API
     - Hice controller para API users
+    - Actualice listado de barrios en data.sql con todo CABA
     - Marge, creo que odio a sequelize. No, no, la verdad es que te enloquece pero al final queda lindo
 
 ## 16/12/22 ##
