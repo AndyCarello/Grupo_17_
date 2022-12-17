@@ -37,6 +37,7 @@ const rutasContacto = require('./routes/main.js');
 const rutasHome = require('./routes/main.js');
 const rutasFooter = require('./routes/main.js');
 const rutasApi = require('./routes/api.js');
+const rutasAdmin = require('./routes/admin.js')
 
 
 //Defino que archivo de rutas utiliza cada 'prefijo' de la url
@@ -48,6 +49,7 @@ app.use('/home', rutasHome);
 app.use('/contacto', rutasContacto);
 app.use('/footer', rutasFooter);
 app.use('/api', rutasApi);
+app.use('/admin', rutasAdmin)
 
 //Solicito el puerto al entorno (environment) y, si no me lo pasa, uso el 80
 app.listen(process.env.PORT || 80, () => {

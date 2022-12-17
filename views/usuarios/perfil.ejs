@@ -56,18 +56,18 @@
                 </form>
             </section>
             <section class="flex">
-                <form class="flex" action="/usuarios/password/" method="POST">
+                <form class="flex" action="/usuarios/password/?_method=PUT" method="POST">
                     <div class="ancho-full centrado">
                         <h3>Actualizar contraseña</h3>
                     </div>
-                    <div class="ancho-half centrado">
-                        <input type="password" name="password" id="password-actual" placeholder="Contraseña actual" required>
+                    <div class="ancho-full centrado">
+                        <input type="password" name="password-actual" id="password-actual" placeholder="Contraseña actual" required>
                     </div>
                     <div class="ancho-half centrado">
-                        <input type="password" name="password" id="password-nueva" placeholder="Nueva contraseña" required>
+                        <input type="password" name="password-nueva" id="password-nueva" placeholder="Nueva contraseña" required>
                     </div>
                     <div class="ancho-half centrado ">
-                        <input type="password" name="password" id="password-repetir" placeholder="Repetir nueva contraseña" required>
+                        <input type="password" name="password-repetir" id="password-repetir" placeholder="Repetir nueva contraseña" required>
                     </div>
                     <div class="ancho-full centrado">
                         <button type="submit" id="actualizar">Actualizar contraseña</button>

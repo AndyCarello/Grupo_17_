@@ -241,6 +241,9 @@ const controller = {
     
         
     },
+    actualizarPassword: (req, res) => {
+        res.send("Deberia de actualizar el password... pero no")
+    },
     recuperacion: (req,res)=>{
         res.render("usuarios/recuperacion", {
             title: "Recuperaración iniciada",

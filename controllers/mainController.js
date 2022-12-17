@@ -86,19 +86,25 @@ let controller = {
         });
     },
 //metodo "prueba"(http://localhost:3000/sequelize) donde si cambian la consulta y lo llaman desde el navegador les devuelve un json directamente con la respuesta.
-    prueba:async(req,res)=> { 
+    prueba: async(req,res)=> { 
 
 
-        let data = await db.Cart.findAll({
+        /* let data = await db.Cart.findAll({
             where: { user_id: 2},
             include: "products"
-        })
+        }) */
 
-        data = await db.Product.findByPk(1, {
-            include: 'ingredients'
-        })
+        try {
+            data = await db.Product.findByPk(1, {
+                include: 'ingredients'
+            })
+        } catch (e) {
+            console.log(e);
+            console.log("La app sigue corriendo");
+            return res.send("Capture el error y no rompio");
+        }
 
-        res.json(data)
+        res.send(data);
 
     }
 };

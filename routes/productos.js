@@ -4,7 +4,7 @@ let productosController = require('../controllers/productosController.js'); //Re
 const path = require('path');
 const multer = require('multer');
 const aux = require('../js/auxiliares');
-const adminMiddleware = require('../middlewares/adminMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware');
 const productsValidations = require('../validaciones/productsValidations');
 
 const storage = multer.diskStorage({

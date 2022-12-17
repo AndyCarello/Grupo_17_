@@ -4,9 +4,13 @@
     (Andy) 
     - Hice router de API
     - Hice controller para API users
-    - Actualice listado de barrios en data.sql con todo CABA
     - Marge, creo que odio a sequelize. No, no, la verdad es que te enloquece pero al final queda lindo
-
+    - Actualice listado de barrios en data.sql con todo CABA
+    - Actualice cookie de login para que funcione con sequelize
+    - Hice router admin
+    - Base controller admin
+    - Correcciones en Middlewares
+    
 ## 16/12/22 ##
 
 ### Novedades ###

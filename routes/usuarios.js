@@ -17,6 +17,7 @@ router.get("/validado", invitadoMiddleware, usuariosController.validado);
 router.get("/ingreso", invitadoMiddleware, usuariosController.ingreso);
 router.post("/ingreso", loginValidations.loginValidations, usuariosController.iniciarSesion);
 router.get("/perfil/", registradoMiddleware, usuariosController.perfil);
+router.put("/password", registradoMiddleware, usuariosController.actualizarPassword);
 router.post("/actualizar/", registradoMiddleware, usuariosController.actualizar);
 router.post("/recuperacion", invitadoMiddleware, usuariosController.recuperacion);
 router.get("/salir",usuariosController.salir);
