@@ -1,4 +1,9 @@
-## 17/12/22 ##
+## 21/12/22 ##
+
+### Novedades 
+
+    - Hicimos chat grupal, reasignamos tareas
+    - Venimos bien encaminados para la entrega final.
 
 ### Novedades ###
     (Andy) 
