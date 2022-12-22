@@ -1,4 +1,5 @@
 const db = require('../../database/models');
+const Category = require('../../database/models/Category');
 
 
 
@@ -8,11 +9,13 @@ const apiControllerProducts = {
     list: async (req, res) => {
         const data = await db.Product.findAndCountAll({
             
+            include: [{ association: "category" }],
+
             attributes: [
-                'id',                  
+                'Product.id',                  
                 [
                     
-                    db.sequelize.fn('CONCAT', db.sequelize.col('name')), 
+                    db.sequelize.fn('CONCAT', db.sequelize.col('Product.name')), 
                     'name'
                     
                 ], 
@@ -22,9 +25,10 @@ const apiControllerProducts = {
                 ],
                 'price',   
                 [
-                    db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/api/products/', db.sequelize.col('id')), 
+                    db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/api/products/', db.sequelize.col('Product.id')), 
                     'url'
-                ],  
+                ],
+               
             ]
         });
         res.send(data)
@@ -32,25 +36,54 @@ const apiControllerProducts = {
 
     detail: async (req, res) => {
         const data = await db.Product.findByPk(req.params.id, {
-            include: {
-                model: db.Category,
-                as: 'category',
-                
-                attributes: []
-            },
+            
+            include: [
+                {
+                    model: db.Category,
+                    as: 'category',
+                    attributes: []
+
+
+                },
+                {
+
+                    model: db.Ingredient,
+                    as: 'ingredients',
+                    
+                    attributes: []
+                }
+       
+            ],
+        
             raw: true,            
             attributes: {               
                 include: [
                     [
                         db.sequelize.col('category.name'), 
                         'category'
-                    ]
-                ],           
-                exclude: [
-                    'is_admin',
-                    'password',
+                        
+                    ],   
+                    [
+                        db.sequelize.fn('CONCAT', '/public/img/', db.Sequelize.col('image')), 
+                        'url'
+                    ],
+                    [
+                        db.sequelize.col('ingredients.name'), 
+                        'Ingrediente'
+                        
+                    ],
+                    [
+                        db.sequelize.col('ingredients.id'), 
+                        'ID-ingrediente'
+                        
+                    ],   
+                          
                     
-                ]
+                    
+                ],
+                
+                
+                
             }
         })
         res.send(data)
@@ -70,3 +103,4 @@ module.exports = apiControllerProducts;
 
 
 
+  
