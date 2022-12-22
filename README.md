@@ -41,9 +41,14 @@ Licenciatura en informatica en la Universidad de Quilmes. Tengo conocimiento con
 
 - https://trello.com/b/PaFQh2o5/proyecto-e-comerce
 
-## Url del proyecto ##
+## Repositorios ##
 
-- https://sucrepasteleria.herokuapp.com/
+### Proyecto node ###
+
+- https://github.com/AndyCarello/Grupo_17_
+### Proyecto react ###
+
+- https://github.com/AndyCarello/Grupo_17_Dashboard_Sprint8
 
 
 
