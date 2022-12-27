@@ -1,5 +1,5 @@
 .container-form-contacto {
-  background-color: white;
+  background-color: #f4ece0;
   padding: 30px;
   margin: 0 auto;
 }
@@ -9,8 +9,20 @@
 }
 
 main {
-  height: 1000px;
+  height: auto;
+  background-color: #f4ece0;
+
 }
+
+input,
+select {
+  border-style: none;
+  padding: 0.7em;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 
 .boton-enviar {
   width: 100px;
@@ -24,6 +36,11 @@ main {
 
 .boton-enviar:hover {
   background-color: white;
+}
+
+.logo-contacto12 {
+  text-align: center;
+  
 }
 
 .ingreso-ancho-full {
@@ -55,6 +72,7 @@ label {
 
 .logo-contacto1 {
   text-align: center;
+
 }
 
 .descripcion-contacto-logo {
@@ -83,10 +101,12 @@ label {
     position: relative;
   }
 
-  .logo-contacto1 {
+  .logo-contacto12 {
     position: relative;
-    bottom: 450px;
-    left: 200px;
+    bottom: 600px;
+    left: 1000px;
+    width: 400px;
+    height: 400px;
   }
 
   main {
