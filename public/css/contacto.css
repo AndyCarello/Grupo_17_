@@ -63,7 +63,7 @@ label {
 #telefono,
 #localidad,
 #comentario {
-  width: 100%;
+  width: 150%;
 }
 
 .logo-contacto1 img {
@@ -102,11 +102,12 @@ label {
   }
 
   .logo-contacto12 {
+    display: flex;
+    flex-direction: column;
     position: relative;
+    align-items: flex-end;
     bottom: 600px;
-    left: 1000px;
-    width: 400px;
-    height: 400px;
+    right: 100px;
   }
 
   main {

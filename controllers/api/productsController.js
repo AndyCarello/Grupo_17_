@@ -1,5 +1,6 @@
 const db = require('../../database/models');
 const Category = require('../../database/models/Category');
+const sequelize = db.sequelize;
 
 
 
@@ -9,13 +10,12 @@ const apiControllerProducts = {
     list: async (req, res) => {
         const data = await db.Product.findAndCountAll({
             
-            include: [{ association: "category" }],
+            include:  "category",
 
             attributes: [
-                'Product.id',                  
+                'product.id',                  
                 [
-                    
-                    db.sequelize.fn('CONCAT', db.sequelize.col('Product.name')), 
+                    db.sequelize.fn('CONCAT', db.sequelize.col('product.name')), 
                     'name'
                     
                 ], 
@@ -25,12 +25,20 @@ const apiControllerProducts = {
                 ],
                 'price',   
                 [
-                    db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/api/products/', db.sequelize.col('Product.id')), 
+                    db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/api/products/', db.sequelize.col('product.id')), 
                     'url'
                 ],
-               
-            ]
+            
+            ],
         });
+        data.categorias = await db.Product.findAll({
+            include: "category",
+            attributes: [
+                [sequelize.fn("COUNT" , sequelize.col("Product.id")) , 'cant_prod']
+            ],
+            group: 'category_id',
+            raw: true
+        })
         res.send(data)
     },
 
@@ -38,21 +46,9 @@ const apiControllerProducts = {
         const data = await db.Product.findByPk(req.params.id, {
             
             include: [
-                {
-                    model: db.Category,
-                    as: 'category',
-                    attributes: []
-
-
-                },
-                {
-
-                    model: db.Ingredient,
-                    as: 'ingredients',
-                    
-                    attributes: []
-                }
-       
+                 
+                "category",
+                "ingredients"
             ],
         
             raw: true,            
@@ -64,17 +60,17 @@ const apiControllerProducts = {
                         
                     ],   
                     [
-                        db.sequelize.fn('CONCAT', '/public/img/', db.Sequelize.col('image')), 
+                        db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/public/img/', db.Sequelize.col('image')), 
                         'url'
                     ],
                     [
-                        db.sequelize.col('ingredients.name'), 
+                        db.sequelize.col('ingredients.name'),
                         'Ingrediente'
                         
                     ],
                     [
                         db.sequelize.col('ingredients.id'), 
-                        'ID-ingrediente'
+                        'id-ingrediente'
                         
                     ],   
                           
