@@ -50,36 +50,16 @@ const apiControllerProducts = {
                 "category",
                 "ingredients"
             ],
-        
-            raw: true,            
+                   
             attributes: {               
                 include: [
                     [
-                        db.sequelize.col('category.name'), 
-                        'category'
-                        
-                    ],   
-                    [
-                        db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/public/img/', db.Sequelize.col('image')), 
+                        db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/img/', db.Sequelize.col('image')), 
                         'url'
                     ],
-                    [
-                        db.sequelize.col('ingredients.name'),
-                        'Ingrediente'
-                        
-                    ],
-                    [
-                        db.sequelize.col('ingredients.id'), 
-                        'id-ingrediente'
-                        
-                    ],   
-                          
-                    
-                    
                 ],
                 
-                
-                
+     
             }
         })
         res.send(data)
