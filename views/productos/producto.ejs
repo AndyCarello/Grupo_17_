@@ -25,7 +25,7 @@
                     <div class="ancho-full centrado">$ <%= producto.price %></div>
                     <% if (locals.user){ %>
                         <div class="centrado">
-                            <button>Agregar</button>
+                            <button id="agregar-producto" type="button" data-pid="<%= producto.id %>" onclick="agregarAlCarrito()">Agregar</button>
                         </div>
                     <% } %>
                 </div>
@@ -33,5 +33,7 @@
         </main>
 
         <%- include('../partials/footer.ejs') %>
+        <script type="text/javascript" src="/js/cookies.js"></script>
+        <script type="text/javascript" src="/js/carrito.js"></script>
     </body>
 </html>

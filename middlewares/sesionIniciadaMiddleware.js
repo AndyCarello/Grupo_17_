@@ -18,16 +18,20 @@ module.exports = async (req, res, next) => {
         res.locals.sesionIniciada = true;
         res.locals.user = req.session.user;
     } else {
-        let emailCookie = req.cookies.emailUsuario; // Guarda la cookie en una variable
-        let usuarios = await db.User.findAll(); //Traigo todos los Usuarios
-        let usuarioEncontrado = usuarios.find((usuario) => {
-            return usuario.email == emailCookie // Busco la coincidencia con la cookie y la guardo en una variable
-        })
-        if (usuarioEncontrado) {
-            delete usuarioEncontrado.password;
-            res.locals.sesionIniciada = true;
-            res.locals.user = req.session.user;
-            req.session.user = usuarioEncontrado // Valido si existe el usuario y lo guardo en la session
+        res.clearCookie("carrito");
+        if (req.cookies.emailUsuario) {
+            let emailCookie = req.cookies.emailUsuario; // Guarda la cookie en una variable
+            let usuarios = await db.User.findAll(); //Traigo todos los Usuarios
+            let usuarioEncontrado = usuarios.find((usuario) => {
+                return usuario.email == emailCookie // Busco la coincidencia con la cookie y la guardo en una variable
+            })
+        
+            if (usuarioEncontrado) {
+                delete usuarioEncontrado.password;
+                res.locals.sesionIniciada = true;
+                res.locals.user = req.session.user;
+                req.session.user = usuarioEncontrado // Valido si existe el usuario y lo guardo en la session
+            }
         }
     }
     next();
