@@ -226,6 +226,18 @@ const controller = {
             res.redirect("/");
         } else {
             const localidades = await db.Neighborhood.findAll();
+
+            try {
+                compras = await db.Cart.findAll({
+                    where: { user_id: req.session.user.id},
+                    include: ["cart_products"]
+                })
+            } catch (e) {
+                console.log(e);
+                console.log("La app sigue corriendo");
+                return res.send("Capture el error y no rompio");
+            }
+
             res.render("usuarios/perfil", {
                 title: "Perfil de usuario",
                 estilos: [
@@ -234,7 +246,8 @@ const controller = {
                     "style.css"        
                 ],
                 usuario: req.session.user,
-                localidades: localidades
+                localidades: localidades,
+                compras: compras
             });
             console.log("Mostrando Pagina de Perfil de usuario con id: " + req.session.user.id);
         }
