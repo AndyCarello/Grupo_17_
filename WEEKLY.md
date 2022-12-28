@@ -1,3 +1,9 @@
+## 26/12/22 ##
+
+### Novedades 
+
+- Apis Usuarios terminadas.
+- Apis Productos Terminadas.
 ## 21/12/22 ##
 
 ### Novedades 
