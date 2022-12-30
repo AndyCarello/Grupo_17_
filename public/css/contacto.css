@@ -38,10 +38,7 @@ select {
   background-color: white;
 }
 
-.logo-contacto12 {
-  text-align: center;
-  
-}
+
 
 .ingreso-ancho-full {
   flex-basis: 80%;
@@ -75,6 +72,12 @@ label {
 
 }
 
+.logo-contacto12{
+
+  height: 600px;
+  top: 300px;
+}
+
 .descripcion-contacto-logo {
   display: flex;
   flex-direction: column;
@@ -82,11 +85,15 @@ label {
   bottom: 100px;
 }
 
+
 @media (min-width: 480px) {
 }
 
 /* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
 @media (min-width: 768px) {
+
+  
+  
 }
 
 /* Laptops y computadoras mas grandes ()*/
@@ -94,6 +101,23 @@ label {
   main {
     height: auto;
   }
+
+  .logo-contacto1 img {
+    width: 400px;
+  }
+  
+  .logo-contacto1 {
+    text-align: center;
+  
+  }
+  
+  .descripcion-contacto-logo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 100px;
+  }
+  
 
   .descripcion-contacto-logo {
     display: flex;
@@ -128,3 +152,6 @@ label {
     height: 100px;
   }
 }
+
+
+
