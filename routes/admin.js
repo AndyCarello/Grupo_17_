@@ -5,8 +5,10 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 
 router.get("/", adminMiddleware, adminController.administrador);
 router.get("/usuarios", adminMiddleware, adminController.listarUsuarios);
-router.put("/usuarios", adminMiddleware, adminController.alternarPermisosAdmin);
+router.put("/usuarios/:id", adminMiddleware, adminController.alternarPermisosAdmin);
+router.delete("/usuarios/:id", adminMiddleware, adminController.eliminarUsuario);
 router.get("/productos", adminMiddleware, adminController.listarProductos);
+router.delete("/productos/:id", adminMiddleware, adminController.eliminarProducto);
 router.get("/ingredientes", adminMiddleware, adminController.listarIngredientes);
 router.post("/ingredientes", adminMiddleware, adminController.crearIngrediente);
 router.put("/ingredientes/:id", adminMiddleware, adminController.actualizarIngrediente);

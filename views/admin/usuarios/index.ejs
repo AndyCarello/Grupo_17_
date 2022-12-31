@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../../partials/head.ejs') %>
+
+    <body>
+        <%- include('../../partials/header.ejs') %>
+        <main>
+            <section class="flex">
+                <div class="ancho-full centrado">
+                    <h1>
+                        <%= title %>
+                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
+                </div>
+                <ul>
+                <% for (usuario of usuarios) { %> <!-- Realizo un ciclo for of de los productos -->
+                    <li>
+                        <%= usuario.name %> <%= usuario.lastname %> | <%= usuario.email %>
+                        <form action="/admin/usuarios/<%= usuario.id %>?_method=PUT" method="post">
+                            <button type="submit">
+                                <% if (usuario.is_admin == 1){ %>
+                                    <i class="fas fa-user-minus"></i> Quitar permisos administrador
+                                <% } else { %>
+                                    <i class="fas fa-user-shield"></i> Hacer administrador
+                                <% } %>
+                                
+                            </button>
+                        </form>
+                        <form action="/admin/usuarios/<%= usuario.id %>?_method=DELETE" method="post">
+                            <button type="submit"><span class="fas fa-trash"></span></button>
+                        </form>
+                    </li>
+                <% } %>
+                </ul>
+            </section>
+        </main>
+        <%- include('../../partials/footer.ejs') %>
+    </body>
+
+</html>
