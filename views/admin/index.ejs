@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <section class="flex">
+                <div class="ancho-full centrado">
+                    <h1><%= title %></h1> <!--imprimo el titulo que le paso en el render del controller-->
+                </div>
+                <ul>
+                    <li><a href="/admin/usuarios">Administrar usuarios</a></li>
+                    <li><a href="/admin/productos">Administrar productos</a></li>
+                    <li><a href="/admin/categorias">Administrar categorias</a></li>
+                    <li><a href="/admin/ingredientes">Administrar ingredientes</a></li>
+                </ul>
+            </section>
+        </main>
+
+
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

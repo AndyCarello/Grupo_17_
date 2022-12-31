@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../../partials/head.ejs') %>
+
+    <body>
+        <%- include('../../partials/header.ejs') %>
+        <main>
+            <section class="flex">
+                <div class="ancho-full centrado">
+                    <h1>
+                        <%= title %>
+                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
+                </div>
+                <ul>
+                <% for (categoria of categorias) { %> <!-- Realizo un ciclo for of de las categorias -->
+                    <li>
+                        <form action="/admin/categorias/<%= categoria.id %>?_method=PUT" method="post">
+                            <input name="nombre" type="text" value="<%= categoria.name %>">
+                            <button type="submit"><span class="fas fa-edit"></span></button>
+                        </form>
+                        <form action="/admin/categorias/<%= categoria.id %>?_method=DELETE" method="post">
+                            <button type="submit"><span class="fas fa-trash"></span></button>
+                        </form>
+                    </li>
+                <% } %>
+                </ul>
+                <div class="ancho-full centrado">
+                    <h1>
+                        Crear Categoria
+                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
+                    <form action="/admin/categorias/" method="post">
+                        <input name="nombre" type="text" required>
+                        <button type="submit"><span class="fas fa-plus"></span></button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <%- include('../../partials/footer.ejs') %>
+    </body>
+
+</html>
