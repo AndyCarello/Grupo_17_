@@ -105,7 +105,7 @@ main select {
 }
 /* Estilos Producto*/
 
-#producto img {
+#producto img, #editar-producto img {
   max-width: 100%;
   height: auto;
 }
