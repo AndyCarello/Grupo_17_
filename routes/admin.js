@@ -9,11 +9,11 @@ router.put("/usuarios", adminMiddleware, adminController.alternarPermisosAdmin);
 router.get("/productos", adminMiddleware, adminController.listarProductos);
 router.get("/ingredientes", adminMiddleware, adminController.listarIngredientes);
 router.post("/ingredientes", adminMiddleware, adminController.crearIngrediente);
-router.put("/ingredientes", adminMiddleware, adminController.actualizarIngrediente);
-router.delete("/ingredientes", adminMiddleware, adminController.eliminarIngrediente);
+router.put("/ingredientes/:id", adminMiddleware, adminController.actualizarIngrediente);
+router.delete("/ingredientes/:id", adminMiddleware, adminController.eliminarIngrediente);
 router.get("/categorias", adminMiddleware, adminController.listarCategorias);
 router.post("/categorias", adminMiddleware, adminController.crearCategoria);
-router.put("/categorias", adminMiddleware, adminController.actualizarCategoria);
-router.delete("/categorias", adminMiddleware, adminController.eliminarCategoria);
+router.put("/categorias/:id", adminMiddleware, adminController.actualizarCategoria);
+router.delete("/categorias/:id", adminMiddleware, adminController.eliminarCategoria);
 
 module.exports = router;
