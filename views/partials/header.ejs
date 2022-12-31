@@ -36,17 +36,25 @@
     </div>
     <nav id="barra-navegacion">
         <ul>
-             <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
-             <li><a href="/home">Home</a></li>
-             <li><a href="/productos">Productos</a></li>
-             <li><a href="/info">Quienes Somos</a></li>
-             <li><a href="/contacto">Contacto</a></li>
-             <li><a href="/delivery">Delivery</a></li>
-             <li><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
-             <li class="invertido solo-mobile"><a href="/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
-             <li class="invertido solo-mobile"><a href="/usuarios/ingreso"><i class="fas fa-user"></i>Ingresar</a></li>
-             <li class="invertido solo-mobile"><a href="/usuarios/registro"><i class="fas fa-user-plus"></i>Registrarme</a></li>
-             <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
+            <li id="abrir-menu" class="invertido derecha solo-mobile"><a href="#">Menu <span><i class="fas fa-bars"></i></span></a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/info">Quienes Somos</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/delivery">Delivery</a></li>
+            <li><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+            <% if (locals.user && locals.user.is_admin){ %>
+                <li><a href="/admin"><i class="fas fa-cogs"></i> Administrar</a></li>
+            <% } %>
+            <li class="invertido solo-mobile"><a href="/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+            <% if (!locals.sesionIniciada) { %>
+                <li class="invertido solo-mobile"><a href="/usuarios/ingreso"><i class="fas fa-user"></i>Ingresar</a></li>
+                <li class="invertido solo-mobile"><a href="/usuarios/registro"><i class="fas fa-user-plus"></i>Registrarme</a></li>
+            <% } else { %>
+                <li class="invertido solo-mobile"><a href="/usuarios/perfil">Perfil</a></li>
+                <li class="invertido solo-mobile"><a href="/usuarios/salir">Salir</a></li>
+            <% } %>
+            <li id="cerrar-menu" class="derecha solo-mobile"><a href="#">Cerrar <span><i class="fas fa-window-close"></i></span></a></li>
         </ul>
     </nav>
 </header>
