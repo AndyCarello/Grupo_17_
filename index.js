@@ -6,7 +6,7 @@ const session = require('express-session');
 const methodOverride = require("method-override");
 const sesionIniciadaMiddleware = require("./middlewares/sesionIniciadaMiddleware.js"); //Llamo al mw que maneja las sesiones a nivel aplicacion
 const cookieParser=require('cookie-parser')
-const cors = require('cors')
+const cors = require('cors') // Requiero para que se puedan hacer pedidos desde otros servers
 //Defino a ejs como mi view engine y especifico donde esta mi carpeta views
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
@@ -14,6 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 //Hago que public este disponible como un recurso estatico
 app.use(express.static("public"));
 
+//Habilito que todos los servers puedan hacer request a este
 app.use(cors())
 
 //Agrego estas lineas para que pueda postear formularios
