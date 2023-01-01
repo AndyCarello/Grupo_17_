@@ -254,8 +254,39 @@ const controller = {
     
         
     },
-    actualizarPassword: (req, res) => {
-        res.send("Deberia de actualizar el password... pero no")
+    actualizarPassword: async (req, res) => {
+        let passwordActual = req.body.passwordactual;
+        let passwordNueva = req.body.passwordnueva;
+        let passwordRepetir = req.body.passwordrepetir;
+
+        if (passwordNueva != passwordRepetir) {
+            return res.send("La confirmacion de contraseña no coincide")
+        } 
+
+        let user = await db.User.findOne(
+            {
+                where: {
+                    id: req.session.user.id
+                }
+            }
+        )
+        if (bcryptjs.compareSync(passwordActual, user.password)) {
+            let resultado = await db.User.update(
+                {
+                    password: bcryptjs.hashSync(passwordNueva, 10)
+                },
+                {
+                    where: {
+                        id: req.session.user.id 
+                    }
+                }
+            )
+            req.session.destroy();
+            res.clearCookie('emailUsuario');
+            return res.send("Contraseña actualizada correctamente")
+        }else {
+            return res.send("La contraseña actual no coincide")
+        }
     },
     recuperacion: (req,res)=>{
         res.render("usuarios/recuperacion", {
