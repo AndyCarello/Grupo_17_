@@ -36,15 +36,28 @@ let controller = {
     },
 
     home: (req, res) => {
-        res.render("index", {
+
+        db.Product.findAll({
+            limit: 4,
+            order: sequelize.random()
+        })
+        .then((productos) =>{
+
+            res.render("index", {
             title: "Home",
             estilos: [
                 "index.css",
                 "style-solo-header.css"     
-            ]
+            ],
+            productos: productos
+        
         });
+
         console.log("Mostrando el Home");
-    },
+    })
+
+},
+
 
     contacto: (req, res) => {
         res.render("contacto", {

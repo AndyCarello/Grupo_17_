@@ -23,6 +23,7 @@ select {
   text-align: center;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  display: flex;
 }
 
 
@@ -90,6 +91,9 @@ label {
 
 @media (min-width: 480px) {
 
+ 
+    
+
   
 }
 
@@ -100,7 +104,14 @@ label {
   .logo-contacto1 {
     text-align: center;
 }
+
+.logo-contacto12 {
+  left: 56%;
+  position: absolute;
   
+}
+
+
   
 }
 
@@ -117,6 +128,7 @@ label {
   #localidad,
   #comentario {
     width: 150%;
+    display: flex;
   }
   .logo-contacto1 img {
     width: 400px;
