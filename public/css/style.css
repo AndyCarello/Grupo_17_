@@ -470,7 +470,9 @@ header {
 }
 
 /* Fin estilos admin */
-
+.oculto {
+  display: none;
+}
 /* Comienzo media Querys */
 /* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
 

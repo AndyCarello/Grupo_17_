@@ -83,9 +83,9 @@
                 <article class="pedido">
                         <div class="pedido-encabezado">
                             <div>Pedido #<%= compra.id %> - <%= compra.date %></div>
-                            <div><i class="fas fa-minus"></i></div>
+                            <div><i class="fas fa-ellipsis-v" data-objetivo="pedido-<%= compra.id %>" onclick="mostrarDetalle(this)"></i></div>
                         </div>
-                        <div class="pedido-detalle"> 
+                        <div id="pedido-<%= compra.id %>" class="pedido-detalle oculto"> 
                         <% for (producto of compra.cart_products){ %>
                             <div class="pedido-item">
                                 <img class="item-imagen" src="/img/<%= producto.image %>" alt="Imagen del producto">
@@ -96,18 +96,11 @@
                                 <% total += (producto.cart_product.unit_price * producto.cart_product.quantity) %>
                             </div>        
                         <% } %>
-                        </div>
                         <div class="pedido-total">Total: $<%= total %></div>
+                        </div>
+                        
                     </article>
-                <%  }   %>
-                    
-                <article class="pedido">
-                    <div class="pedido-encabezado">
-                        <div>Pedido #9999 - 00/00/0000</div>
-                        <div><i class="fas fa-plus"></i></div>
-                    </div>
-                </article>
-                
+                <%  }   %>                
             </section>
             <section>
                 
