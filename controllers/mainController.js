@@ -47,6 +47,7 @@ let controller = {
             title: "Home",
             estilos: [
                 "index.css",
+                "footer.css",
                 "style-solo-header.css"     
             ],
             productos: productos
@@ -64,6 +65,7 @@ let controller = {
             title: "Contacto",
             estilos: [
                 "index.css",
+                "footer.css",
                 "contacto.css",
                 "style-solo-header.css"
             ]
