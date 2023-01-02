@@ -210,6 +210,16 @@ main select {
   padding: 1em;
 }
 
+#carrito:hover{
+  border-color: red;
+  color: #f4ece0;
+  background-color: #7d5a50;
+}
+
+#carrito:hover a{
+  color: #f4ece0;
+}
+
 #contenedor-carrito {
   width: 100%;
   overflow: scroll;
@@ -306,6 +316,11 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+#buscador:hover form button {
+  background-color: #7d5a50;
+  color: white;
 }
 
 #buscador form input[type="text"] {
