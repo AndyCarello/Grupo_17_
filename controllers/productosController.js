@@ -18,7 +18,6 @@ const controller = {
             res.render("productos/crear", {
                 title: "Crear Producto",
                 estilos: [
-                    "index.css",
                     "footer.css",
                     "style.css"
                 ],
@@ -42,7 +41,6 @@ const controller = {
                 res.render("productos/productos", {
                     title: "Nuestros productos",
                     estilos: [
-                        "index.css",
                         "footer.css",
                         "style.css",
                         "productos.css"
@@ -67,7 +65,6 @@ const controller = {
         res.render("productos/productos", {
             title: "Resultado(s) para: " + req.query.busqueda,
             estilos: [
-                "index.css",
                 "footer.css",
                 "style.css",
                 "productos.css"
@@ -88,7 +85,6 @@ const controller = {
                 res.render("productos/producto", {
                     title: productoEncontrado.name,
                     estilos: [
-                        "index.css",
                         "footer.css",
                         "style.css"
                     ],
@@ -199,7 +195,6 @@ const controller = {
 
                     title: "Actualización de Producto",
                     estilos: [
-                        "index.css",
                         "footer.css",
                         "style.css"
                     ],

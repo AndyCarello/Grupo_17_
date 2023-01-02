@@ -4,35 +4,43 @@
 
     <body>
         <%- include('../../partials/header.ejs') %>
-        <main>
+        <main class="admin">
             <section class="flex">
                 <div class="ancho-full centrado">
                     <h1>
                         <%= title %>
                     </h1> <!--imprimo el titulo que le paso en el render del controller-->
                 </div>
-                <ul>
-                <% for (ingrediente of ingredientes) { %> <!-- Realizo un ciclo for of de las ingredientes -->
-                    <li>
-                        <form action="/admin/ingredientes/<%= ingrediente.id %>?_method=PUT" method="post">
-                            <input name="nombre" type="text" value="<%= ingrediente.name %>">
-                            <button type="submit"><span class="fas fa-edit"></span></button>
-                        </form>
-                        <form action="/admin/ingredientes/<%= ingrediente.id %>?_method=DELETE" method="post">
-                            <button type="submit"><span class="fas fa-trash"></span></button>
-                        </form>
-                    </li>
-                <% } %>
-                </ul>
                 <div class="ancho-full centrado">
-                    <h1>
-                        Crear Ingrediente
-                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
-                    <form action="/admin/ingredientes/" method="post">
-                        <input name="nombre" type="text" required>
+                     <!--imprimo el titulo que le paso en el render del controller-->
+                    <form class="mini-form" action="/admin/ingredientes/" method="post">
+                        <div>
+                            Crear Ingrediente
+                        </div>
+                        <input name="nombre" type="text" placeholder="Ingrese nombre" required>
                         <button type="submit"><span class="fas fa-plus"></span></button>
                     </form>
                 </div>
+                <ul>
+                <% for (ingrediente of ingredientes) { %> <!-- Realizo un ciclo for of de las ingredientes -->
+                    <li>
+                        <div class="actualizar">
+                            <form id="form.ing-<%= ingrediente.id %>" action="/admin/ingredientes/<%= ingrediente.id %>?_method=PUT" method="post">
+                                <input name="nombre" type="text" value="<%= ingrediente.name %>">
+                                
+                            </form>
+                        </div>
+                        <div class="botones">
+                            <button form="form.ing-<%= ingrediente.id %>" type="submit"><span class="fas fa-edit"></span></button>
+                            <form action="/admin/ingredientes/<%= ingrediente.id %>?_method=DELETE" method="post">
+                                <button type="submit"><span class="fas fa-trash"></span></button>
+                            </form>
+                        </div>
+                        
+                        
+                    </li>
+                <% } %>
+                </ul>
             </section>
         </main>
         <%- include('../../partials/footer.ejs') %>

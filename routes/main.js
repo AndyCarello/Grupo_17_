@@ -9,10 +9,7 @@ router.get("/delivery", mainController.delivery);
 router.get("/preguntas-frecuentes", mainController.preguntasFrecuentes);
 router.get('/info', mainController.quienesSomos);
 router.get('/contacto' , mainController.contacto);
-router.get("/footer", mainController.footer);
 
-
-router.get('/test', mainController.test);
 router.get('/sequelize', mainController.prueba);//
 
 

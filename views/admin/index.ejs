@@ -8,12 +8,13 @@
                 <div class="ancho-full centrado">
                     <h1><%= title %></h1> <!--imprimo el titulo que le paso en el render del controller-->
                 </div>
-                <ul>
-                    <li><a href="/admin/usuarios">Administrar usuarios</a></li>
-                    <li><a href="/admin/productos">Administrar productos</a></li>
-                    <li><a href="/admin/categorias">Administrar categorias</a></li>
-                    <li><a href="/admin/ingredientes">Administrar ingredientes</a></li>
-                </ul>
+                <div class="centrado">                    
+                    <a href="/admin/usuarios"><button><i class="fas fa-users"></i> Administrar usuarios</button></a>
+                    <a href="/admin/productos"><button><i class="fas fa-cheese"></i> Administrar productos</button></a>
+                    <a href="/admin/categorias"><button><i class="fas fa-filter"></i> Administrar categorias</button></a>
+                    <a href="/admin/ingredientes"><button><i class="fas fa-receipt"></i> Administrar ingredientes</button></a>
+                </div>
+
             </section>
         </main>
 

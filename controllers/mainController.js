@@ -3,21 +3,11 @@ const { productList } = require('./productosController');
 const sequelize = db.sequelize;
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 let controller = {
-    test: (req,res)=>{
-        res.render("test", {
-            title: "Test SUCRE PASTELERIA",
-            estilos: [
-                "style.css",
-                "footer.css"        
-            ]
-        });
-        console.log("Mostrando que esta funcionando");
-    },
+    
     delivery: (req,res)=>{
         res.render("delivery", {
             title: "Delivery",
             estilos: [
-                "index.css",
                 "footer.css",
                 "style.css"        
             ]
@@ -28,7 +18,6 @@ let controller = {
         res.render("preguntas-frecuentes", {
             title: "Preguntas frecuentes",
             estilos: [
-                "index.css",
                 "footer.css",
                 "style.css"          
             ]
@@ -39,7 +28,6 @@ let controller = {
         res.render("info", {
             title: "¿Quienes somos?",
             estilos: [
-                "index.css",
                 "footer.css",
                 "style.css"        
             ]
@@ -70,21 +58,7 @@ let controller = {
         console.log("Mostrando Contacto");
     },
 
-    footer:(req,res) => {
-
-        res.render("partials/footer" , {
-            title: "Footer",
-            estilos: [
-                "syles.css",
-                "footer.css"
-
-
-            ]
     
-
-
-        });
-    },
 //metodo "prueba"(http://localhost:3000/sequelize) donde si cambian la consulta y lo llaman desde el navegador les devuelve un json directamente con la respuesta.
     prueba: async(req,res)=> { 
 

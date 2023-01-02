@@ -4,7 +4,7 @@
 
     <body>
         <%- include('../../partials/header.ejs') %>
-        <main>
+        <main class="admin">
             <section class="flex">
                 <div class="ancho-full centrado">
                     <h1>
@@ -16,17 +16,21 @@
                 <ul>
                 <% for (producto of productos) { %> <!-- Realizo un ciclo for of de los productos -->
                     <li>
-                        <%= producto.name %>
-                        <form action="/productos/<%= producto.id %>" method="get">
-                            <button type="submit"><span class="fas fa-eye"></span></button>
-                        </form>
-                        
-                        <form action="/productos/actualizar/<%= producto.id %>" method="get">
-                            <button type="submit"><span class="fas fa-edit"></span></button>
-                        </form>
-                        <form action="/admin/productos/<%= producto.id %>?_method=DELETE" method="post">
-                            <button type="submit"><span class="fas fa-trash"></span></button>
-                        </form>
+                        <div>
+                            <%= producto.name %>
+                        </div>
+                        <div class="botones">
+                            <form action="/productos/<%= producto.id %>" method="get">
+                                <button type="submit"><span class="fas fa-eye"></span></button>
+                            </form>
+                            
+                            <form action="/productos/actualizar/<%= producto.id %>" method="get">
+                                <button type="submit"><span class="fas fa-edit"></span></button>
+                            </form>
+                            <form action="/admin/productos/<%= producto.id %>?_method=DELETE" method="post">
+                                <button type="submit"><span class="fas fa-trash"></span></button>
+                            </form>
+                        </div>
                     </li>
                 <% } %>
                 </ul>
