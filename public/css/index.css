@@ -60,6 +60,7 @@ body {
   overflow: hidden;
   position: relative;
   margin: 1.5%;
+  
 }
 
 .box2 i {
@@ -342,10 +343,12 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 70px;
+    
   }
 
   .img1 {
     width: 250px;
+    aspect-ratio: 1;
   }
 
   .slider-item {
