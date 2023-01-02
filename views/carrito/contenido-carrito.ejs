@@ -13,10 +13,10 @@
                 <div class="fila">
                     <div class="celda solo-desktop"><img src="/img/<%= producto.image %>" alt="Imagen del producto"></div>
                     <div class="celda izquierda"><%= producto.name %><span>Precio: $<%= producto.price %></span></div>
-                    <div class="celda"><input type="text" value="<%= producto.cantidad %>"></div>
+                    <div class="celda"><input type="text" data-pid="<%= producto.id %>" value="<%= producto.cantidad %>" onchange="actualizarCantidad(this)"></div>
                     <div class="celda">$ <%= producto.price * producto.cantidad %></div>
                     <% total += (producto.price * producto.cantidad) %> 
-                    <div class="celda"><i class="fas fa-sync"></i><i class="fas fa-trash"></i></div>
+                    <div class="celda"><i class="fas fa-trash" data-pid="<%= producto.id %>" onclick="quitarDelCarrito(this)"></i></div>
                 </div>
             <% } %>          
         </div>
