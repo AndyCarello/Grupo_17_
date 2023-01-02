@@ -132,6 +132,18 @@ main select {
   margin: 0;
   display: inline-block;
 }
+
+.ingrediente {
+  align-content: center;
+}
+
+.ingrediente input {
+  width: auto;
+}
+
+.ingrediente label {
+  margin-left: 0.25em;
+}
 /* Estilos Perfil*/
 
 .pedido {

@@ -5,74 +5,80 @@ const path = require("path");
 const { stringify } = require("querystring");
 const db = require('../database/models');
 const { Op } = require('sequelize');
-const {validationResult} = require("express-validator");
+const { validationResult } = require("express-validator");
 const e = require("express");
 
 //Defino un objeto literal que contiene los metodos con los callbacks de cada ruta y lo exporto para poder usarlo en el router
 const controller = {
 
-    add: async (req,res)=>{
-        const categorias = await db.Category.findAll();
+    add: async (req, res) => {
+        try {
+            const categorias = await db.Category.findAll();
+            let ingredientes = await db.Ingredient.findAll();
+            res.render("productos/crear", {
+                title: "Crear Producto",
+                estilos: [
+                    "index.css",
+                    "footer.css",
+                    "style.css"
+                ],
+                categorias: categorias,
+                ingredientes: ingredientes
+            });
+            console.log("Mostrando formulario de creacion de producto");
+        } catch (e) {
+            return res.send(e)
+        }
 
-        res.render("productos/crear", {
-            title: "Desplegable de categorias",
-            estilos: [
-                "index.css",
-                "footer.css",
-                "style.css"        
-            ],
-            categorias: categorias
-        });
-        console.log("Mostrando desplegable de categorias");
     },
 
-    productList: function(req,res){
+    productList: function (req, res) {
 
         db.Product.findAll({
             include: 'category'
         })
-        .then((productos) =>{
+            .then((productos) => {
 
-            res.render("productos/productos", {
-                title: "Nuestros productos",
-                estilos: [
-                    "index.css",
-                    "footer.css",
-                    "style.css",
-                    "productos.css"                  
-                ],
-                productos: productos
-            });
-            console.log("Mostrando Pagina de productos");
+                res.render("productos/productos", {
+                    title: "Nuestros productos",
+                    estilos: [
+                        "index.css",
+                        "footer.css",
+                        "style.css",
+                        "productos.css"
+                    ],
+                    productos: productos
+                });
+                console.log("Mostrando Pagina de productos");
 
-  
 
-        })
+
+            })
     },
-    buscarPorTitulo: async function(req,res){
+    buscarPorTitulo: async function (req, res) {
 
         const productos = await db.Product.findAll({
             where: {
-                name: {[Op.substring]: req.query.busqueda}
+                name: { [Op.substring]: req.query.busqueda }
             },
             include: 'category'
         })
-        
-            res.render("productos/productos", {
-                title: "Resultado(s) para: " + req.query.busqueda,
-                estilos: [
-                    "index.css",
-                    "footer.css",
-                    "style.css",
-                    "productos.css"
-                ],
-                productos: productos
-            });
-            console.log("Mostrando resultados busqueda");
+
+        res.render("productos/productos", {
+            title: "Resultado(s) para: " + req.query.busqueda,
+            estilos: [
+                "index.css",
+                "footer.css",
+                "style.css",
+                "productos.css"
+            ],
+            productos: productos
+        });
+        console.log("Mostrando resultados busqueda");
 
     },
-    
-    productDetail: function(req , res) {
+
+    productDetail: function (req, res) {
 
         db.Product.findByPk(req.params.id, {
             include: 'ingredients'
@@ -84,7 +90,7 @@ const controller = {
                     estilos: [
                         "index.css",
                         "footer.css",
-                        "style.css"        
+                        "style.css"
                     ],
                     producto: productoEncontrado
                 });
@@ -92,21 +98,7 @@ const controller = {
             })
     },
 
-    productCreate: function(req,res) {
-
-        res.render("productos/crear", {
-            title: "Creacion de Producto",
-            estilos: [
-                "index.css",
-                "footer.css",
-                "style.css" 
-            ]
-        });
-        console.log("Mostrando formulario de creacion de producto");
-    },
-
-    crearProducto: function(req, res){
-
+    crearProducto: function (req, res) {
         db.Product.create({
 
             name: req.body.nombre,
@@ -114,20 +106,30 @@ const controller = {
             price: req.body.precio,
             category_id: req.body.categoria,
             image: req.file.filename,
-            
-        })
-        .then(function(){
-
-            res.redirect("/productos")
-            console.log("Mostrando formulario de creacion de producto");
 
         })
+            .then(function (i) {
+                let ingredientes = req.body.ingredientes.filter(x => x != "")
+                let data = []
+                for (ingrediente of ingredientes) {
+                    data.push(
+                        {
+                            product_id: i.id,
+                            ingredient_id: parseInt(ingrediente)
+                        }
+                    )
+                }
+                db.ingredient_product.bulkCreate(data)
+                res.redirect("/productos")
+                console.log("Mostrando formulario de creacion de producto");
+
+            })
 
 
-        
+
     },
 
-    actualizarProducto: function(req,res) {
+    actualizarProducto: async function (req, res) {
         const data = {
             name: req.body.nombre,
             price: req.body.precio,
@@ -136,49 +138,84 @@ const controller = {
             image: (req.file) ? req.file.filename : null
         }
 
-        if (data.image == null) {delete data.image}
+        if (data.image == null) { delete data.image }
+
+
+        await db.Product.update(data, {
+            where: { id: req.params.id }
+        })
         
-
-        db.Product.update(data,{
-            where: {id:req.params.id}
-        })
-        .then(res.redirect("/productos/" + req.params.id));
+        let quitarIngredientes = req.body.quitaringredientes.filter(x => x != "");
+        quitarIngredientes = quitarIngredientes.map(x => parseInt(x))
+        if (quitarIngredientes != []) {
+            await db.ingredient_product.destroy({
+                where: {
+                    [Op.and]: [
+                        {
+                            product_id: req.params.id,
+                            ingredient_id: { [Op.in]: quitarIngredientes }
+                        }
+                    ]
+                }
+            })
+        }
+        let agregarIngredientes = req.body.agregaringredientes.filter(x => x != "");
+        agregarIngredientes = agregarIngredientes.map(x => parseInt(x))
+        let dataIngredientes = []
+        for (ingrediente of agregarIngredientes) {
+            dataIngredientes.push(
+                {
+                    product_id: req.params.id,
+                    ingredient_id: parseInt(ingrediente)
+                }
+            )
+        }
+        db.ingredient_product.bulkCreate(dataIngredientes)
+        res.redirect("/productos/" + req.params.id);
     },
 
-    borrarProducto: function(req,res){
+    borrarProducto: function (req, res) {
 
-        db.Product.destroy ({
+        db.Product.destroy({
 
-            where: {id:req.params.id}
+            where: { id: req.params.id }
         })
-        .then(res.redirect('/productos'));
+            .then(res.redirect('/productos'));
     },
 
-    productEdit: function(req,res){
+    productEdit: function (req, res) {
 
-        db.Product.findByPk(req.params.id)
-            .then(async(productoEncontrado) =>{
-                const categorias = await db.Category.findAll()
-                res.render(path.join(__dirname,'../views/productos/actualizar.ejs'), {
-                    
-                title: "Actualización de Producto",
-                estilos: [
-                    "index.css",
-                    "footer.css",
-                    "style.css" 
-                ],
-                producto:productoEncontrado,
-                categorias: categorias
-            });
+        db.Product.findByPk(req.params.id, { include: "ingredients" })
+            .then(async (productoEncontrado) => {
+                const categorias = await db.Category.findAll();
+                const ingredientesDisponibles = await db.Ingredient.findAll({
+                    where: {
+                        id: {
+                            [Op.notIn]: productoEncontrado.ingredients.map(x => x.id)
+                        }
+                    }
+                });
+                res.render(path.join(__dirname, '../views/productos/actualizar.ejs'), {
 
-                
+                    title: "Actualización de Producto",
+                    estilos: [
+                        "index.css",
+                        "footer.css",
+                        "style.css"
+                    ],
+                    producto: productoEncontrado,
+                    categorias: categorias,
+                    ingredientesDisponibles: ingredientesDisponibles
+                });
+
+
             })
     }
 
-    
+
 
 }
-module.exports = controller; 
+module.exports = controller;
 
 
 

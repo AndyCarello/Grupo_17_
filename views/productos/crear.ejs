@@ -30,6 +30,18 @@
                         <input type="file" name="foto" id="foto" placeholder="Foto de Producto" accept=".jpg, .png" required >
                     </div>
                     <div class="ancho-full centrado">
+                        <h3>Ingredientes</h3>
+                        <div class="flex">
+                            <input type="hidden"  name="ingredientes[]">
+                            <% for (ingrediente of ingredientes) { %>
+                            <div class="ancho-quarter centrado ingrediente">
+                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="ingredientes" value="<%= ingrediente.id %>">
+                                <label for="ingrediente<%= ingrediente.id %>"><%= ingrediente.name %></label>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="ancho-full centrado">
                         <button type="submit" id="crear">Crear</button>
                     </div>
                     <div class="ancho-full espaciado">
