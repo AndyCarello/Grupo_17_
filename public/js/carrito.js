@@ -1,5 +1,5 @@
-function agregarAlCarrito(){
-    let idProducto = document.getElementById("agregar-producto").dataset.pid;
+function agregarAlCarrito(elemento){
+    let idProducto = elemento.dataset.pid;
     let carrito = getCookie("carrito");
     if (carrito && carrito != "") {
         carrito = JSON.parse(carrito)

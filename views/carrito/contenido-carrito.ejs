@@ -1,0 +1,37 @@
+<div id="fondo-carrito">
+    <div id="contenedor-carrito">
+        <div id="detalle-carrito">
+            <div class="fila encabezado">
+                <div class="celda solo-desktop"></div>
+                <div class="celda">Producto</div>
+                <div class="celda">#</div>
+                <div class="celda">Subtotal</div>
+                <div class="celda"></div>
+            </div>
+            <% let total = 0 %>
+            <% for (producto of productos) { %> 
+                <div class="fila">
+                    <div class="celda solo-desktop"><img src="/img/<%= producto.image %>" alt="Imagen del producto"></div>
+                    <div class="celda izquierda"><%= producto.name %><span>Precio: $<%= producto.price %></span></div>
+                    <div class="celda"><input type="text" value="<%= producto.cantidad %>"></div>
+                    <div class="celda">$ <%= producto.price * producto.cantidad %></div>
+                    <% total += (producto.price * producto.cantidad) %> 
+                    <div class="celda"><i class="fas fa-sync"></i><i class="fas fa-trash"></i></div>
+                </div>
+            <% } %>          
+        </div>
+    </div>
+    <div class="carrito-inline">
+        <div id="vaciar-carrito" onclick="deleteCookie('carrito')">Vaciar <i class="fas fa-dumpster"></i></div>
+        <div id="total">Total: $ <%= total %> </div>
+    </div>
+    <div class="carrito-inline">
+        <a href="/productos">
+            <button>Seguir comprando</button>
+        </a>
+        <a href="/carrito/compra">
+        <button>Confirmar compra</button> 
+        </a>
+        
+    </div>
+</div>

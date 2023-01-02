@@ -29,7 +29,7 @@
                     </div>
                     <div class="ancho-full espaciado" >
                         <% if (locals.user){ %>
-                          <button class="ancho-half" >Agregar<i class="fas fa-cart-plus"></i></button>
+                          <button id="boton-agregar-<%= producto.id %> " class="ancho-half" type="button" data-pid="<%= producto.id %>" onclick="agregarAlCarrito(this)">Agregar<i class="fas fa-cart-plus"></i></button>
                         <% } %>
                         <a href="/productos/<%= producto.id %>">
                             <button class="ancho-half">Ver mas</button>
@@ -41,5 +41,7 @@
         </section>
     </main>
     <%- include ('../partials/footer.ejs') %>
+    <script type="text/javascript" src="/js/cookies.js"></script>
+    <script type="text/javascript" src="/js/carrito.js"></script>
 </body>
 </html>

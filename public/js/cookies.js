@@ -20,3 +20,10 @@ function getCookie(cname) {
     }
     return "";
 }
+
+function deleteCookie(cname) {
+    const d = new Date("2000-01-01T00:00:00");
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=1;" + expires + ";path=/";
+    window.location.href = "/";
+}

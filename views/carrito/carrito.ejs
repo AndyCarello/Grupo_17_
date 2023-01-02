@@ -7,37 +7,22 @@
             <div class="ancho-full centrado">
                 <h1>Carrito de compras</h1>
             </div>
-            <div id="fondo-carrito">
-            <div id="contenedor-carrito">
-                <div id="detalle-carrito">
-                    <div class="fila encabezado">
-                        <div class="celda solo-desktop"></div>
-                        <div class="celda">Producto</div>
-                        <div class="celda">#</div>
-                        <div class="celda">Subtotal</div>
-                        <div class="celda"></div>
+                <% if (typeof productos === 'undefined') { %>
+                    <div class="ancho-full centrado">
+                        <p>No se encontraron productos en el carrito</p>
                     </div>
-                    <% for (producto of productos) { %> 
-                        <div class="fila">
-                            <div class="celda solo-desktop"><img src="/img/<%= producto.image %>" alt="Imagen del producto"></div>
-                            <div class="celda izquierda"><%= producto.name %><span>Precio: $<%= producto.price %></span></div>
-                            <div class="celda"><input type="text" value="<%= producto.cantidad %>"></div>
-                            <div class="celda">$ <%= producto.price * producto.cantidad %></div>
-                            <div class="celda"><i class="fas fa-sync"></i><i class="fas fa-trash"></i></div>
-                        </div>
-                    <% } %>          
-                </div>
-            </div>
-            <div class="carrito-inline">
-                <div id="vaciar-carrito">Vaciar <i class="fas fa-dumpster"></i></div>
-                <div id="total">Total: $ 1400.00</div>
-            </div>
-            <div class="carrito-inline">
-                <button onclick="window.location.href='/productos';">Seguir comprando</button>
-                <button onclick="window.location.href='/carrito/compra';">Confirmar compra</button>
-            </div>
-        </div>  
+                    <div class="ancho-full centrado">
+                        <a href="/productos">
+                            <button>Seguir comprando</button>
+                        </a>
+                    </div>
+                <% } else { %>
+                    <%- include('contenido-carrito.ejs') %> 
+                <% } %>
+                
         </main>
     <%- include('../partials/footer.ejs') %>
+    <script type="text/javascript" src="/js/cookies.js"></script>
+    <script type="text/javascript" src="/js/carrito.js"></script>
     </body>
 </html>

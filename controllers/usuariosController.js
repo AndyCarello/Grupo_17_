@@ -327,6 +327,7 @@ const controller = {
     salir: (req, res)=>{//Destruye la sesion de usuario y redirige al home
         req.session.destroy();
         res.clearCookie('emailUsuario');
+        res.clearCookie('carrito')
         return res.redirect("/");
     },
 
