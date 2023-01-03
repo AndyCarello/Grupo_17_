@@ -1,3 +1,8 @@
+## 03/01/23 ##
+
+### Novedades 
+- Reunion pactada para las 20 hs para practicar el proyecto antes de la defensa final.
+
 ## 02/01/23 ##
 
 ### Novedades 
