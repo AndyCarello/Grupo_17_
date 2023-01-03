@@ -1,3 +1,8 @@
+## 02/01/23 ##
+
+### Novedades 
+- Sprint 8 finalizado
+
 ## 26/12/22 ##
 
 ### Novedades 

@@ -22,7 +22,7 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-//Confirguro la libreria express session
+//Configuro la libreria express session
 app.use(session({
         secret: "frase secreta",
         resave: false,
@@ -54,6 +54,13 @@ app.use('/contacto', rutasContacto);
 app.use('/footer', rutasFooter);
 app.use('/api', rutasApi);
 app.use('/admin', rutasAdmin)
+app.get('*', (req, res) => res.status(404).render("404", {
+    title: "Pagina no encontrada",
+    estilos: [
+        "style.css",
+        "footer.css"
+    ]
+}))
 
 //Solicito el puerto al entorno (environment) y, si no me lo pasa, uso el 80
 app.listen(process.env.PORT || 80, () => {
