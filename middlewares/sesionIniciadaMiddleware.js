@@ -18,7 +18,7 @@ module.exports = async (req, res, next) => {
         res.locals.sesionIniciada = true;
         res.locals.user = req.session.user;
     } else {
-        res.clearCookie("carrito");
+        res.cookie('carrito', "", {maxAge: 1});
         if (req.cookies.emailUsuario) {
             let emailCookie = req.cookies.emailUsuario; // Guarda la cookie en una variable
             let usuarios = await db.User.findAll(); //Traigo todos los Usuarios
