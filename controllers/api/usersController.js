@@ -27,6 +27,10 @@ module.exports = {
                 ]
             ]
         });
+        data.ultimoUsuario = await db.User.findOne({
+            attributes: {exclude: ["password", "is_admin"]},
+            order: [["id", "DESC"]]
+        });
         res.send(data)
     },
 

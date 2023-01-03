@@ -37,9 +37,12 @@ const apiControllerProducts = {
                 [sequelize.fn("COUNT" , sequelize.col("Product.id")) , 'cant_prod']
             ],
             group: 'category_id',
-            raw: true
-        })
-        res.send(data)
+            // raw: true
+        });
+        data.ultimoProducto = await db.Product.findOne({
+            order: [["id", "DESC"]]
+        });
+        res.send(data);
     },
 
     detail: async (req, res) => {
