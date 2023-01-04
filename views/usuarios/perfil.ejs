@@ -56,12 +56,9 @@
                 </form>
             </section>
             <section class="flex">
-                <form class="flex" action="/usuarios/password/?_method=PUT" method="POST">
+                <form id="form-actualizar-pass" class="flex" action="/usuarios/password/?_method=PUT" method="POST">
                     <div class="ancho-full centrado">
                         <h3>Actualizar contraseña</h3>
-                    </div>
-                    <div class="ancho-full centrado">
-                        <input type="password" name="passwordactual" id="password-actual" placeholder="Contraseña actual" required>
                     </div>
                     <div class="ancho-half centrado">
                         <input type="password" name="passwordnueva" id="password-nueva" placeholder="Nueva contraseña" required>
@@ -110,5 +107,6 @@
 
         </footer>
         <%- include('../partials/footer.ejs') %>
+        <script type="text/javascript" src="/js/validacion-password.js"></script>
     </body>
 </html>

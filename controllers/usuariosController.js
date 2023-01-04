@@ -243,22 +243,8 @@ const controller = {
         
     },
     actualizarPassword: async (req, res) => {
-        let passwordActual = req.body.passwordactual;
         let passwordNueva = req.body.passwordnueva;
         let passwordRepetir = req.body.passwordrepetir;
-
-        if (passwordNueva != passwordRepetir) {
-            return res.send("La confirmacion de contraseña no coincide")
-        } 
-
-        let user = await db.User.findOne(
-            {
-                where: {
-                    id: req.session.user.id
-                }
-            }
-        )
-        if (bcryptjs.compareSync(passwordActual, user.password)) {
             let resultado = await db.User.update(
                 {
                     password: bcryptjs.hashSync(passwordNueva, 10)
@@ -270,11 +256,15 @@ const controller = {
                 }
             )
             req.session.destroy();
+            res.cookie('emailUsuario', '', {maxAge: 1});
             res.clearCookie('emailUsuario');
-            return res.send("Contraseña actualizada correctamente")
-        }else {
-            return res.send("La contraseña actual no coincide")
-        }
+            return res.render('usuarios/password-actualizada', {
+                title: 'Password actualizada!',
+                estilos: [
+                    'footer.css',
+                    'style.css'
+                ]
+            })
     },
     recuperacion: (req,res)=>{
         res.render("usuarios/recuperacion", {
@@ -312,7 +302,8 @@ const controller = {
         res.redirect("/usuarios/perfil/");
     },
     salir: (req, res)=>{//Destruye la sesion de usuario y redirige al home
-        req.session.destroy();
+        req.session.destroy();        
+        res.cookie('emailUsuario', '', {maxAge: 1});
         res.clearCookie('emailUsuario');
         res.cookie('carrito', "", {maxAge: 1});
         return res.redirect("/");
