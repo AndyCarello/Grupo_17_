@@ -5,8 +5,8 @@
         <%- include('../partials/header.ejs') %>
         <main id="producto" class="flex">
             <article class="ancho-full centrado">
-                <div class="ancho-quarter centrado">
-                    <img src="/img/<%= producto.image %>" alt="Imagen de Producto">
+                <div style="background-image: url('/img/<%= producto.image %>');" class="ancho-quarter centrado imagen-producto">
+                    <!-- <img src="" alt="Imagen de Producto"> -->
                 </div>
                 <div class="ancho-half centrado">
                     <h1><%= producto.name %>

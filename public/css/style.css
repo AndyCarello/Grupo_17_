@@ -115,6 +115,12 @@ main select {
   padding: 1em;
 }
 
+#producto .imagen-producto {
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+}
+
 .categoria {
   margin: 0.25em auto;
   display: block;
