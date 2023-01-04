@@ -105,20 +105,20 @@ const controller = {
 
         })
             .then(function (i) {
-                let ingredientes = req.body.ingredientes.filter(x => x != "")
-                let data = []
-                for (ingrediente of ingredientes) {
-                    data.push(
-                        {
-                            product_id: i.id,
-                            ingredient_id: parseInt(ingrediente)
-                        }
-                    )
+                if (req.body.ingredientes) {
+                    let data = []
+                    for (ingrediente of req.body.ingredientes) {
+                        data.push(
+                            {
+                                product_id: i.id,
+                                ingredient_id: parseInt(ingrediente)
+                            }
+                        )
+                    }
+                    db.ingredient_product.bulkCreate(data)
                 }
-                db.ingredient_product.bulkCreate(data)
-                res.redirect("/productos")
-                console.log("Mostrando formulario de creacion de producto");
-
+                
+                res.redirect("/productos");
             })
 
 
@@ -141,32 +141,32 @@ const controller = {
             where: { id: req.params.id }
         })
         
-        let quitarIngredientes = req.body.quitaringredientes.filter(x => x != "");
-        quitarIngredientes = quitarIngredientes.map(x => parseInt(x))
-        if (quitarIngredientes != []) {
+        if (req.body.quitaringredientes) {
             await db.ingredient_product.destroy({
                 where: {
                     [Op.and]: [
                         {
                             product_id: req.params.id,
-                            ingredient_id: { [Op.in]: quitarIngredientes }
+                            ingredient_id: { [Op.in]: req.body.quitaringredientes }
                         }
                     ]
                 }
             })
         }
-        let agregarIngredientes = req.body.agregaringredientes.filter(x => x != "");
-        agregarIngredientes = agregarIngredientes.map(x => parseInt(x))
-        let dataIngredientes = []
-        for (ingrediente of agregarIngredientes) {
-            dataIngredientes.push(
-                {
-                    product_id: req.params.id,
-                    ingredient_id: parseInt(ingrediente)
-                }
-            )
+        if (req.body.agregaringredientes) {
+            let dataIngredientes = []
+            for (ingrediente of req.body.agregaringredientes) {
+                dataIngredientes.push(
+                    {
+                        product_id: req.params.id,
+                        ingredient_id: parseInt(ingrediente)
+                    }
+                )
+            }
+            db.ingredient_product.bulkCreate(dataIngredientes)
         }
-        db.ingredient_product.bulkCreate(dataIngredientes)
+        
+       
         res.redirect("/productos/" + req.params.id);
     },
 

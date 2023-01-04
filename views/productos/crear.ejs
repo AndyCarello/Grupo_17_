@@ -32,10 +32,9 @@
                     <div class="ancho-full centrado">
                         <h3>Ingredientes</h3>
                         <div class="flex">
-                            <input type="hidden"  name="ingredientes[]">
                             <% for (ingrediente of ingredientes) { %>
                             <div class="ancho-quarter centrado ingrediente">
-                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="ingredientes" value="<%= ingrediente.id %>">
+                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="ingredientes[]" value="<%= ingrediente.id %>">
                                 <label for="ingrediente<%= ingrediente.id %>"><%= ingrediente.name %></label>
                             </div>
                             <% } %>

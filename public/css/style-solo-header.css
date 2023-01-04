@@ -163,6 +163,12 @@ header {
   color: #7d5a50;
 }
 
+.menu-oculto {
+  display: none!important;
+}
+
+
+
 /* No utilizo menor a 480px para pequeños dispositivos porque desarrollamos mobile first*/
 
 /* Tablets grandes, laptops y computadoras pequeñas (mas de 768px)*/
@@ -216,6 +222,10 @@ header {
     display: inline-flex;
     justify-content: space-evenly;
     background-color: #fcdec0;
+  }
+
+  .siempre-desktop {
+    display: flex!important;
   }
 }
 

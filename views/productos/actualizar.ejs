@@ -38,10 +38,9 @@
                     <div class="ancho-full centrado">
                         <h3 class="ancho-full centrado">Quitar Ingredientes</h3>
                         <div class="ancho-full">
-                            <input type="hidden"  name="quitaringredientes[]">
                             <% for (ingrediente of producto.ingredients) { %>
                             <div class="ancho-quarter centrado ingrediente">
-                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="quitaringredientes" value="<%= ingrediente.id %>">
+                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="quitaringredientes[]" value="<%= ingrediente.id %>">
                                 <label for="ingrediente<%= ingrediente.id %>"><%= ingrediente.name %></label>
                             </div>
                             <% } %>
@@ -50,10 +49,9 @@
                     <div class="ancho-full centrado">
                         <h3 class="ancho-full centrado">Agregar Ingredientes</h3>
                         <div class="ancho-full">
-                            <input type="hidden"  name="agregaringredientes[]">
                             <% for (ingrediente of ingredientesDisponibles) { %>
                             <div class="ancho-quarter centrado ingrediente">
-                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="agregaringredientes" value="<%= ingrediente.id %>">
+                                <input type="checkbox" id="ingrediente<%= ingrediente.id %>" name="agregaringredientes[]" value="<%= ingrediente.id %>">
                                 <label for="ingrediente<%= ingrediente.id %>"><%= ingrediente.name %></label>
                             </div>
                             <% } %>
