@@ -8,12 +8,20 @@
             <section class="flex">
                 <div class="ancho-full centrado">
                     <h1>
-                        <%= title %>
-                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
+                        <%= title %> <!--imprimo el titulo que le paso en el render del controller-->
+                    </h1>
                 </div>
                 <div class="ancho-full centrado">
+
+                    <!-- 
+                        
+                        por cada usuario que recibo del render hago un <li> que tiene etiquetas 
+                        con los datos de usuario y dos form, alternar permisos(put) y eliminar(delete) 
+
+                     -->
+
                     <ul>
-                    <% for (usuario of usuarios) { %> <!-- Realizo un ciclo for of de los productos -->
+                    <% for (usuario of usuarios) { %> 
                         <li>
                             <div>
                                 <div><%= usuario.name %> <%= usuario.lastname %></div>

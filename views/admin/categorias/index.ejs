@@ -4,41 +4,59 @@
 
     <body>
         <%- include('../../partials/header.ejs') %>
-        <main class="admin">
-            <section class="flex">
-                <div class="ancho-full centrado">
-                    <h1>
-                        <%= title %>
-                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
-                </div>
-                <div class="ancho-full centrado">
-                     <!--imprimo el titulo que le paso en el render del controller-->
-                    <form class="mini-form" action="/admin/categorias/" method="post">
-                        <div>Crear Categoria</div>
-                        <input name="nombre" type="text" placeholder="Ingrese nombre" required>
-                        <button type="submit"><span class="fas fa-plus"></span></button>
-                    </form>
-                </div>
-                <ul>
-                <% for (categoria of categorias) { %> <!-- Realizo un ciclo for of de las categorias -->
-                    <li>
-                        <div class="actualizar">
-                            <form id="form-cat-<%= categoria.id %>" action="/admin/categorias/<%= categoria.id %>?_method=PUT" method="post">
-                                <input name="nombre" type="text" value="<%= categoria.name %>">
-                            </form>
-                        </div>
-                        <div class="botones">
-                            <button form="form-cat-<%= categoria.id %>" type="submit"><span class="fas fa-edit"></span></button>
-                            <form action="/admin/categorias/<%= categoria.id %>?_method=DELETE" method="post">
-                                <button type="submit"><span class="fas fa-trash"></span></button>
-                            </form>
-                        </div>
-                    </li>
-                <% } %>
-                </ul>
-            </section>
-        </main>
-        <%- include('../../partials/footer.ejs') %>
+            <main class="admin">
+                <section class="flex">
+                    <div class="ancho-full centrado">
+                        <h1>
+                            <%= title %> <!--imprimo el titulo que le paso en el render del controller-->
+                        </h1> 
+                    </div>
+                    <div class="ancho-full centrado">
+
+                        <!--
+                        
+                        Formulario de crear categoria
+                    
+                    -->
+                        <form class="mini-form" action="/admin/categorias/" method="post">
+                            <div>Crear Categoria</div>
+                            <input name="nombre" type="text" placeholder="Ingrese nombre" required>
+                            <button type="submit"><span class="fas fa-plus"></span></button>
+                        </form>
+                    </div>
+
+                    <!--
+
+                        Con un for of imprimo para cada categoria un formulario(put) para actualizar el nombre
+                       y un form (delete) para eliminarla.
+                       El boton de submit del actualizar esta afuera del form para mejorar la alineacion
+                       por eso tiene el atributo form="form-cat-_idcategoria_" que es el id del formulario
+                       para submitearlo.
+                    
+                    -->
+
+                    <ul>
+                        <% for (categoria of categorias) { %>
+                            <li>
+                                <div class="actualizar">
+                                    <form id="form-cat-<%= categoria.id %>"
+                                        action="/admin/categorias/<%= categoria.id %>?_method=PUT" method="post">
+                                        <input name="nombre" type="text" value="<%= categoria.name %>" required>
+                                    </form>
+                                </div>
+                                <div class="botones">
+                                    <button form="form-cat-<%= categoria.id %>" type="submit"><span
+                                            class="fas fa-edit"></span></button>
+                                    <form action="/admin/categorias/<%= categoria.id %>?_method=DELETE" method="post">
+                                        <button type="submit"><span class="fas fa-trash"></span></button>
+                                    </form>
+                                </div>
+                            </li>
+                            <% } %>
+                    </ul>
+                </section>
+            </main>
+            <%- include('../../partials/footer.ejs') %>
     </body>
 
 </html>

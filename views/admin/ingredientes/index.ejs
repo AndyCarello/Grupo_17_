@@ -8,11 +8,16 @@
             <section class="flex">
                 <div class="ancho-full centrado">
                     <h1>
-                        <%= title %>
-                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
+                        <%= title %> <!--imprimo el titulo que le paso en el render del controller-->
+                    </h1> 
                 </div>
                 <div class="ancho-full centrado">
-                     <!--imprimo el titulo que le paso en el render del controller-->
+
+                        <!--
+                        
+                        Formulario de crear ingrediente
+                    
+                    -->
                     <form class="mini-form" action="/admin/ingredientes/" method="post">
                         <div>
                             Crear Ingrediente
@@ -21,17 +26,28 @@
                         <button type="submit"><span class="fas fa-plus"></span></button>
                     </form>
                 </div>
+
+                    <!--
+
+                        Con un for of imprimo para cada ingrediente un formulario(put) para actualizar el nombre
+                       y un form (delete) para eliminarlo.
+                       El boton de submit del actualizar esta afuera del form para mejorar la alineacion
+                       por eso tiene el atributo form="form-ing-_idingrediente_" que es el id del formulario
+                       para submitearlo.
+                    
+                    -->
+
                 <ul>
-                <% for (ingrediente of ingredientes) { %> <!-- Realizo un ciclo for of de las ingredientes -->
+                <% for (ingrediente of ingredientes) { %> 
                     <li>
                         <div class="actualizar">
-                            <form id="form.ing-<%= ingrediente.id %>" action="/admin/ingredientes/<%= ingrediente.id %>?_method=PUT" method="post">
-                                <input name="nombre" type="text" value="<%= ingrediente.name %>">
+                            <form id="form-ing-<%= ingrediente.id %>" action="/admin/ingredientes/<%= ingrediente.id %>?_method=PUT" method="post">
+                                <input name="nombre" type="text" value="<%= ingrediente.name %>" required>
                                 
                             </form>
                         </div>
                         <div class="botones">
-                            <button form="form.ing-<%= ingrediente.id %>" type="submit"><span class="fas fa-edit"></span></button>
+                            <button form="form-ing-<%= ingrediente.id %>" type="submit"><span class="fas fa-edit"></span></button>
                             <form action="/admin/ingredientes/<%= ingrediente.id %>?_method=DELETE" method="post">
                                 <button type="submit"><span class="fas fa-trash"></span></button>
                             </form>

@@ -8,11 +8,21 @@
             <section class="flex">
                 <div class="ancho-full centrado">
                     <h1>
-                        <%= title %> | <a href="/productos/crear"><i class="fas fa-plus"></i></a>
-                    </h1> <!--imprimo el titulo que le paso en el render del controller-->
+                        <!--imprimo el titulo que le paso en el render del controller-->
+                        <%= title %> | <a href="/productos/crear"><i class="fas fa-plus"></i></a> 
+                    </h1> 
                 </div>
+
+                <!-- Hago un for of de todos los productos que recibo por el render 
+                    por cada producto imprimo una etiqueta con el nombre y tres formularios 
+                    ver y actualizar(get), te llevan a los metodos del controlador ya existentes
+                    eliminar(delete) elimina el producto desde el controlador de admin
+
+                    Ver y actualizar podrian ser botones con un link pero son todos formularios
+                    por que con un solo estilo alineaba a todos por igual
+                -->
                 <ul>
-                <% for (producto of productos) { %> <!-- Realizo un ciclo for of de los productos -->
+                <% for (producto of productos) { %>
                     <li>
                         <div>
                             <%= producto.name %>
