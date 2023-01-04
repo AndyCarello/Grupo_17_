@@ -10,10 +10,13 @@ const apiControllerProducts = {
     list: async (req, res) => {
         const data = await db.Product.findAndCountAll({
             
+            //Incluyo el modelo relacionado
             include:  "category",
 
+            //Con attributes elijo que campos quiero traer
             attributes: [
-                'product.id',                  
+                'product.id',   
+                //renombro columna con [original, alias] es como el AS de sql               
                 [
                     db.sequelize.fn('CONCAT', db.sequelize.col('product.name')), 
                     'name'
@@ -24,6 +27,7 @@ const apiControllerProducts = {
                     'description'
                 ],
                 'price',   
+                //req.headers.host me trae servidor
                 [
                     db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/api/products/', db.sequelize.col('product.id')), 
                     'url'
@@ -46,17 +50,21 @@ const apiControllerProducts = {
     },
 
     detail: async (req, res) => {
+        //A findByPK le paso un primer parametro que es el ID y despues el objeto con los modelos relacionados y los atributos
         const data = await db.Product.findByPk(req.params.id, {
             
+            //Incluyo el modelo relacionado
             include: [
                  
                 "category",
                 "ingredients"
             ],
                    
+            //Con attributes elijo que campos quiero traer
             attributes: {               
                 include: [
                     [
+                        //req.headers.host me trae servidor
                         db.sequelize.fn('CONCAT', 'http://', req.headers.host, '/img/', db.Sequelize.col('image')), 
                         'url'
                     ],
@@ -71,7 +79,7 @@ const apiControllerProducts = {
 
 }
 
-
+//Exporto mi controlador 
 module.exports = apiControllerProducts;
 
 
