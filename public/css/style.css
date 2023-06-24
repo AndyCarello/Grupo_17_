@@ -531,6 +531,12 @@ header {
   .solo-desktop {
     display: unset !important;
   }
+  .actualizarCantidad{
+    width: 35px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: antiquewhite;
+  }
 
   .pedido-item {
     display: flex;

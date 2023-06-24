@@ -44,17 +44,22 @@ function actualizarCantidad(elemento) {
     let carrito = JSON.parse(getCookie("carrito"));
     let productoParaActualizar = parseInt(elemento.dataset.pid);
     let nuevaCantidad = parseInt(elemento.value);
-    //genero un objeto para reemplazar en la cookie
-    let data = {
-        id : productoParaActualizar,
-        cantidad: nuevaCantidad
+    if(nuevaCantidad < 1 ){
+        alert('La cantidad debe de ser mayor o igual a 1')
+    }else{
+
+        //genero un objeto para reemplazar en la cookie
+        let data = {
+            id : productoParaActualizar,
+            cantidad: nuevaCantidad
+        }
+        //actualizo el producto en la cookie
+        let posicionEnCarrito = carrito.findIndex(x => parseInt(x.id) == productoParaActualizar);
+        carrito.splice(posicionEnCarrito, 1, data);
+        setCookie("carrito", JSON.stringify(carrito), 1);
+        alert("Cantidad actualizada!");
+        window.location.reload(); 
     }
-    //actualizo el producto en la cookie
-    let posicionEnCarrito = carrito.findIndex(x => parseInt(x.id) == productoParaActualizar);
-    carrito.splice(posicionEnCarrito, 1, data);
-    setCookie("carrito", JSON.stringify(carrito), 1);
-    alert("Cantidad actualizada!");
-    window.location.reload(); 
 }
 // recibe une etiqueta i con data-pid
 function quitarDelCarrito(elemento) {
