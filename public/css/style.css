@@ -46,6 +46,13 @@ a {
   flex-wrap: wrap;
   column-gap: 0.5em;
 }
+.cantidadInput{
+  background-color: whitesmoke;
+  width: 35px;
+}
+.cantidadInput:hover{
+  cursor: pointer;
+}
 
 .ancho-quarter {
   flex-basis: 34%;
@@ -92,6 +99,7 @@ button {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   justify-content: center;
+  cursor: pointer;
 }
 
 main {

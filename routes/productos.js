@@ -7,6 +7,8 @@ const aux = require('../js/auxiliares');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 const productsValidations = require('../validaciones/productsValidations');
 
+
+//multer para cargar imagenes
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
         cb(null, path.join(__dirname, '../public/img'))

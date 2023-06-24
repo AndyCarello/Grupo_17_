@@ -29,6 +29,10 @@
                     </div>
                     <div class="ancho-full espaciado" >
                         <% if (locals.user){ %>
+                            <!-- SE AGREGA INPUT CANTIDAD -->
+                            <p>Cantidad:</p>
+                            <input class="cantidadInput" type="number" name="cantidad" id="cantidad">
+
                           <button id="boton-agregar-<%= producto.id %> " class="ancho-half" type="button" data-pid="<%= producto.id %>" onclick="agregarAlCarrito(this)">Agregar<i class="fas fa-cart-plus"></i></button>
                         <% } %>
                         <a href="/productos/<%= producto.id %>">
